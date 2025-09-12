@@ -6,8 +6,9 @@ A collection of SQL scripts and examples for learning database concepts, queries
 
 The repository is structured into directories covering key SQL areas:
 
-- **basic/**: Fundamental SQL elements like data types.
+- **basic/**: Fundamental SQL elements like data types and constraints.
   - [data_types.sql](basic/data_types.sql)
+  - [constraints.sql](basic/constraints.sql)
 
 - **aggregation/**: SQL aggregation functions (e.g., SUM, COUNT, AVG, MAX, MIN).
 
