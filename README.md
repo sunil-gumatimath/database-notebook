@@ -14,8 +14,10 @@ The repository is structured into directories covering key SQL areas:
 
 - **ddl/**: Data Definition Language statements (CREATE, ALTER, DROP DATABASE/TABLE).
   - [ddl.student.sql](ddl/ddl.student.sql)
+  - [ddl.query.sql](ddl/ddl.query.sql)
 
 - **dml/**: Data Manipulation Language operations (INSERT, UPDATE, DELETE, SELECT).
+  - [dml.query.sql](dml/dml.query.sql)
 
 - **indexes/**: Creating, using, and managing indexes for query optimization.
 
