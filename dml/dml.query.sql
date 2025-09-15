@@ -1,24 +1,24 @@
--- CREATE → Used to create new database objects.
-CREATE TABLE student (
-    id INT PRIMARY KEY,
-    name VARCHAR(50),
-    email VARCHAR(100)
-);
+-- What is DML?
 
--- ALTER → Used to modify existing database objects.
-ALTER TABLE student ADD age INT;
-ALTER TABLE student DROP COLUMN email;
+-- DML stands for Data Manipulation Language.
+-- It deals with the data inside the database objects (like tables).
+-- Unlike DDL (which changes structure), DML adds, updates, deletes, or retrieves the data.
 
--- DROP → Used to delete a database object permanently.
-DROP TABLE student;
+-- INSERT → Add new records (rows).
 
--- TRUNCATE → Removes all rows from a table but keeps the structure.
-TRUNCATE TABLE student;
+INSERT INTO student (student_id, student_name, email, age, s_status, college_id)
+VALUES (1, 'Sunil', 'sunil@mail.com', 25, 'not active', 101);
 
--- RENAME → Changes the name of a database object.
-RENAME TABLE student TO learners;
+-- UPDATE → Modify existing records.
 
--- Key Points:
--- DDL is structural (focuses on schema, not data).
--- It’s auto-committed (cannot be rolled back in most databases).
--- Used mainly by database administrators and developers to define & maintain schema.
+UPDATE students
+SET s_status = 'not active'
+WHERE student_id = 1;
+
+-- DELETE → Remove records.
+
+DELETE FROM student
+WHERE student_id = 1;
+
+-- SELECT → Retrieve data from the table (technically part of DQL, but often grouped with DML).
+SELECT * FROM students;
