@@ -13,6 +13,7 @@ The repository is structured into directories covering key SQL areas:
 - **aggregation/**: SQL aggregation functions (e.g., SUM, COUNT, AVG, MAX, MIN).
 
 - **ddl/**: Data Definition Language statements (CREATE, ALTER, DROP DATABASE/TABLE).
+  - [ddl.student.sql](ddl/ddl.student.sql)
 
 - **dml/**: Data Manipulation Language operations (INSERT, UPDATE, DELETE, SELECT).
 
