@@ -60,32 +60,6 @@ SOURCE basic/data_types.sql;
 SOURCE ddl/ddl.query.sql;
 ```
 
-## Sample Data
-
-To populate the tables for testing queries, use these INSERT statements after creating the tables (e.g., run them in dml/dml.query.sql or separately).
-
-### College Table
-```sql
-INSERT INTO college (college_name, location, rating) VALUES
-('MIT', 'Cambridge, MA', 5),
-('Stanford', 'Stanford, CA', 5),
-('Harvard', 'Cambridge, MA', 5),
-('Caltech', 'Pasadena, CA', 5),
-('Princeton', 'Princeton, NJ', 5);
-```
-
-### Student Table
-```sql
-INSERT INTO student (student_name, email, age, s_status, college_id) VALUES
-('John Doe', 'john.doe@email.com', 20, 'active', 1),
-('Jane Smith', 'jane.smith@email.com', 22, 'active', 2),
-('Alice Johnson', 'alice.j@email.com', 19, 'not active', 1),
-('Bob Brown', 'bob.brown@email.com', 21, 'active', 3),
-('Carol White', 'carol.w@email.com', 23, 'active', 4);
-```
-
-These provide sample relationships for joins, queries, and demonstrations.
-
 ## Prerequisites
 
 - MySQL server installed and running locally (version 8.0+ recommended for full feature support).
