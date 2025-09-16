@@ -1,94 +1,52 @@
 # SQL Learning Repository
 
-A collection of SQL scripts and examples for learning database concepts, queries, and operations using MySQL. The repository is organized by topics to facilitate step‑by‑step study of SQL fundamentals, including data types, constraints, table creation (DDL), and basic queries (DML).
+This repository is a practical collection of SQL examples, queries and schema snippets intended as a learning notebook or quick reference. It groups examples by common SQL topics: DDL (schema), DML (data manipulation), DQL (queries), basic SQL concepts, table samples, transactions and more.
 
-## Project Structure
+Use these files as examples to learn, test, or adapt queries for small practice databases (MySQL, MariaDB, PostgreSQL, Oracle — syntax notes are included where relevant). Many files are short notes with example statements rather than ready-to-run projects.
 
-```
-README.md
-aggregation/
-basic/
-    constraints.sql
-    data_types.sql
-ddl/
-    ddl.query.sql
-    sqlplusTable.sql
-dml/
-    dml.query.sql
-dql/
-    alias.sql
-    distinct.sql
-    dql.query.sql
-indexes/
-joins/
-SQL Query/
-    query.sql
-table/
-    college.sql
-    student.sql
-transactions/
-```
+**Repository Layout**
+- `basic/` : Core SQL concepts and examples
+	- `data_types.sql` — Describes common SQL data types with example `CREATE TABLE` snippets.
+	- `constraints.sql` — Notes and examples for `NOT NULL`, `UNIQUE`, `PRIMARY KEY`, `FOREIGN KEY`, `CHECK`, and `DEFAULT` with sample `college` and `student` tables.
+- `ddl/` : Data Definition Language examples
+	- `ddl.query.sql` — DDL examples and notes (`CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME`) and sample `college`/`student` schema.
+	- `sqlplusTable.sql` — Larger example dataset (employee/department/salary tables) with `INSERT` statements; suitable for practicing queries.
+- `dml/` : Data Manipulation Language examples
+	- `dml.query.sql` — `INSERT`, `UPDATE`, `DELETE` examples and brief usage notes.
+- `dql/` : Data Query Language examples
+	- `dql.query.sql` — Notes on `SELECT` and examples using `WHERE`, `COUNT`, renaming columns.
+	- `alias.sql` — Simple examples showing column aliases.
+	- `distinct.sql` — Short note demonstrating `DISTINCT` usage.
+- `table/` : Simple table query examples
+	- `college.sql` — `SELECT * FROM college;` example.
+	- `student.sql` — `SELECT * FROM students;` example.
+- `SQL Query/` : Miscellaneous practice queries
+	- `query.sql` — A set of practice queries against the `EMP`, `DEPT`, `SALGRADE`, and `BONUS` sample tables from `sqlplusTable.sql` (salary calculations, LIKE, arithmetic, aliases).
+- `indexes/`, `joins/`, `transactions/` : Folders for index, join and transaction examples (currently empty or with examples to add).
 
-- **basic/** – Fundamental SQL elements such as data types and constraints.
-  - `data_types.sql`: Demonstrates common data types (CHAR, VARCHAR, INT, DATE, etc.) with sample `CREATE TABLE` statements.
-  - `constraints.sql`: Explains and implements constraints (NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, CHECK, DEFAULT).
+**How to use this repo**
+- Pick a target RDBMS (MySQL, PostgreSQL, Oracle). Some syntax (e.g., `AUTO_INCREMENT`, `CHECK` enforcement, or `SQL*Plus` conventions) may vary.
+- Load the sample schema from `ddl/sqlplusTable.sql` (or adapt `ddl/ddl.query.sql`) into a test database to run the queries in `SQL Query/query.sql`.
+- Open files in `basic/`, `dml/`, and `dql/` to learn common patterns and try the snippets interactively.
 
-- **ddl/** – Data Definition Language statements.
-  - `ddl.query.sql`: Creates `college` and `student` tables with various constraints and includes basic `SELECT` queries.
-  - `sqlplusTable.sql`: Example of creating a table using SQL*Plus syntax (for Oracle compatibility).
+**Quick start (MySQL example)**
+1. Create a test database:
 
-- **dml/** – Data Manipulation Language operations.
-  - `dml.query.sql`: Examples of `INSERT`, `UPDATE`, `DELETE`, and simple `SELECT` statements on the `student` table.
+	 ```pwsh
+	 mysql -u root -p -e "CREATE DATABASE sql_notebook; USE sql_notebook;"
+	 ```
+2. Load the sample tables (example path):
 
-- **dql/** – Data Query Language operations focused on `SELECT`.
-  - `alias.sql`: Using column aliases.
-  - `distinct.sql`: Using `DISTINCT`.
-  - `dql.query.sql`: Basic `SELECT` queries, filtering, aggregation, and column renaming.
+	 ```pwsh
+	 mysql -u root -p sql_notebook < "ddl/sqlplusTable.sql"
+	 ```
+3. Run practice queries from `SQL Query/query.sql` or experiment with the `dql/` examples.
 
-- **indexes/** – Placeholder for index creation examples (currently empty).
+**Notes & Suggestions**
+- Many files are explanatory notes rather than production-ready migration scripts — review and adapt before running on real data.
+- Consider adding README sections for `joins/` and `indexes/` when you populate those folders.
+- If you want, I can: add runnable migration scripts per database (MySQL/Postgres/SQLite), normalize naming across files, or create a single runnable demo that sets up the sample DB and runs example queries. Tell me which RDBMS you prefer.
 
-- **joins/** – Placeholder for JOIN examples (currently empty).
+---
 
-- **SQL Query/** – Miscellaneous query examples.
-  - `query.sql`: Sample query used in the learning exercises.
-
-- **table/** – Sample table schemas and simple queries.
-  - `college.sql`: `SELECT * FROM college;`
-  - `student.sql`: `SELECT * FROM student;`
-
-- **transactions/** – Placeholder for transaction control examples (currently empty).
-
-## Usage
-
-1. Open the project in VS Code or any text editor.
-2. Use a SQL client such as MySQL Workbench, DBeaver, or the MySQL command‑line tool.
-3. For each script:
-   - Create a database (e.g., `CREATE DATABASE sql_learning;`).
-   - Connect to the database.
-   - Execute the SQL file (e.g., `SOURCE path/to/file.sql;` in MySQL CLI or copy‑paste in a GUI).
-
-Example setup in MySQL CLI:
-
-```sql
-mysql -u root -p
-CREATE DATABASE sql_learning;
-USE sql_learning;
-SOURCE basic/data_types.sql;
-SOURCE ddl/ddl.query.sql;
-```
-
-## Prerequisites
-
-- MySQL server (8.0+ recommended).
-- Basic SQL knowledge is helpful but not required; the files include explanatory comments.
-
-## Notes
-
-- The repository is for educational purposes only.
-- Back up your database before running DDL or DML scripts.
-- Scripts assume a MySQL environment; minor adjustments may be needed for other DBMS (e.g., PostgreSQL, SQLite).
-- Empty directories are placeholders for future expansions—contribute by adding examples.
-
-## Contributing
-
-Fork the repo and submit pull requests for new scripts, fixes, or additional topics. Focus on clear comments, executable examples, and MySQL compatibility.
+Repository maintained as a personal SQL learning notebook. Contributions and improvements are welcome.
