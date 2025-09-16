@@ -17,9 +17,12 @@ The repository is structured into directories covering key SQL areas. Each file 
   - [ddl.query.sql](ddl/ddl.query.sql): Creates 'college' and 'student' tables with AUTO_INCREMENT PRIMARY KEY, NOT NULL, UNIQUE, CHECK, DEFAULT, and FOREIGN KEY constraints. Includes basic SELECT queries and a RENAME TABLE example.
 
 - **dml/**: Data Manipulation Language operations (INSERT, UPDATE, DELETE, SELECT).
-  - [dml.query.sql](dml/dml.query.sql): Placeholder for DML examples; currently empty. Add INSERT/UPDATE/DELETE statements here.
+  - [dml.query.sql](dml/dml.query.sql): Examples of INSERT, UPDATE, DELETE, and basic SELECT statements using the 'student' table to demonstrate data manipulation operations.
 
-- **indexes/**: Creating, using, and managing indexes for query optimization.  
+- **dql/**: Data Query Language operations, focused on SELECT statements for retrieving and querying data.
+  - [dql.query.sql](dql/dql.query.sql): Basic SELECT queries including retrieving all columns, specific columns, filtering with WHERE, aggregate COUNT with conditions, and an ALTER TABLE RENAME COLUMN example on the 'students' table.
+
+- **indexes/**: Creating, using, and managing indexes for query optimization.
   *Currently empty; add CREATE INDEX examples here.*
 
 - **joins/**: Different types of JOIN operations (INNER, LEFT, RIGHT, FULL).  
@@ -56,6 +59,32 @@ USE sql_learning;
 SOURCE basic/data_types.sql;
 SOURCE ddl/ddl.query.sql;
 ```
+
+## Sample Data
+
+To populate the tables for testing queries, use these INSERT statements after creating the tables (e.g., run them in dml/dml.query.sql or separately).
+
+### College Table
+```sql
+INSERT INTO college (college_name, location, rating) VALUES
+('MIT', 'Cambridge, MA', 5),
+('Stanford', 'Stanford, CA', 5),
+('Harvard', 'Cambridge, MA', 5),
+('Caltech', 'Pasadena, CA', 5),
+('Princeton', 'Princeton, NJ', 5);
+```
+
+### Student Table
+```sql
+INSERT INTO student (student_name, email, age, s_status, college_id) VALUES
+('John Doe', 'john.doe@email.com', 20, 'active', 1),
+('Jane Smith', 'jane.smith@email.com', 22, 'active', 2),
+('Alice Johnson', 'alice.j@email.com', 19, 'not active', 1),
+('Bob Brown', 'bob.brown@email.com', 21, 'active', 3),
+('Carol White', 'carol.w@email.com', 23, 'active', 4);
+```
+
+These provide sample relationships for joins, queries, and demonstrations.
 
 ## Prerequisites
 
