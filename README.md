@@ -20,6 +20,8 @@ The repository is structured into directories covering key SQL areas. Each file 
   - [dml.query.sql](dml/dml.query.sql): Examples of INSERT, UPDATE, DELETE, and basic SELECT statements using the 'student' table to demonstrate data manipulation operations.
 
 - **dql/**: Data Query Language operations, focused on SELECT statements for retrieving and querying data.
+  - [alias.sql](dql/alias.sql): Examples of using aliases in SELECT statements to provide alternative names for columns or expressions.
+  - [distinct.sql](dql/distinct.sql): Examples of using DISTINCT to retrieve unique values from a table.
   - [dql.query.sql](dql/dql.query.sql): Basic SELECT queries including retrieving all columns, specific columns, filtering with WHERE, aggregate COUNT with conditions, and an ALTER TABLE RENAME COLUMN example on the 'students' table.
 
 - **indexes/**: Creating, using, and managing indexes for query optimization.
@@ -30,7 +32,7 @@ The repository is structured into directories covering key SQL areas. Each file 
 
 - **table/**: Sample table schemas and basic queries.
   - [college.sql](table/college.sql): Simple SELECT * FROM college; to view table contents.
-  - [student.sql](table/student.sql): Simple SELECT * FROM student; to view table contents.
+  - [student.sql](table/student.sql): Simple SELECT * FROM students; to view table contents.
 
 - **transactions/**: Transaction control (BEGIN, COMMIT, ROLLBACK) and ACID properties.  
   *Currently empty; add transaction examples here.*

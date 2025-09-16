@@ -13,7 +13,6 @@ SELECT student_name,email FROM students;
 SELECT * FROM students
 WHERE age > 20;
 
-SELECT DISTINCT name FROM students;
 
 SELECT COUNT(*) FROM students
 WHERE s_status = 'not active';
