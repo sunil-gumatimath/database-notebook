@@ -38,7 +38,7 @@ The repository is structured into directories covering key SQL areas. Each file 
   *Currently empty; add transaction examples here.*
 
 Additional root files:
-- [.gitignore](.gitignore): Ignores unnecessary files like local settings.
+- [.gitignore](.gitignore): Ignores VS Code settings and session files.
 
 ## Usage
 
