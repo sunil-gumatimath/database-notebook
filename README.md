@@ -21,7 +21,7 @@ Use these files as examples to learn, test, or adapt queries for small practice 
 	- `college.sql` — `SELECT * FROM college;` example.
 	- `student.sql` — `SELECT * FROM students;` example.
 - `SQL Query/` : Miscellaneous practice queries
-	- `assignment_01.sql` — Practice queries using `WHERE` with `AND`/`OR` conditions.
+	- `assignment_01.sql` — A collection of practice queries demonstrating filtering with the `WHERE` clause, including combined `AND`/`OR` conditions and exclusion operators (`!=`).
 	- `query_1.sql` — Examples of calculated columns, aliases, and basic arithmetic operations on salaries.
 	- `query_2.sql` — A set of practice queries against the `EMP` table using the `WHERE` clause for filtering.
 - `aggregation/`, `indexes/`, `joins/`, `transactions/` : Folders for aggregation, index, join and transaction examples (currently empty or with examples to add).
