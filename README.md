@@ -21,12 +21,14 @@ Use these files as examples to learn, test, or adapt queries for small practice 
 	- `college.sql` — `SELECT * FROM college;` example.
 	- `student.sql` — `SELECT * FROM students;` example.
 - `SQL Query/` : Miscellaneous practice queries
-	- `query.sql` — A set of practice queries against the `EMP`, `DEPT`, `SALGRADE`, and `BONUS` sample tables from `sqlplusTable.sql` (salary calculations, LIKE, arithmetic, aliases).
-- `indexes/`, `joins/`, `transactions/` : Folders for index, join and transaction examples (currently empty or with examples to add).
+	- `assignment_01.sql` — Practice queries using `WHERE` with `AND`/`OR` conditions.
+	- `query_1.sql` — Examples of calculated columns, aliases, and basic arithmetic operations on salaries.
+	- `query_2.sql` — A set of practice queries against the `EMP` table using the `WHERE` clause for filtering.
+- `aggregation/`, `indexes/`, `joins/`, `transactions/` : Folders for aggregation, index, join and transaction examples (currently empty or with examples to add).
 
 **How to use this repo**
 - Pick a target RDBMS (MySQL, PostgreSQL, Oracle). Some syntax (e.g., `AUTO_INCREMENT`, `CHECK` enforcement, or `SQL*Plus` conventions) may vary.
-- Load the sample schema from `ddl/sqlplusTable.sql` (or adapt `ddl/ddl.query.sql`) into a test database to run the queries in `SQL Query/query.sql`.
+- Load the sample schema from `ddl/sqlplusTable.sql` (or adapt `ddl/ddl.query.sql`) into a test database to run the queries in `SQL Query/`.
 - Open files in `basic/`, `dml/`, and `dql/` to learn common patterns and try the snippets interactively.
 
 **Quick start (MySQL example)**
@@ -40,7 +42,7 @@ Use these files as examples to learn, test, or adapt queries for small practice 
 	 ```pwsh
 	 mysql -u root -p sql_notebook < "ddl/sqlplusTable.sql"
 	 ```
-3. Run practice queries from `SQL Query/query.sql` or experiment with the `dql/` examples.
+3. Run practice queries from the `SQL Query/` directory or experiment with the `dql/` examples.
 
 **Notes & Suggestions**
 - Many files are explanatory notes rather than production-ready migration scripts — review and adapt before running on real data.
