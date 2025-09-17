@@ -4,8 +4,6 @@ SELECT * FROM salgrade;
 SELECT * FROM bonus;
 
 
-SELECT ename FROM emp
-WHERE ENAME like 'A%';
 
 -- sal colm
 SELECT sal FROM emp;
@@ -27,3 +25,18 @@ SELECT sal+(sal*10/100) as increment FROM emp;
 
 -- annual increment with 10%
 SELECT (sal*12) + (sal * 12 * 10/100) as annual_increment FROM emp;
+
+-- write a query to display employee_name desigination
+SELECT ename,job FROM emp;
+
+-- write a query to display employee_name and quater_sal,half_term and annual_sal
+SELECT ename , (sal*3) as quater_sal, (sal*6) as half_term, (sal*12) as annual_sal FROM emp;
+
+-- write a query to display emp_name,emp_designation,sal with bonous of 1000rs
+SELECT ename,job,sal+1000 as bonous FROM emp;
+
+-- write a query to display all details of employee along with annual salary
+SELECT emp.*,sal*12 FROM emp;
+
+-- write a query to alies/display employee as 'popstar'
+SELECT ename as pop_star FROM emp;
