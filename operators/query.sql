@@ -58,6 +58,33 @@ SELECT ENAME FROM emp
 WHERE ENAME LIKE '____';
 
 -- NOT LIKE
+-- Write a query to find ename where ename does NOT start with 'M' character.
+SELECT * FROM emp
+WHERE ENAME NOT LIKE 'M%';
+
+-- Write a query to find ename where ename is NOT 4 characters long.
+SELECT ename FROM emp
+WHERE ENAME NOT LIKE '____';
+
+-- Write a query to find ename where ename does NOT end with 'S'.
+SELECT ename FROM emp
+WHERE ENAME NOT LIKE '%S';
+
+-- Write a query to find ename where ename does NOT contain 'O' character.
+SELECT ename FROM emp
+WHERE ENAME NOT LIKE '%O%';
+
+-- Write a query to display ename where 2nd letter is NOT 'A'.
+SELECT ename FROM emp
+WHERE ENAME NOT LIKE '_A%';
+
+-- Write a query to display ename where last 2nd letter is NOT 'A'.
+SELECT ename FROM emp
+WHERE ENAME NOT LIKE '%A_';
+
+-- Write a query to find ename where ename is NOT 4 characters long.
+SELECT ename,SAL FROM emp
+WHERE ENAME NOT LIKE '____';
 
 -- BETWEEN
 
