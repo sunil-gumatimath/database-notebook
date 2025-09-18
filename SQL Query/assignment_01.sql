@@ -1,6 +1,6 @@
 SELECT * FROM emp;
 
--- write  a query to display emp details where emp earning salary more than 1000 and less then 2000
+-- write  a query to display emp details where emp earning salary more than 1000 and less than 2000
 SELECT * FROM emp WHERE SAL > 1000 AND SAL < 2000;
 
 -- write a query to display emp details where emp working in deptno in 20 30 50 60 80 90
@@ -31,7 +31,7 @@ WHERE job != 'CLERK';
 SELECT * from emp
 where deptno != 30;
 
--- write aquery to display emp details except SALESMAN and PRESIDENT
+-- write a query to display emp details except SALESMAN and PRESIDENT
 SELECT * FROM emp
 WHERE JOB != 'SALESMAN' and JOB != 'PRESIDENT';
 
