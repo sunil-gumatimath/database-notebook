@@ -5,11 +5,11 @@ SELECT * FROM emp;
 -- Operators are the symbols used to perform some specific task
 
 -- IN
--- write a query to display where emp work in deptno 10,30,50
+-- write a query to display employees who work in deptno 10,30,50
 SELECT * FROM emp
 WHERE DEPTNO IN (10,30,50);
 
--- write a query to display where employee work in as 'SALESMAN' and 'MANAGER'
+-- write a query to display employees who work as 'SALESMAN' or 'MANAGER'
 SELECT * FROM emp
 WHERE JOB IN ('SALESMAN','MANAGER');
 
@@ -87,10 +87,31 @@ SELECT ename,SAL FROM emp
 WHERE ENAME NOT LIKE '____';
 
 -- BETWEEN
+-- used to ranges
+
+-- write a query to display emp details where sal is between 1250 and 3000
+SELECT * FROM emp
+WHERE SAL BETWEEN 1250 AND 3000;
+
+-- write a query to find emp details where sal is between 251 and 2999
+SELECT * FROM emp
+WHERE SAL BETWEEN 251 AND 2999;
 
 -- BETWEEN NOT
+-- write a query to display emp details sal not more than 1250 and sal less than 3000
+SELECT * FROM emp
+WHERE SAL NOT BETWEEN 1250 AND 3000;
+
+-- write a query to find emp details earning not between sal 250 to 3000
+SELECT * FROM emp
+WHERE SAL NOT BETWEEN  251 AND 2999;
 
 -- IS
+-- special operator which is used check wither the colm is null
+
+-- write a query to display ename,sal,comm where emp not earning any commision
+SELECT ename,sal,comm FROM emp
+WHERE COMM IS NULL;
 
 -- IS NOT
 
