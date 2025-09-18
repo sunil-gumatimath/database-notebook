@@ -114,5 +114,14 @@ SELECT ename,sal,comm FROM emp
 WHERE COMM IS NULL;
 
 -- IS NOT
+-- special operator which is used check wither the colm is not null
 
--- CONCAT
+-- write a query to display ename,sal,comm where emp earning some commision
+SELECT ename,sal,comm FROM emp
+WHERE COMM IS NOT NULL;
+
+-- CONCAT(||)
+-- used to conat more then 1 argument
+
+SELECT 'HI' || ename || 'I LOVE MY SAL' || sal FROM emp
+WHERE SAL > 4000;
