@@ -19,7 +19,7 @@ Use these files as examples to learn, test, or adapt queries for small practice 
 	- `distinct.sql` — Short note demonstrating `DISTINCT` usage.
 - `table/` : Simple table query examples
 	- `college.sql` — `SELECT * FROM college;` example.
-	- `student.sql` — `SELECT * FROM students;` example.
+	- `student.sql` — `SELECT * FROM student;` example.
 - `operators/` : SQL operators examples
 	- `query.sql` — Examples demonstrating various SQL operators like comparison, logical, and arithmetic operators.
 - `SQL Query/` : Miscellaneous practice queries
