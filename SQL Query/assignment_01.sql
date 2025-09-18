@@ -17,7 +17,7 @@ WHERE sal > 1500 AND DEPTNO = 10 or DEPTNO = 20 or DEPTNO = 30 or DEPTNO = 60 or
 
 -- write a query to display emp name. emp sal where annual salary more than 15000
 SELECT ENAME,SAL FROM emp
-WHERE (SAL*12) > 15000
+WHERE (SAL*12) > 15000;
 
 -- write a query to display emp details where employee working deptno 10,20,30 and employee name 'JONES' 'JAMES' 'SMITH' 'ADAM'
 SELECT * FROM emp
