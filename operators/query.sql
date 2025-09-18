@@ -107,21 +107,21 @@ SELECT * FROM emp
 WHERE SAL NOT BETWEEN  251 AND 2999;
 
 -- IS
--- special operator which is used check wither the colm is null
+-- special operator which is used to check whether the column is null
 
--- write a query to display ename,sal,comm where emp not earning any commision
+-- write a query to display ename,sal,comm where emp not earning any commission
 SELECT ename,sal,comm FROM emp
 WHERE COMM IS NULL;
 
 -- IS NOT
--- special operator which is used check wither the colm is not null
+-- special operator which is used to check whether the column is not null
 
--- write a query to display ename,sal,comm where emp earning some commision
+-- write a query to display ename,sal,comm where emp earning some commission
 SELECT ename,sal,comm FROM emp
 WHERE COMM IS NOT NULL;
 
 -- CONCAT(||)
--- used to conat more then 1 argument
+-- used to concat more than 1 argument
 
 SELECT 'HI' || ename || 'I LOVE MY SAL' || sal FROM emp
 WHERE SAL > 4000;

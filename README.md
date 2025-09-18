@@ -21,7 +21,7 @@ Use these files as examples to learn, test, or adapt queries for small practice 
 	- `college.sql` — `SELECT * FROM college;` example.
 	- `student.sql` — `SELECT * FROM student;` example.
 - `operators/` : SQL operators examples
-	- `query.sql` — Examples demonstrating various SQL operators like comparison, logical, and arithmetic operators.
+	- `query.sql` — Examples demonstrating various SQL operators like IN, NOT IN, LIKE, NOT LIKE, BETWEEN, IS, CONCAT, etc., with explanations and queries.
 - `SQL Query/` : Miscellaneous practice queries
 	- `assignment_01.sql` — A collection of practice queries demonstrating filtering with the `WHERE` clause, including combined `AND`/`OR` conditions and exclusion operators (`!=`).
 	- `query_1.sql` — Examples of calculated columns, aliases, and basic arithmetic operations on salaries.
