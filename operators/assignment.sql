@@ -46,3 +46,26 @@ WHERE ENAME NOT LIKE 'A%'
   AND ENAME NOT LIKE 'O%'
   AND ENAME NOT LIKE 'U%'
   AND YEAR(HIREDATE) IN (1981,1982,1983,1984,1985);
+
+-- write a query to display emp details where deptno 10, 20,30,40,50,60 and not working in job as 'NURSE','POLICE' and hired in month 'dec','feb','apr','july'
+-- 'sep','oct','nov','jan','mar','jun','jul'
+
+SELECT * 
+FROM emp
+WHERE deptno IN (10,20,30,40,50,60) 
+  AND JOB NOT IN ('NURSE','POLICE') 
+  AND MONTHNAME(HIREDATE) IN ('January','February','March','April','June',
+                              'July','September','October','November','December');
+
+-- write a query to display of emp where emp not earning comm earn and sal greater than 500 and sal less than 6000 and working in deptno 10, 20, 30 and ename starts
+-- with consonant char and ename hired year 81,82,83,84,86 and hired in month feb,april,jun,aug,oct,dec,jan,mar,may,july,sep
+
+SELECT *
+FROM emp
+WHERE (COMM IS NULL OR COMM = 0)
+  AND SAL BETWEEN 501 AND 5999
+  AND DEPTNO IN (10,20,30)
+  AND ENAME REGEXP '^[^AEIOU]'
+  AND YEAR(HIREDATE) IN (1981,1982,1983,1984,1986)
+  AND MONTHNAME(HIREDATE) IN ('January','February','March','April','May',
+                               'June','July','August','September','October','December');

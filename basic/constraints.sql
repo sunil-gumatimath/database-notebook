@@ -25,7 +25,7 @@
 CREATE TABLE college(
     college_id INT PRIMARY KEY,
     college_name VARCHAR(100) NOT NULL,
-    location VARCHAR(100) DEFAULT 'unknow'
+    location VARCHAR(100) DEFAULT 'unknown'
 );
 
 CREATE TABLE student(

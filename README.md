@@ -27,11 +27,11 @@ Use these files as examples to learn, test, or adapt queries for small practice 
 	- `assignment_01.sql` — A collection of practice queries demonstrating filtering with the `WHERE` clause, including combined `AND`/`OR` conditions and exclusion operators (`!=`).
 	- `query_1.sql` — Examples of calculated columns, aliases, and basic arithmetic operations on salaries.
 	- `query_2.sql` — A set of practice queries against the `EMP` table using the `WHERE` clause for filtering.
-- `aggregation/`, `indexes/`, `joins/`, `transactions/` : Folders reserved for aggregation, index, join and transaction examples (currently empty — ready for future content).
+
 
 **How to use this repo**
 - Pick a target RDBMS (MySQL, PostgreSQL, Oracle). Some syntax (e.g., `AUTO_INCREMENT`, `CHECK` enforcement, or `SQL*Plus` conventions) may vary.
-- Load the sample schema from `ddl/sqlplusTable.sql` (or adapt `ddl/ddl.query.sql`) into a test database to run the queries in `SQL Query/`.
+- Load the sample schema from `ddl/sqlplusTable.sql` (or adapt `ddl/ddl.query.sql`) into a test database to run the queries in `sql queries/`.
 - Open files in `basic/`, `dml/`, and `dql/` to learn common patterns and try the snippets interactively.
 
 **Quick start (MySQL example)**
@@ -45,11 +45,11 @@ Use these files as examples to learn, test, or adapt queries for small practice 
 	 ```pwsh
 	 mysql -u root -p sql_notebook < "ddl/sqlplusTable.sql"
 	 ```
-3. Run practice queries from the `SQL Query/` directory or experiment with the `dql/` examples.
+3. Run practice queries from the `sql queries/` directory or experiment with the `dql/` examples.
 
 **Notes & Suggestions**
 - Many files are explanatory notes rather than production-ready migration scripts — review and adapt before running on real data.
-- The repository structure includes empty folders (`aggregation/`, `indexes/`, `joins/`, `transactions/`) ready for future content expansion.
+
 - If you want, I can: add runnable migration scripts per database (MySQL/Postgres/SQLite), normalize naming across files, or create a single runnable demo that sets up the sample DB and runs example queries. Tell me which RDBMS you prefer.
 
 ---

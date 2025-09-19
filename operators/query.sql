@@ -33,7 +33,7 @@ WHERE DEPTNO NOT IN (10,50,30);
 SELECT * FROM emp
 WHERE ENAME LIKE 'M%';
 
--- write a query to find ename where as 4 character
+-- write a query to find ename where ename is 4 characters long
 SELECT ename FROM emp
 WHERE ENAME LIKE '____';
 
@@ -53,7 +53,7 @@ WHERE ENAME LIKE '_A%';
 SELECT ENAME FROM emp
 WHERE ENAME LIKE '%A_';
 
--- write a query to find ename where as 4 character
+-- write a query to find ename where ename is 4 characters long
 SELECT ENAME FROM emp
 WHERE ENAME LIKE '____';
 
