@@ -22,11 +22,12 @@ Use these files as examples to learn, test, or adapt queries for small practice 
 	- `student.sql` — `SELECT * FROM student;` example.
 - `operators/` : SQL operators examples
 	- `query.sql` — Examples demonstrating various SQL operators like IN, NOT IN, LIKE, NOT LIKE, BETWEEN, IS, CONCAT, etc., with explanations and queries.
+	- `assignment.sql` — Practice assignments with SQL operators including pattern matching, date filtering, and complex WHERE conditions.
 - `SQL Query/` : Miscellaneous practice queries
 	- `assignment_01.sql` — A collection of practice queries demonstrating filtering with the `WHERE` clause, including combined `AND`/`OR` conditions and exclusion operators (`!=`).
 	- `query_1.sql` — Examples of calculated columns, aliases, and basic arithmetic operations on salaries.
 	- `query_2.sql` — A set of practice queries against the `EMP` table using the `WHERE` clause for filtering.
-- `aggregation/`, `indexes/`, `joins/`, `transactions/` : Folders for aggregation, index, join and transaction examples (currently empty or with examples to add).
+- `aggregation/`, `indexes/`, `joins/`, `transactions/` : Folders reserved for aggregation, index, join and transaction examples (currently empty — ready for future content).
 
 **How to use this repo**
 - Pick a target RDBMS (MySQL, PostgreSQL, Oracle). Some syntax (e.g., `AUTO_INCREMENT`, `CHECK` enforcement, or `SQL*Plus` conventions) may vary.
@@ -48,7 +49,7 @@ Use these files as examples to learn, test, or adapt queries for small practice 
 
 **Notes & Suggestions**
 - Many files are explanatory notes rather than production-ready migration scripts — review and adapt before running on real data.
-- Consider adding README sections for `joins/` and `indexes/` when you populate those folders.
+- The repository structure includes empty folders (`aggregation/`, `indexes/`, `joins/`, `transactions/`) ready for future content expansion.
 - If you want, I can: add runnable migration scripts per database (MySQL/Postgres/SQLite), normalize naming across files, or create a single runnable demo that sets up the sample DB and runs example queries. Tell me which RDBMS you prefer.
 
 ---
