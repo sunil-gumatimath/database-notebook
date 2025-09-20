@@ -1,63 +1,60 @@
 # SQL Learning Repository
 
-This repository is a practical collection of SQL examples, queries and schema snippets intended as a learning notebook or quick reference. It groups examples by common SQL topics: DDL (schema), DML (data manipulation), DQL (queries), basic SQL concepts, table samples, transactions and more.
+This repository is a practical collection of SQL examples, queries, and schema snippets intended as a learning notebook or quick reference. It groups examples by common SQL topics like DDL, DML, DQL, functions, and operators.
 
-Use these files as examples to learn, test, or adapt queries for small practice databases (MySQL, MariaDB, PostgreSQL, Oracle — syntax notes are included where relevant). Many files are short notes with example statements rather than ready-to-run projects.
+Use these files to learn, test, or adapt queries for small practice databases (e.g., MySQL, MariaDB, PostgreSQL, Oracle). Syntax notes are included where relevant. Many files are short notes with example statements rather than ready-to-run projects.
 
-**Repository Layout**
-- `basic/` : Core SQL concepts and examples
-	- `data_types.sql` — Describes common SQL data types with example `CREATE TABLE` snippets.
-	- `constraints.sql` — Notes and examples for `NOT NULL`, `UNIQUE`, `PRIMARY KEY`, `FOREIGN KEY`, `CHECK`, and `DEFAULT` with sample `college` and `student` tables.
-- `ddl/` : Data Definition Language examples
-	- `ddl.query.sql` — DDL examples and notes (`CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME`) and sample `college`/`student` schema.
-	- `sqlplusTable.sql` — Larger example dataset (employee/department/salary tables) with `INSERT` statements; suitable for practicing queries.
-- `dml/` : Data Manipulation Language examples
-	- `dml.query.sql` — `INSERT`, `UPDATE`, `DELETE` examples and brief usage notes.
-- `dql/` : Data Query Language examples
-	- `dql.query.sql` — Notes on `SELECT` and examples using `WHERE`, `COUNT`, renaming columns.
-	- `alias.sql` — Simple examples showing column aliases.
-	- `distinct.sql` — Short note demonstrating `DISTINCT` usage.
-- `function/` : SQL function examples
-	- `single_row_function.sql` — Examples of single row functions.
-	- `single row function/` — Directory containing specific single row function examples
-		- `character_single_row.sql` — Examples of character-based single row functions like `upper()`, `lower()`, `substr()`, etc.
-- `indexes/` : Index examples (currently empty)
-- `joins/` : SQL join examples (currently empty)
-- `operators/` : SQL operators examples
-	- `query.sql` — Examples demonstrating various SQL operators like IN, NOT IN, LIKE, NOT LIKE, BETWEEN, IS, CONCAT, etc., with explanations and queries.
-	- `assignment.sql` — Practice assignments with SQL operators including pattern matching, date filtering, and complex WHERE conditions.
-- `sql queries/` : Miscellaneous practice queries
-	- `assignment_01.sql` — A collection of practice queries demonstrating filtering with the `WHERE` clause, including combined `AND`/`OR` conditions and exclusion operators (`!=`).
-	- `query_1.sql` — Examples of calculated columns, aliases, and basic arithmetic operations on salaries.
-	- `query_2.sql` — A set of practice queries against the `EMP` table using the `WHERE` clause for filtering.
-- `table/` : Simple table query examples
-	- `college.sql` — `SELECT * FROM college;` example.
-	- `student.sql` — `SELECT * FROM student;` example.
-- `transactions/` : Transaction examples (currently empty)
+## Repository Layout
 
-**How to use this repo**
-- Pick a target RDBMS (MySQL, PostgreSQL, Oracle). Some syntax (e.g., `AUTO_INCREMENT`, `CHECK` enforcement, or `SQL*Plus` conventions) may vary.
-- Load the sample schema from `ddl/sqlplusTable.sql` (or adapt `ddl/ddl.query.sql`) into a test database to run the queries in `sql queries/`.
-- Open files in `basic/`, `dml/`, `dql/`, and `function/` to learn common patterns and try the snippets interactively.
+-   `basic/`: Core SQL concepts and examples.
+    -   `data_types.sql`: Describes common SQL data types with `CREATE TABLE` snippets.
+    -   `constraints.sql`: Examples for `NOT NULL`, `UNIQUE`, `PRIMARY KEY`, `FOREIGN KEY`, `CHECK`, and `DEFAULT`.
+-   `ddl/`: Data Definition Language examples.
+    -   `ddl.query.sql`: Notes on `CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME`.
+    -   `sqlplusTable.sql`: A larger example dataset (employee, department) with `INSERT` statements, suitable for practicing queries.
+-   `dml/`: Data Manipulation Language examples.
+    -   `dml.query.sql`: `INSERT`, `UPDATE`, `DELETE` examples.
+-   `dql/`: Data Query Language examples.
+    -   `dql.query.sql`: Notes on `SELECT` with `WHERE`, `COUNT`, etc.
+    -   `alias.sql`: Examples of column aliases.
+    -   `distinct.sql`: A short note on `DISTINCT` usage.
+-   `function/`: SQL function examples.
+    -   `single_row_function.sql`: General examples of single-row functions.
+    -   `single row function/character_single_row.sql`: Examples of character-based functions like `UPPER()`, `LOWER()`, `SUBSTR()`.
+-   `operators/`: SQL operator examples.
+    -   `query.sql`: Examples of operators like `IN`, `LIKE`, `BETWEEN`, `IS NULL`, etc.
+    -   `assignment.sql`: Practice assignments using various operators.
+-   `sql queries/`: Miscellaneous practice queries.
+    -   `assignment_01.sql`, `query_1.sql`, `query_2.sql`: Collections of practice queries using `WHERE` clauses, calculated columns, and filtering.
+-   `table/`: Simple table query examples.
+    -   `college.sql`: `SELECT * FROM college;`
+    -   `student.sql`: `SELECT * FROM student;`
 
-**Quick start (MySQL example)**
-1. Create a test database:
+## How to Use
 
-	 ```pwsh
-	 mysql -u root -p -e "CREATE DATABASE sql_notebook; USE sql_notebook;"
-	 ```
-2. Load the sample tables (example path):
+1.  **Choose a Database**: Pick a target RDBMS (MySQL, PostgreSQL, Oracle, etc.). Note that some syntax (e.g., `AUTO_INCREMENT`) may vary.
+2.  **Load Schema**: Load the sample schema from `ddl/sqlplusTable.sql` into a test database. This will allow you to run the examples in `sql queries/`.
+3.  **Explore**: Open files in `basic/`, `dml/`, `dql/`, etc., to learn common patterns and try the snippets interactively.
 
-	 ```pwsh
-	 mysql -u root -p sql_notebook < "ddl/sqlplusTable.sql"
-	 ```
-3. Run practice queries from the `sql queries/` directory or experiment with the `dql/` examples.
+### Quick Start (MySQL Example)
 
-**Notes & Suggestions**
-- Many files are explanatory notes rather than production-ready migration scripts — review and adapt before running on real data.
-- Empty directories (`aggregation/`, `indexes/`, `joins/`, `transactions/`) may be populated with additional examples in the future.
-- If you want, I can: add runnable migration scripts per database (MySQL/Postgres/SQLite), normalize naming across files, or create a single runnable demo that sets up the sample DB and runs example queries. Tell me which RDBMS you prefer.
+1.  Create a test database:
+    ```bash
+    mysql -u root -p -e "CREATE DATABASE sql_notebook; USE sql_notebook;"
+    ```
+2.  Load the sample tables:
+    ```bash
+    mysql -u root -p sql_notebook < ddl/sqlplusTable.sql
+    ```
+3.  Run practice queries from the `sql queries/` directory or experiment with the `dql/` examples.
+
+## Contributing
+
+Contributions and improvements are welcome! Feel free to open an issue or submit a pull request. Some ideas for contribution include:
+- Adding examples for other SQL concepts (e.g., Joins, Aggregation, Window Functions).
+- Providing versions of scripts for different database systems (e.g., PostgreSQL, SQLite).
+- Adding more complex query challenges.
 
 ---
 
-Repository maintained as a personal SQL learning notebook. Contributions and improvements are welcome.
+Repository maintained as a personal SQL learning notebook.
