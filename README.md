@@ -17,9 +17,12 @@ Use these files as examples to learn, test, or adapt queries for small practice 
 	- `dql.query.sql` — Notes on `SELECT` and examples using `WHERE`, `COUNT`, renaming columns.
 	- `alias.sql` — Simple examples showing column aliases.
 	- `distinct.sql` — Short note demonstrating `DISTINCT` usage.
-- `table/` : Simple table query examples
-	- `college.sql` — `SELECT * FROM college;` example.
-	- `student.sql` — `SELECT * FROM student;` example.
+- `function/` : SQL function examples
+	- `single_row_function.sql` — Examples of single row functions.
+	- `single row function/` — Directory containing specific single row function examples
+		- `character_single_row.sql` — Examples of character-based single row functions like `upper()`, `lower()`, `substr()`, etc.
+- `indexes/` : Index examples (currently empty)
+- `joins/` : SQL join examples (currently empty)
 - `operators/` : SQL operators examples
 	- `query.sql` — Examples demonstrating various SQL operators like IN, NOT IN, LIKE, NOT LIKE, BETWEEN, IS, CONCAT, etc., with explanations and queries.
 	- `assignment.sql` — Practice assignments with SQL operators including pattern matching, date filtering, and complex WHERE conditions.
@@ -27,12 +30,15 @@ Use these files as examples to learn, test, or adapt queries for small practice 
 	- `assignment_01.sql` — A collection of practice queries demonstrating filtering with the `WHERE` clause, including combined `AND`/`OR` conditions and exclusion operators (`!=`).
 	- `query_1.sql` — Examples of calculated columns, aliases, and basic arithmetic operations on salaries.
 	- `query_2.sql` — A set of practice queries against the `EMP` table using the `WHERE` clause for filtering.
-
+- `table/` : Simple table query examples
+	- `college.sql` — `SELECT * FROM college;` example.
+	- `student.sql` — `SELECT * FROM student;` example.
+- `transactions/` : Transaction examples (currently empty)
 
 **How to use this repo**
 - Pick a target RDBMS (MySQL, PostgreSQL, Oracle). Some syntax (e.g., `AUTO_INCREMENT`, `CHECK` enforcement, or `SQL*Plus` conventions) may vary.
 - Load the sample schema from `ddl/sqlplusTable.sql` (or adapt `ddl/ddl.query.sql`) into a test database to run the queries in `sql queries/`.
-- Open files in `basic/`, `dml/`, and `dql/` to learn common patterns and try the snippets interactively.
+- Open files in `basic/`, `dml/`, `dql/`, and `function/` to learn common patterns and try the snippets interactively.
 
 **Quick start (MySQL example)**
 1. Create a test database:
@@ -49,7 +55,7 @@ Use these files as examples to learn, test, or adapt queries for small practice 
 
 **Notes & Suggestions**
 - Many files are explanatory notes rather than production-ready migration scripts — review and adapt before running on real data.
-
+- Empty directories (`aggregation/`, `indexes/`, `joins/`, `transactions/`) may be populated with additional examples in the future.
 - If you want, I can: add runnable migration scripts per database (MySQL/Postgres/SQLite), normalize naming across files, or create a single runnable demo that sets up the sample DB and runs example queries. Tell me which RDBMS you prefer.
 
 ---
