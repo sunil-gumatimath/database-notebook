@@ -24,11 +24,19 @@ Use these files to learn, test, or adapt queries for small practice databases (e
 -   `operators/`: SQL operator examples.
     -   `query.sql`: Examples of operators like `IN`, `LIKE`, `BETWEEN`, `IS NULL`, etc.
     -   `assignment.sql`: Practice assignments using various operators.
+-   `aggregation/`: SQL aggregation function examples.
+    -   Contains examples of aggregate functions like `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`, and `GROUP BY` clauses.
+-   `indexes/`: Database index examples.
+    -   Contains examples of creating and managing database indexes for performance optimization.
+-   `joins/`: SQL join operation examples.
+    -   Contains examples of different types of joins (`INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL OUTER JOIN`, etc.).
 -   `sql queries/`: Miscellaneous practice queries.
     -   `assignment_01.sql`, `query_1.sql`, `query_2.sql`: Collections of practice queries using `WHERE` clauses, calculated columns, and filtering.
 -   `table/`: Simple table query examples.
     -   `college.sql`: `SELECT * FROM college;`
     -   `student.sql`: `SELECT * FROM student;`
+-   `transactions/`: Database transaction examples.
+    -   Contains examples of transaction management including `BEGIN`, `COMMIT`, `ROLLBACK`, and `SAVEPOINT`.
 
 ## How to Use
 
