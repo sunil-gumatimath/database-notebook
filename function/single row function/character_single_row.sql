@@ -37,7 +37,7 @@ SELECT SUBSTR(ename,1,length(ename)/2) FROM emp;
 SELECT SUBSTR(ename, FLOOR(length(ename)/2) + 1) AS second_half
 FROM emp;
 
--- write a query to find where ename starts with conslant character
+-- write a query to find where ename starts with consonant character
 SELECT ename FROM emp
 WHERE SUBSTR(ename,1,1) NOT IN ('A','E','I','O','U');
 
@@ -51,4 +51,4 @@ WHERE SUBSTR(ENAME,1,1) IN ('A','E','I','O','U');
 -- replace Bangalore to Mangalore
 SELECT REPLACE('Bangalore','B','M') as replaced_string;
 
--- 
+--
