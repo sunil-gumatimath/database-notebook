@@ -15,7 +15,7 @@ SELECT upper('sql function') as upper_case FROM dual;
 -- Converts string to lowercase.
 SELECT lower('SQL FUNCTION') as lower_case FROM dual;
 
--- SQL Server (capitalise first letter of each word)
+-- SQL Server (capitalize first letter of each word)
 SELECT CONCAT(UPPER(LEFT('hello world',1)), LOWER(SUBSTRING('hello world',2))) AS initcap_word;
 
 -- substr
