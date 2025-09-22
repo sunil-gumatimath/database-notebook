@@ -21,6 +21,7 @@ Use these files to learn, test, or adapt queries for small practice databases (e
 -   `function/`: SQL function examples.
     -   `single_row_function.sql`: General examples of single-row functions.
     -   `number_single_row_fun/number_single_row.sql`: Examples of numeric functions like `ROUND()`, `TRUNC()`, `MOD()`, etc.
+    -   `date single row function/date_single_row_fun.sql`: Examples of date and time functions like `SYSDATE`, `CURRENT_DATE`, `EXTRACT()`, etc.
     -   `single row function/`: Character and string function examples.
         -   `character_single_row.sql`: Examples of character-based functions like `UPPER()`, `LOWER()`, `SUBSTR()`, `LENGTH()`, etc.
         -   `csrf.assignment.sql`: Practice assignments for character and string functions.
