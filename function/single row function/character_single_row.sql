@@ -51,4 +51,17 @@ WHERE SUBSTR(ENAME,1,1) IN ('A','E','I','O','U');
 -- replace Bangalore to Mangalore
 SELECT REPLACE('Bangalore','B','M') as replaced_string;
 
---
+-- replace K to P in this string 'KUSHKA'
+SELECT REPLACE('KUSHKA','P','K')as replaced_string;
+
+-- replace PUSHPA to KUSHPA
+SELECT REPLACE('PUSHPA','PU','KU') as replaced_string;
+
+-- extract P from PUSHPA
+SELECT REPLACE('PUSHPA','P','') as extract_p;
+
+-- write a query to replace A's in ename
+SELECT REPLACE(ename,'A','') FROM emp;
+
+-- write a query to find number of P charcter in PUSHPA
+SELECT LENGTH('PUSHPA') - LENGTH(REPLACE('PUSHPA','P','')) AS p_count;
