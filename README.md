@@ -20,7 +20,10 @@ Use these files to learn, test, or adapt queries for small practice databases (e
     -   `distinct.sql`: A short note on `DISTINCT` usage.
 -   `function/`: SQL function examples.
     -   `single_row_function.sql`: General examples of single-row functions.
-    -   `single row function/character_single_row.sql`: Examples of character-based functions like `UPPER()`, `LOWER()`, `SUBSTR()`.
+    -   `number_single_row_fun/number_single_row.sql`: Examples of numeric functions like `ROUND()`, `TRUNC()`, `MOD()`, etc.
+    -   `single row function/`: Character and string function examples.
+        -   `character_single_row.sql`: Examples of character-based functions like `UPPER()`, `LOWER()`, `SUBSTR()`, `LENGTH()`, etc.
+        -   `csrf.assignment.sql`: Practice assignments for character and string functions.
 -   `operators/`: SQL operator examples.
     -   `query.sql`: Examples of operators like `IN`, `LIKE`, `BETWEEN`, `IS NULL`, etc.
     -   `assignment.sql`: Practice assignments using various operators.
@@ -30,13 +33,13 @@ Use these files to learn, test, or adapt queries for small practice databases (e
     -   Contains examples of creating and managing database indexes for performance optimization.
 -   `joins/`: SQL join operation examples.
     -   Contains examples of different types of joins (`INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL OUTER JOIN`, etc.).
+-   `transactions/`: Database transaction examples.
+    -   Contains examples of transaction management including `BEGIN`, `COMMIT`, `ROLLBACK`, and `SAVEPOINT`.
 -   `sql queries/`: Miscellaneous practice queries.
     -   `assignment_01.sql`, `query_1.sql`, `query_2.sql`: Collections of practice queries using `WHERE` clauses, calculated columns, and filtering.
 -   `table/`: Simple table query examples.
     -   `college.sql`: `SELECT * FROM college;`
     -   `student.sql`: `SELECT * FROM student;`
--   `transactions/`: Database transaction examples.
-    -   Contains examples of transaction management including `BEGIN`, `COMMIT`, `ROLLBACK`, and `SAVEPOINT`.
 
 ## How to Use
 
