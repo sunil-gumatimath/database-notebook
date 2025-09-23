@@ -16,7 +16,7 @@ WHERE JOB = 'MANAGER';
 
 -- Write a query to find number of employees where ename starts with vowel characters
 SELECT COUNT(*) FROM emp
-WHERE SUBSTR(ENAME, 1, 1) IN ('A', 'E', 'I', 'O', 'U');
+WHERE SUBSTRING(ENAME, 1, 1) IN ('A', 'E', 'I', 'O', 'U');
 
 -- Write a query to display average salary given to employees working in deptno 10 and 30
 SELECT AVG(sal) FROM emp
