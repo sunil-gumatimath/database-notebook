@@ -1,8 +1,8 @@
 -- HAVING
 
--- Having is a clause used to filter group records 
--- Having execute group-by-group
--- it accepts multi-row function
+-- Having is a clause used to filter group records
+-- Having executes group-by-group
+-- it accepts multi-row functions
 
 -- ORDER OF EXECUTION
 -- 1. FROM
