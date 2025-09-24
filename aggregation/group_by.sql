@@ -29,10 +29,12 @@ SELECT MAX(SAL), DEPTNO
 FROM emp
 GROUP BY DEPTNO;
 
--- write a query to find emp working in each job
-SELECT COUNT(*),JOB FROM emp
+-- Write a query to find employees working in each job
+SELECT COUNT(*), JOB
+FROM emp
 GROUP BY JOB;
 
--- write a query to find total salary given to employee who is hired in each year
-SELECT SUM(SAL),YEAR(HIREDATE) FROM emp
+-- Write a query to find total salary given to employees who are hired in each year
+SELECT SUM(SAL), YEAR(HIREDATE)
+FROM emp
 GROUP BY YEAR(HIREDATE);
