@@ -25,12 +25,14 @@ Use these files to learn, test, or adapt queries for small practice databases (e
   - `distinct.sql` - `DISTINCT` keyword usage
 
 ### Functions & Expressions
-- **`function/`** - SQL function examples
+- **`function_single row/`** - SQL function examples
   - `single_row_function.sql` - General single-row function examples
   - **`number_single_row_fun/`**
     - `number_single_row.sql` - Numeric functions (`ROUND()`, `TRUNC()`, `MOD()`, etc.)
   - **`date single row function/`**
     - `date_single_row_fun.sql` - Date/time functions (`SYSDATE`, `CURRENT_DATE`, `EXTRACT()`, etc.)
+  - **`general single row function/`**
+    - `general.sql` - General single-row functions
   - **`single row function/`** - Character and string functions
     - `character_single_row.sql` - String functions (`UPPER()`, `LOWER()`, `SUBSTR()`, `LENGTH()`, etc.)
     - `csrf.assignment.sql` - Practice assignments for character/string functions
@@ -40,7 +42,11 @@ Use these files to learn, test, or adapt queries for small practice databases (e
   - `query.sql` - Comparison and logical operators (`IN`, `LIKE`, `BETWEEN`, `IS NULL`, etc.)
   - `assignment.sql` - Practice assignments using various operators
 - **`aggregation/`** - Aggregate functions and grouping
-  - Examples of `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`, and `GROUP BY` clauses
+  - `aggregate_fun.sql` - Aggregate function examples (`COUNT`, `SUM`, `AVG`, `MIN`, `MAX`)
+  - `assignment.sql` - Practice assignments for aggregate functions
+  - `group_by.sql` - `GROUP BY` clause examples
+  - `having.sql` - `HAVING` clause examples
+  - `order_by.sql` - `ORDER BY` clause examples
 - **`joins/`** - Join operations
   - Examples of `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL OUTER JOIN`, etc.
 - **`indexes/`** - Database indexing
