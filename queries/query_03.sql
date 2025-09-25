@@ -58,6 +58,11 @@ SELECT ename FROM emp
 WHERE mgr = 7566;
 
 -- Write a query to find manager for 'KING'
+SELECT mgr FROM emp
+WHERE ENAME = 'KING';
+
+SELECT ename FROM emp
+WHERE mgr IS NULL;
 
 -- Write a query to find manager for 'TURNER'
 
