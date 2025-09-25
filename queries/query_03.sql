@@ -35,3 +35,10 @@ WHERE ENAME = 'MARTIN';
 
 SELECT ename FROM emp
 WHERE mgr = 7698;
+
+-- Write a query to find manager for 'BLAKE'
+SELECT mgr FROM emp
+WHERE ENAME = 'BLAKE';
+
+SELECT ename FROM emp
+WHERE mgr = 7839;
