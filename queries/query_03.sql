@@ -56,3 +56,15 @@ WHERE ENAME = 'SCOTT';
 
 SELECT ename FROM emp
 WHERE mgr = 7566;
+
+-- Write a query to find manager for 'KING'
+
+-- Write a query to find manager for 'TURNER'
+
+-- Write a query to find manager for 'ADAMS'
+
+-- Write a query to find manager for 'JAMES'
+
+-- Write a query to find manager for 'FORD'
+
+-- Write a query to find manager for 'MILLER'
