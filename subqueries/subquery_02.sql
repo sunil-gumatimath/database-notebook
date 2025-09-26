@@ -52,3 +52,11 @@ ORDER BY sal ASC;
 
 SELECT ename FROM emp
 WHERE SAL = 800;
+
+-- Write a query to find 1st hired date 
+SELECT MIN(DATE(HIREDATE)) FROM emp;
+
+-- Write a query to find last hired date 
+SELECT MAX(DATE(HIREDATE)) FROM emp;
+
+
