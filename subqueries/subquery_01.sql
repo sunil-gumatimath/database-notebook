@@ -21,7 +21,7 @@ SELECT mgr FROM emp WHERE ENAME = 'BLAKE';
 SELECT ename FROM emp WHERE mgr = 7839;
 
 -- CLARK - Find manager information
-SELECT mgr FROM emp WHERE ename = 'CLARK';
+SELECT mgr FROM emp WHERE ENAME = 'CLARK';
 SELECT ename FROM emp WHERE mgr = 7839;
 
 -- FORD - Find manager information
@@ -53,7 +53,7 @@ SELECT mgr FROM emp WHERE ENAME = 'SCOTT';
 SELECT ename FROM emp WHERE mgr = 7566;
 
 -- SMITH - Find manager information
-SELECT mgr FROM emp WHERE ename = 'SMITH';
+SELECT mgr FROM emp WHERE ENAME = 'SMITH';
 SELECT ename FROM emp WHERE EMPNO = 7902;
 
 -- TURNER - Find manager information
