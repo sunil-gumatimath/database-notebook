@@ -26,7 +26,7 @@ Use these files to learn, test, or adapt queries for small practice databases (e
 
 ### Functions and expressions
 - `functions/single_row/`
-  - `single_row_function_overview.sql` — General single-row function notes
+  - `single_row_function_overview.sql` — Placeholder overview for upcoming single-row function notes
   - `number_functions.sql` — Numeric functions (`ROUND()`, `TRUNC()`, `MOD()`, etc.)
   - `date_functions.sql` — Date/time functions (`SYSDATE`, `CURRENT_DATE`, `EXTRACT()`, etc.)
   - `general_functions.sql` — Miscellaneous single-row functions
@@ -47,7 +47,7 @@ Use these files to learn, test, or adapt queries for small practice databases (e
 - `indexes/` — Directory for index-related examples (currently empty)
 
 ### Advanced features
-- `transactions/` — Transaction management: `BEGIN`, `COMMIT`, `ROLLBACK`, `SAVEPOINT`
+- `transactions/` — Placeholder directory reserved for transaction management scripts (currently empty)
 - `subqueries/` — Nested query examples and practice
   - `subquery.sql` — Basic subquery concepts and examples
   - `assignment.sql` — Practice assignments for subqueries
@@ -57,9 +57,7 @@ Use these files to learn, test, or adapt queries for small practice databases (e
 ### Practice and examples
 - `queries/` — Practice query collections
   - `assignment_01.sql`, `query_01.sql`, `query_02.sql` — Various practice queries with `WHERE` clauses, calculated columns, and filtering
-- `tables/` — Simple table examples
-  - `college.sql` — Basic college table schema/queries
-  - `student.sql` — Basic student table schema/queries
+- `tables/` — Placeholder `SELECT` statements that reference sample `college` and `students` tables (schema definitions still TODO)
 
 ## How to use
 
