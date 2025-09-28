@@ -43,12 +43,8 @@ Use these files to learn, test, or adapt queries for small practice databases (e
 - `operators/`
   - `operators_examples.sql` — Comparison and logical operators (`IN`, `LIKE`, `BETWEEN`, `IS NULL`, etc.)
   - `operators_assignment.sql` — Operator-focused practice assignments
-- `joins/`
-  - `join_examples.sql` — Various JOIN examples (`INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL OUTER JOIN`)
-  - `join_practice.sql` — Practice problems for JOIN operations
-- `indexes/`
-  - `index_examples.sql` — Index creation examples (`CREATE INDEX`, `UNIQUE INDEX`, etc.)
-  - `index_practice.sql` — Practice problems for index management
+- `joins/` — Directory for JOIN-related examples (currently empty)
+- `indexes/` — Directory for index-related examples (currently empty)
 
 ### Advanced features
 - `transactions/` — Transaction management: `BEGIN`, `COMMIT`, `ROLLBACK`, `SAVEPOINT`
