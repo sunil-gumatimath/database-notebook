@@ -1,122 +1,110 @@
 # SQL Learning Repository
 
-A simple collection of SQL examples and practice exercises for learning SQL step by step.
+Quick links: See the full project index at [`INDEX.md`](INDEX.md).
 
-## 📚 What's Inside
+### Table of Contents
+- [Repository structure](#repository-structure)
+  - [Core SQL concepts](#core-sql-concepts)
+  - [Database structure (DDL)](#database-structure-ddl)
+  - [Data operations](#data-operations)
+  - [Functions and expressions](#functions-and-expressions)
+  - [Query features](#query-features)
+  - [Advanced features](#advanced-features)
+  - [Practice and examples](#practice-and-examples)
+- [How to use](#how-to-use)
+  - [Quick start (MySQL example)](#quick-start-mysql-example)
+- [Contributing](#contributing)
+- [Conventions](#conventions)
 
-This repository contains:
-- SQL basics (data types, constraints)
-- Common SQL commands (CREATE, SELECT, INSERT, UPDATE, DELETE)
-- SQL functions (string, number, date functions)
-- Practice queries and assignments
-- Sample database with employee and department data
+This repository is a practical collection of SQL examples, queries, and schema snippets intended as a learning notebook or quick reference. Content is grouped by topics like DDL, DML, DQL, functions, and operators.
 
-## 📂 Folder Structure
+Use these files to learn, test, or adapt queries for small practice databases (e.g., MySQL, MariaDB, PostgreSQL, Oracle). Syntax notes are included where relevant. Many files are short notes with example statements rather than ready-to-run projects.
 
-```
-SQL/
-├── basics/              # Data types and constraints
-├── ddl/                 # CREATE, ALTER, DROP tables
-├── dml/                 # INSERT, UPDATE, DELETE data
-├── dql/                 # SELECT queries
-├── functions/           # SQL functions
-│   ├── single_row/      # String, number, date functions
-│   └── aggregate/       # COUNT, SUM, AVG, MAX, MIN
-├── operators/           # Comparison and logical operators
-├── subqueries/          # Nested queries
-└── queries/             # Practice exercises
-```
+## Repository structure
 
-## 🚀 Quick Start
+### Core SQL concepts
+- `basics/`
+  - `data_types.sql` — Common SQL data types with `CREATE TABLE` examples
+  - `constraints.sql` — Constraint examples (`NOT NULL`, `UNIQUE`, `PRIMARY KEY`, `FOREIGN KEY`, `CHECK`, `DEFAULT`)
 
-### 1. Install a Database
-Choose one:
-- **MySQL** (easiest for beginners)
-- **PostgreSQL**
-- **SQLite**
+### Database structure (DDL)
+- `ddl/`
+  - `ddl_commands.sql` — `CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME` operations
+  - `sqlplus_table.sql` — Sample dataset (employee, department) with `INSERT` statements for practice
 
-### 2. Create Practice Database
+### Data operations
+- `dml/`
+  - `dml_commands.sql` — `INSERT`, `UPDATE`, `DELETE` operations
+- `dql/`
+  - `dql_commands.sql` — `SELECT` statements with `WHERE`, `COUNT`, etc.
+  - `select_alias.sql` — Column alias examples
+  - `select_distinct.sql` — `DISTINCT` keyword usage
 
-**For MySQL:**
+### Functions and expressions
+- `functions/single_row/`
+  - `examples/` — `character_functions.sql`, `number_functions.sql`, `date_functions.sql`, `general_functions.sql`
+  - `assignments/` — `csrf_assignment.sql`
+  - `notes/` — `single_row_function_overview.sql`
+- `functions/aggregate/`
+  - `examples/` — `aggregate_functions.sql`, `group_by.sql`, `having.sql`, `order_by.sql`
+  - `assignments/` — `assignment.sql`
+
+### Query features
+- `operators/`
+  - `examples/` — `operators_examples.sql`
+  - `assignments/` — `operators_assignment.sql`
+- `joins/` — Directory for JOIN-related examples (currently empty)
+- `indexes/` — Directory for index-related examples (currently empty)
+
+### Advanced features
+- `transactions/` — Placeholder directory reserved for transaction management scripts (currently empty)
+- `subqueries/` — Nested query examples and practice
+  - `examples/` — `subquery.sql`
+  - `assignments/` — `assignment.sql`
+  - `query/` — Additional subquery examples
+    - `subquery_01.sql`, `subquery_02.sql` — Progressive subquery practice
+
+### Practice and examples
+- `queries/` — Practice query collections
+  - `examples/` — `query_01.sql`, `query_02.sql`
+  - `assignments/` — `assignment_01.sql`
+- `tables/` — Placeholder `SELECT` statements that reference sample `college` and `students` tables (schema definitions still TODO)
+
+## How to use
+
+1. Choose a database: MySQL, PostgreSQL, Oracle, etc. Some syntax varies by engine.
+2. Load sample schema: `ddl/sqlplus_table.sql` into a test database.
+3. Explore: Use [`INDEX.md`](INDEX.md) for direct links to examples and assignments, or browse the folders.
+
+### Quick start (MySQL example)
+
+1. Create a test database:
 ```bash
-mysql -u root -p
-CREATE DATABASE sql_practice;
-USE sql_practice;
-SOURCE ddl/sqlplus_table.sql;
+mysql -u root -p -e "CREATE DATABASE sql_notebook; USE sql_notebook;"
 ```
-
-**For PostgreSQL:**
+2. Load the sample tables:
 ```bash
-createdb sql_practice
-psql sql_practice -f ddl/sqlplus_table.sql
+mysql -u root -p sql_notebook < ddl/sqlplus_table.sql
 ```
+3. Run practice queries from the `queries/` directory or experiment with the `dql/` examples.
 
-### 3. Try Your First Query
-```sql
-SELECT * FROM DEPT;
-SELECT * FROM EMP;
-```
+## Contributing
 
-## 📖 Learning Order
-
-**Week 1-2: Basics**
-1. `basics/data_types.sql` - Learn SQL data types
-2. `basics/constraints.sql` - Understand database rules
-3. `ddl/ddl_commands.sql` - Create and modify tables
-4. `dql/dql_commands.sql` - Basic SELECT queries
-
-**Week 3-4: Functions**
-1. `functions/single_row/examples/` - Work with text, numbers, dates
-2. `functions/aggregate/examples/` - Learn COUNT, SUM, AVG
-
-**Week 5-6: Advanced**
-1. `operators/examples/` - Comparison and logic
-2. `subqueries/examples/` - Nested queries
-3. `queries/examples/` - Real practice problems
-
-## 📝 Sample Data
-
-The repository includes a practice database with:
-- **DEPT** table: 4 departments (Accounting, Research, Sales, Operations)
-- **EMP** table: 14 employees with salaries and job titles
-- **SALGRADE** table: Salary grade levels
-- **BONUS** table: Employee bonuses
-
-## 💡 How to Use This Repository
-
-1. **Learn**: Open a `.sql` file and read the examples
-2. **Practice**: Run the queries in your database
-3. **Test**: Try the assignments in each folder
-4. **Experiment**: Modify queries to see what happens
-
-## 📋 Quick Links
-
-Full file list: See [`INDEX.md`](INDEX.md)
-
-**Main Topics:**
-- [Data Types](basics/data_types.sql)
-- [DDL Commands](ddl/ddl_commands.sql)
-- [DML Commands](dml/dml_commands.sql)
-- [SELECT Queries](dql/dql_commands.sql)
-- [Functions](functions/)
-- [Practice Queries](queries/)
-
-## 🎯 Tips for Learning
-
-- **Start simple**: Don't skip the basics
-- **Type, don't copy**: Write queries yourself
-- **Make mistakes**: Errors help you learn
-- **Practice daily**: Even 15 minutes helps
-- **Use comments**: Write notes in your SQL files
-
-## 📌 Notes
-
-- Examples work with MySQL, PostgreSQL, and Oracle
-- Some syntax may vary between databases
-- Check comments in files for database-specific notes
+Contributions are welcome! Ideas:
+- Add examples for joins, indexes, transactions, and window functions
+- Provide variants for PostgreSQL/SQLite/Oracle where syntax differs
+- Add more complex query challenges
 
 ---
 
-**Happy Learning!** 🎓
+Repository maintained as a personal SQL learning notebook.
 
-Start with `basics/data_types.sql` and work your way through each folder.
+## Conventions
+
+- Folders:
+  - `examples/`: runnable and reference examples for a topic
+  - `assignments/`: practice questions/tasks for a topic
+  - `notes/`: brief topic notes or overviews
+- Naming: use lowercase with underscores for file names; prefer descriptive names.
+- SQL dialects: examples may mix MySQL and Oracle syntax; verify for your RDBMS.
+- Adding new content: place it in the appropriate `examples/`, `assignments/`, or `notes/` subfolder and link it from the topic `README.md`. Also consider adding it to `INDEX.md`.
