@@ -42,5 +42,18 @@ WHERE empno IN (
 -- ============================================================================
 -- Query 4: Display all employees who are managers
 -- ============================================================================
-SELECT * FROM emp
-WHERE empno IN (SELECT mgr FROM emp);
+SELECT * 
+FROM emp
+WHERE empno IN (
+    SELECT mgr FROM emp
+);
+
+-- “Write a query to count how many employees work in the department located in NEW YORK.”
+SELECT COUNT(*)
+FROM emp
+WHERE deptno = (
+    SELECT deptno
+    FROM dept
+    WHERE LOC ='NEW YORK'
+);
+
