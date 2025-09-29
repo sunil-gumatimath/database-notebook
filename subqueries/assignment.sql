@@ -48,16 +48,16 @@ WHERE empno IN (
     SELECT mgr FROM emp
 );
 
--- “Write a query to count how many employees work in the department located in NEW YORK.”
+-- "Write a query to count how many employees work in the department located in NEW YORK."
 SELECT COUNT(*)
 FROM emp
 WHERE deptno = (
     SELECT deptno
     FROM dept
-    WHERE LOC ='NEW YORK'
+    WHERE LOC = 'NEW YORK'
 );
 
--- “Write a query to find the highest salary among all managers.”
+-- "Write a query to find the highest salary among all managers."
 SELECT MAX(SAL)
 FROM emp
 WHERE empno IN (
@@ -65,7 +65,7 @@ WHERE empno IN (
     FROM emp
 );
 
--- “Write a query to find the 4th highest salary from the EMP table.”
+-- "Write a query to find the 4th highest salary from the EMP table."
 SELECT MAX(SAL) FROM emp
 WHERE SAL < (
     SELECT MAX(SAL) FROM emp
@@ -73,8 +73,19 @@ WHERE SAL < (
         SELECT MAX(SAL) FROM emp
         WHERE SAL < (
             SELECT MAX(SAL) FROM emp
+)));
+
+-- "Write a query to display the employee(s) who have the 4th highest salary."
+SELECT * FROM emp
+WHERE sal = (
+    SELECT MAX(SAL) FROM emp
+    WHERE sal < (
+        SELECT MAX(sal) FROM emp
+        WHERE sal < (
+            SELECT MAX(sal) FROM emp
+            WHERE sal < (
+                SELECT MAX(SAL) FROM emp
+            )
         )
     )
 );
-
--- 
