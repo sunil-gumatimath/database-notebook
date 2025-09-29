@@ -57,3 +57,24 @@ WHERE deptno = (
     WHERE LOC ='NEW YORK'
 );
 
+-- “Write a query to find the highest salary among all managers.”
+SELECT MAX(SAL)
+FROM emp
+WHERE empno IN (
+    SELECT mgr
+    FROM emp
+);
+
+-- “Write a query to find the 4th highest salary from the EMP table.”
+SELECT MAX(SAL) FROM emp
+WHERE SAL < (
+    SELECT MAX(SAL) FROM emp
+    WHERE SAL < (
+        SELECT MAX(SAL) FROM emp
+        WHERE SAL < (
+            SELECT MAX(SAL) FROM emp
+        )
+    )
+);
+
+-- 
