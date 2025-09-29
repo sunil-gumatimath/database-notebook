@@ -33,3 +33,5 @@ WHERE MAX(SAL) > 3000; -- error group function is not allowed here (WHERE functi
 
 -- Write a query to find max sal, min sal, total sal, avg sal for employees
 SELECT MAX(sal), MIN(sal), SUM(sal), AVG(sal) FROM emp;
+
+

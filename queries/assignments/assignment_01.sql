@@ -18,18 +18,20 @@ FROM emp;
 -- write a query to find no of vowels character in 'EDUCATION'
 SELECT LENGTH('EDUCATION')
        - LENGTH(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE('EDUCATION','A','')
-                                                ,'E','')
-                                                ,'I','')
-                                                ,'O','')
-                                                ,'U','')) AS vowel_count;
+                                               ,'E','')
+                                               ,'I','')
+                                               ,'O','')
+                                               ,'U','')) AS vowel_count;
 
 
 -- write a query to find consonant character in 'EDUCATION'
 SELECT LENGTH('EDUCATION')
        - (LENGTH('EDUCATION')
           - LENGTH(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE('EDUCATION','A','')
-                                                        ,'E','')
-                                                        ,'I','')
-                                                        ,'O','')
-                                                        ,'U','')))
-       AS consonant_count;
+                                                       ,'E','')
+                                                       ,'I','')
+                                                       ,'O','')
+                                                       ,'U','')))
+      AS consonant_count;
+
+

@@ -21,3 +21,5 @@ SELECT * FROM emp WHERE JOB = 'SALESMAN' or JOB = 'CLERK';
 
 -- write a query to display all the employee details where emp name is 'SMITH' and 'TURNER'
 SELECT * FROM emp WHERE ENAME = 'SMITH' or ENAME = 'TURNER';
+
+

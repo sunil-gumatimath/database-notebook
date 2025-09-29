@@ -33,3 +33,5 @@ FROM emp;
 -- COUNT(column) - Returns the number of non-null values in specified column
 SELECT COUNT(comm) AS employees_with_commission
 FROM emp;
+
+

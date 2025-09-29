@@ -40,3 +40,5 @@ SELECT emp.*,sal*12 FROM emp;
 
 -- write a query to alias/display employee as 'popstar'
 SELECT ename as pop_star FROM emp;
+
+

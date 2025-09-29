@@ -26,3 +26,5 @@ SELECT ROUND(4321.599,-2) as result FROM dual;
 -- TRUNC: Truncate number to specified decimal places
 -- Used to truncate the number to lowest value
 SELECT TRUNCATE(321.537,1) as result FROM dual;
+
+

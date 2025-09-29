@@ -151,3 +151,5 @@ SELECT CONCAT(SUBSTR('John Doe', 1, 1), SUBSTR('John Doe', INSTR('John Doe', ' '
 
 -- Clean up strings (remove extra spaces)
 SELECT TRIM(REPLACE('  Hello   World  ', '  ', ' ')) AS cleaned_string FROM dual;
+
+

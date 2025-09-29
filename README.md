@@ -1,5 +1,20 @@
 ## SQL Learning Repository
 
+Quick links: See the full project index at [`INDEX.md`](INDEX.md).
+
+### Table of Contents
+- [Repository structure](#repository-structure)
+  - [Core SQL concepts](#core-sql-concepts)
+  - [Database structure (DDL)](#database-structure-ddl)
+  - [Data operations](#data-operations)
+  - [Functions and expressions](#functions-and-expressions)
+  - [Query features](#query-features)
+  - [Advanced features](#advanced-features)
+  - [Practice and examples](#practice-and-examples)
+- [How to use](#how-to-use)
+  - [Quick start (MySQL example)](#quick-start-mysql-example)
+- [Contributing](#contributing)
+
 This repository is a practical collection of SQL examples, queries, and schema snippets intended as a learning notebook or quick reference. Content is grouped by topics like DDL, DML, DQL, functions, and operators.
 
 Use these files to learn, test, or adapt queries for small practice databases (e.g., MySQL, MariaDB, PostgreSQL, Oracle). Syntax notes are included where relevant. Many files are short notes with example statements rather than ready-to-run projects.
@@ -26,44 +41,39 @@ Use these files to learn, test, or adapt queries for small practice databases (e
 
 ### Functions and expressions
 - `functions/single_row/`
-  - `single_row_function_overview.sql` — Placeholder overview for upcoming single-row function notes
-  - `number_functions.sql` — Numeric functions (`ROUND()`, `TRUNC()`, `MOD()`, etc.)
-  - `date_functions.sql` — Date/time functions (`SYSDATE`, `CURRENT_DATE`, `EXTRACT()`, etc.)
-  - `general_functions.sql` — Miscellaneous single-row functions
-  - `character_functions.sql` — String functions (`UPPER()`, `LOWER()`, `SUBSTR()`, `LENGTH()`, etc.)
-  - `csrf_assignment.sql` — Practice assignments for character/string functions
+  - `examples/` — `character_functions.sql`, `number_functions.sql`, `date_functions.sql`, `general_functions.sql`
+  - `assignments/` — `csrf_assignment.sql`
+  - `notes/` — `single_row_function_overview.sql`
 - `functions/aggregate/`
-  - `aggregate_functions.sql` — Aggregate function examples (`COUNT`, `SUM`, `AVG`, `MIN`, `MAX`)
-  - `assignment.sql` — Practice assignments for aggregate functions
-  - `group_by.sql` — `GROUP BY` clause examples
-  - `having.sql` — `HAVING` clause examples
-  - `order_by.sql` — `ORDER BY` clause examples
+  - `examples/` — `aggregate_functions.sql`, `group_by.sql`, `having.sql`, `order_by.sql`
+  - `assignments/` — `assignment.sql`
 
 ### Query features
 - `operators/`
-  - `operators_examples.sql` — Comparison and logical operators (`IN`, `LIKE`, `BETWEEN`, `IS NULL`, etc.)
-  - `operators_assignment.sql` — Operator-focused practice assignments
+  - `examples/` — `operators_examples.sql`
+  - `assignments/` — `operators_assignment.sql`
 - `joins/` — Directory for JOIN-related examples (currently empty)
 - `indexes/` — Directory for index-related examples (currently empty)
 
 ### Advanced features
 - `transactions/` — Placeholder directory reserved for transaction management scripts (currently empty)
 - `subqueries/` — Nested query examples and practice
-  - `subquery.sql` — Basic subquery concepts and examples
-  - `assignment.sql` — Practice assignments for subqueries
+  - `examples/` — `subquery.sql`
+  - `assignments/` — `assignment.sql`
   - `query/` — Additional subquery examples
     - `subquery_01.sql`, `subquery_02.sql` — Progressive subquery practice
 
 ### Practice and examples
 - `queries/` — Practice query collections
-  - `assignment_01.sql`, `query_01.sql`, `query_02.sql` — Various practice queries with `WHERE` clauses, calculated columns, and filtering
+  - `examples/` — `query_01.sql`, `query_02.sql`
+  - `assignments/` — `assignment_01.sql`
 - `tables/` — Placeholder `SELECT` statements that reference sample `college` and `students` tables (schema definitions still TODO)
 
 ## How to use
 
 1. **Choose a database**: Pick a target RDBMS (MySQL, PostgreSQL, Oracle, etc.). Some syntax (e.g., `AUTO_INCREMENT`) varies by engine.
 2. **Load sample schema**: Load the sample schema from `ddl/sqlplus_table.sql` into a test database. This enables the examples in `queries/` and `dql/`.
-3. **Explore**: Open files in `basics/`, `dml/`, `dql/`, `functions/`, etc., to learn common patterns and try the snippets interactively.
+3. **Explore**: Use [`INDEX.md`](INDEX.md) for direct links to examples and assignments, or browse `basics/`, `dml/`, `dql/`, `functions/`, etc., to learn common patterns and try the snippets interactively.
 
 ### Quick start (MySQL example)
 
@@ -87,3 +97,13 @@ Contributions are welcome! Ideas:
 ---
 
 Repository maintained as a personal SQL learning notebook.
+
+## Conventions
+
+- Folders:
+  - `examples/`: runnable and reference examples for a topic
+  - `assignments/`: practice questions/tasks for a topic
+  - `notes/`: brief topic notes or overviews
+- Naming: use lowercase with underscores for file names; prefer descriptive names.
+- SQL dialects: examples may mix MySQL and Oracle syntax; verify for your RDBMS.
+- Adding new content: place it in the appropriate `examples/`, `assignments/`, or `notes/` subfolder and link it from the topic `README.md`. Also consider adding it to `INDEX.md`.

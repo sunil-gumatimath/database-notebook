@@ -113,3 +113,5 @@ FROM (
 -- - COALESCE is ANSI standard and works across all databases
 -- - CASE statements are more portable than IF functions
 -- ================================================
+
+

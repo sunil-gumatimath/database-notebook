@@ -125,3 +125,5 @@ WHERE COMM IS NOT NULL;
 
 SELECT 'HI' || ename || 'I LOVE MY SAL' || sal FROM emp
 WHERE SAL > 4000;
+
+

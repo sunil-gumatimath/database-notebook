@@ -69,3 +69,5 @@ WHERE (COMM IS NULL OR COMM = 0)
   AND YEAR(HIREDATE) IN (1981,1982,1983,1984,1986)
   AND MONTHNAME(HIREDATE) IN ('January','February','March','April','May',
                                'June','July','August','September','October','December');
+
+

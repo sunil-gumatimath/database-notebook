@@ -38,3 +38,5 @@ WHERE JOB != 'SALESMAN' and JOB != 'PRESIDENT';
 -- write a query to display emp details except 'SMITH','TURNER','MARTIN','BLAKE'
 SELECT * FROM emp
 WHERE ename != 'SMITH'AND ename != 'MARTIN' and ename != 'BLAKE' and ename != 'TURNER';
+
+

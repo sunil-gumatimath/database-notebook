@@ -75,3 +75,5 @@ ORDER BY JOB ASC;
 -- - NULL values are considered "smaller" than non-NULL values in ascending order
 -- - ORDER BY clause is typically used at the end of a SELECT statement
 -- - Can sort by column names, column positions, or expressions
+
+
