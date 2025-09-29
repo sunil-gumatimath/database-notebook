@@ -1,33 +1,46 @@
--- Assignment
+-- ============================================================================
+-- Assignment - Subqueries
+-- ============================================================================
 
+-- Display all records from emp and dept tables
 SELECT * FROM emp;
 SELECT * FROM dept;
 
--- Write a query to display 'SMITH' mgr name
-
-SELECT ename 
+-- ============================================================================
+-- Query 1: Display the name of SMITH's manager
+-- ============================================================================
+SELECT ename
 FROM emp
 WHERE empno = (
-    SELECT mgr 
+    SELECT mgr
     FROM emp
     WHERE ename = 'SMITH'
 );
 
--- Write a query to display SMITH location
+-- ============================================================================
+-- Query 2: Display SMITH's work location
+-- ============================================================================
 SELECT loc
 FROM dept
-WHERE deptno=(
+WHERE deptno = (
     SELECT deptno
     FROM emp
     WHERE ename = 'SMITH'
 );
 
--- “Write a query to display the details of managers for employees ‘SMITH’, ‘TURNER’, and ‘MARTIN’.”
-SELECT * 
+-- ============================================================================
+-- Query 3: Display details of managers for employees SMITH, TURNER, and MARTIN
+-- ============================================================================
+SELECT *
 FROM emp
-WHERE empno in (
+WHERE empno IN (
     SELECT mgr
     FROM emp
-    WHERE ename in ('SMITH','TURNER','MARTIN')
+    WHERE ename IN ('SMITH', 'TURNER', 'MARTIN')
 );
 
+-- ============================================================================
+-- Query 4: Display all employees who are managers
+-- ============================================================================
+SELECT * FROM emp
+WHERE empno IN (SELECT mgr FROM emp);
