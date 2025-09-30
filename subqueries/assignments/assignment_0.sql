@@ -10,3 +10,4 @@
 
 -- write a query to find employee details where employee working in dept administration and markiting
 
+-- write a query 
