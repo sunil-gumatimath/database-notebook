@@ -1,4 +1,19 @@
--- Write a query to find deot name for the employee 1st name id donald
+-- Employees
+SELECT * FROM employees;
+-- Departments
+SELECT * FROM departments;
+-- Jobs
+SELECT * FROM jobs;
+-- Locations
+SELECT * FROM locations;
+-- Countries
+SELECT * FROM countries;
+-- Regions
+SELECT * FROM regions;
+-- Job History
+SELECT * FROM job_history;
+
+-- Write a query to find dept name for the employee 1st name id donald
 
 -- write a query to find country-name where the employee first name is nancy
 
