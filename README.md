@@ -30,7 +30,7 @@ Use these files to learn, test, or adapt queries for small practice databases (e
 ### Database structure (DDL)
 - `ddl/`
   - `ddl_commands.sql` — `CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME` operations
-  - `sqlplus_table.sql` — Sample dataset (employee, department) with `INSERT` statements for practice
+  - `scott_table.sql` — SCOTT schema tables (emp, dept, bonus, salgrade) with sample data
 
 ### Data operations
 - `dml/`
@@ -73,7 +73,7 @@ Use these files to learn, test, or adapt queries for small practice databases (e
 ## How to use
 
 1. Choose a database: MySQL, PostgreSQL, Oracle, etc. Some syntax varies by engine.
-2. Load sample schema: `ddl/sqlplus_table.sql` into a test database.
+2. Load sample schema: `ddl/scott_table.sql` (SCOTT schema) or `ddl/hr_schema.sql` (HR schema) into a test database.
 3. Explore: Use [`INDEX.md`](INDEX.md) for direct links to examples and assignments, or browse the folders.
 
 ### Quick start (MySQL example)
@@ -84,7 +84,10 @@ mysql -u root -p -e "CREATE DATABASE sql_notebook; USE sql_notebook;"
 ```
 2. Load the sample tables:
 ```bash
-mysql -u root -p sql_notebook < ddl/sqlplus_table.sql
+# For SCOTT schema:
+mysql -u root -p sql_notebook < ddl/scott_table.sql
+# OR for HR schema:
+mysql -u root -p sql_notebook < ddl/hr_schema.sql
 ```
 3. Run practice queries from the `queries/` directory or experiment with the `dql/` examples.
 

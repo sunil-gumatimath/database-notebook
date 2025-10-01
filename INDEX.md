@@ -8,7 +8,7 @@ Quick links to all examples and assignments.
 
 ### DDL
 - [ddl/ddl_commands.sql](ddl/ddl_commands.sql)
-- [ddl/sqlplus_table.sql](ddl/sqlplus_table.sql)
+- [ddl/scott_table.sql](ddl/scott_table.sql)
 
 ### DML
 - [dml/dml_commands.sql](dml/dml_commands.sql)
@@ -61,7 +61,7 @@ Quick links to all examples and assignments.
   - [queries/assignments/assignment_01.sql](queries/assignments/assignment_01.sql)
 
 ### Tables
-- [tables/hr_table.sql](tables/hr_table.sql)
+- [ddl/hr_schema.sql](ddl/hr_schema.sql)
 
 ### Misc
 - [joins/README.md](joins/README.md)
