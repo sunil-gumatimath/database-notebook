@@ -14,6 +14,13 @@ SELECT * FROM regions;
 SELECT * FROM job_history;
 
 -- Write a query to find dept name for the employee 1st name id donald
+SELECT department_name 
+FROM departments
+WHERE department_id = (
+    SELECT department_id 
+    FROM employees
+    WHERE first_name = 'Donald'
+);
 
 -- write a query to find country-name where the employee first name is nancy
 
