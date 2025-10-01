@@ -68,7 +68,7 @@ Use these files to learn, test, or adapt queries for small practice databases (e
 - `queries/` — Practice query collections
   - `examples/` — `query_01.sql`, `query_02.sql`
   - `assignments/` — `assignment_01.sql`
-- `tables/` — Placeholder `SELECT` statements that reference sample `college` and `students` tables (schema definitions still TODO)
+- `tables/` — SCOTT schema tables (emp, dept, bonus, salgrade) for SQL practice examples
 
 ## How to use
 

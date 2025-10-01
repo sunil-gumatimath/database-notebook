@@ -1,12 +1,9 @@
 ## Tables
 
-Schemas and sample data related to practice tables.
+SCOTT schema tables and sample data for SQL practice.
 
 Contents:
-- `college.sql` — College-related table references (schema TBD).
-- `student.sql` — Student-related table references (schema TBD).
+- `hr_table.sql` — HR-related table references (schema TBD).
+- `scoot_table.sql` — SCOTT schema tables (emp, dept, bonus, salgrade) with sample data.
 
-Note: Actual schema and inserts live in `ddl/sqlplus_table.sql` for now.
-
-
-
+Note: SCOTT schema tables provide realistic examples for learning SQL queries and operations.

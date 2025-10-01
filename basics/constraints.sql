@@ -22,18 +22,13 @@
 -- Automatically assigns a value when none is provided.
 -- Common for status fields (Active, Pending).
 
-CREATE TABLE college(
-    college_id INT PRIMARY KEY,
-    college_name VARCHAR(100) NOT NULL,
-    location VARCHAR(100) DEFAULT 'unknown'
-);
-
-CREATE TABLE student(
-    student_id INT PRIMARY KEY,
-    sname VARCHAR(100) NOT NULL,
+-- Example table demonstrating various constraints:
+CREATE TABLE employee_projects(
+    empno INT PRIMARY KEY,
+    ename VARCHAR(100) NOT NULL,
     email VARCHAR(100) UNIQUE,
-    age INT CHECK(age >= 18),
-    is_active BOOLEAN DEFAULT 0
-    college_id INT,
-    FOREIGN KEY (college_id) REFERENCES college(college_id)
+    salary DECIMAL(7,2) CHECK(salary > 0),
+    status VARCHAR(20) DEFAULT 'active',
+    deptno INT,
+    FOREIGN KEY (deptno) REFERENCES dept(deptno)
 );

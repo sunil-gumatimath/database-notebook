@@ -5,20 +5,19 @@
 -- In SQL, only the SELECT statement is part of DQL.
 -- So while DDL defines structure and DML manipulates data, DQL is all about reading data.
 
-SELECT * FROM students;
-SELECT * FROM college;
+SELECT * FROM emp;
+SELECT * FROM dept;
 
-SELECT student_name,email FROM students;
+SELECT ename, sal FROM emp;
 
-SELECT * FROM students
-WHERE age > 20;
+SELECT * FROM emp
+WHERE sal > 2000;
 
+SELECT COUNT(*) FROM emp
+WHERE deptno = 20;
 
-SELECT COUNT(*) FROM students
-WHERE s_status = 'not active';
- 
-ALTER TABLE college
-RENAME COLUMN college_name TO name;
+ALTER TABLE dept
+ADD CONSTRAINT dept_name_unique UNIQUE (dname);
 
-ALTER TABLE students
-RENAME COLUMN s_status TO status;
+ALTER TABLE emp
+ADD CONSTRAINT emp_email_unique UNIQUE (ename);

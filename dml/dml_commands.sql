@@ -5,20 +5,17 @@
 -- Unlike DDL (which changes structure), DML adds, updates, deletes, or retrieves the data.
 
 -- INSERT → Add new records (rows).
-
-INSERT INTO student (student_id, student_name, email, age, s_status, college_id)
-VALUES (1, 'Sunil', 'sunil@mail.com', 25, 'not active', 101);
+INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, deptno)
+VALUES (8000, 'JOHNSON', 'ANALYST', 7566, '2023-01-15', 3500, 20);
 
 -- UPDATE → Modify existing records.
-
-UPDATE students
-SET s_status = 'not active'
-WHERE student_id = 1;
+UPDATE emp
+SET sal = sal + 500
+WHERE deptno = 20;
 
 -- DELETE → Remove records.
-
-DELETE FROM student
-WHERE student_id = 1;
+DELETE FROM emp
+WHERE empno = 8000;
 
 -- SELECT → Retrieve data from the table (technically part of DQL, but often grouped with DML).
-SELECT * FROM students;
+SELECT * FROM emp;

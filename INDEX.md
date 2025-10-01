@@ -61,12 +61,9 @@ Quick links to all examples and assignments.
   - [queries/assignments/assignment_01.sql](queries/assignments/assignment_01.sql)
 
 ### Tables
-- [tables/college.sql](tables/college.sql)
-- [tables/student.sql](tables/student.sql)
+- [tables/hr_table.sql](tables/hr_table.sql)
 
 ### Misc
 - [joins/README.md](joins/README.md)
 - [indexes/README.md](indexes/README.md)
 - [transactions/README.md](transactions/README.md)
-
-
