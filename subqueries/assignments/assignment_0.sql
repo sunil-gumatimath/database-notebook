@@ -63,5 +63,13 @@ WHERE job_id = (
 );
 
 -- write a query to find max,min salary given to a desigination where employee first_name is alysaa
+SELECT max(salary) as max_salary,
+       min(salary) as min_salary
+        FROM employees
+WHERE job_id = (
+    SELECT job_id
+    FROM employees
+    WHERE first_name = 'Alyssa'
+);
 
 -- write a query to find employee details where employee working in dept administration and markiting
