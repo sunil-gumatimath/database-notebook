@@ -144,3 +144,5 @@ WHERE department_id IN (
         )
     )
 );
+
+-- 10. Write a query to find country name for the region 'Asia', 'Middle East', 'Africa'
