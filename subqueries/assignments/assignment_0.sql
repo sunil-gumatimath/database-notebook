@@ -34,7 +34,7 @@ SELECT * FROM job_history;
 -- 1. Write a query to find department name for the employee with first name 'Donald'
 SELECT department_name
 FROM departments
-WHERE department_id = (
+WHERE department_id IN (
     SELECT department_id
     FROM employees
     WHERE first_name = 'Donald'
@@ -43,13 +43,13 @@ WHERE department_id = (
 -- 2. Write a query to find country name where the employee first name is 'Nancy'
 SELECT country_name
 FROM countries
-WHERE country_id = (
+WHERE country_id IN (
     SELECT country_id
     FROM locations
-    WHERE location_id = (
+    WHERE location_id IN (
         SELECT location_id
         FROM departments
-        WHERE department_id = (
+        WHERE department_id IN (
             SELECT department_id
             FROM employees
             WHERE first_name = 'Nancy'
@@ -81,15 +81,14 @@ WHERE region_id IN (
 -- 4. Write a query to find job title where the employee first name is 'Elizabeth'
 SELECT job_title
 FROM jobs
-WHERE job_id = (
+WHERE job_id IN (
     SELECT job_id
     FROM employees
     WHERE first_name = 'Elizabeth'
 );
 
 -- 5. Write a query to find max and min salary for the designation where employee first name is 'Alyssa'
-SELECT MAX(salary) AS max_salary,
-       MIN(salary) AS min_salary
+SELECT MAX(salary) AS max_salary, MIN(salary) AS min_salary
 FROM employees
 WHERE job_id IN (
     SELECT job_id
@@ -106,7 +105,7 @@ WHERE department_id IN (
     WHERE department_name IN ('Administration', 'Marketing')
 );
 
--- 7. Write a query to find employee details where the employees working in city 'SEATTLE' and 'TORONTO'
+-- 7. Write a query to find employee details where employees are working in city 'Seattle' and 'Toronto'
 SELECT *
 FROM employees
 WHERE department_id IN (
@@ -114,5 +113,18 @@ WHERE department_id IN (
     WHERE location_id IN (
         SELECT location_id FROM locations
         WHERE city IN ('Seattle','Toronto')
+    )
+);
+
+-- 8. Write a query to find employee details where employees are working in country 'United Kingdom', 'India', 'Germany'
+SELECT * FROM employees
+WHERE department_id IN (
+    SELECT department_id FROM departments
+    WHERE location_id IN (
+        SELECT location_id FROM locations
+        WHERE country_id IN (
+            SELECT country_id FROM countries
+            WHERE country_name IN ('United Kingdom','India','Germany')
+        )
     )
 );
