@@ -61,7 +61,7 @@ This repository is a practical collection of SQL examples, queries, and schema s
     - `number_functions.sql` — Numeric operations: ROUND, TRUNC, MOD, SQRT, POWER, ABS
     - `date_functions.sql` — Date/time handling: CURDATE, NOW, DATE_ADD, DATEDIFF, LAST_DAY, DATE_FORMAT
     - `general_functions.sql` — Conditional logic: IFNULL, COALESCE, NULLIF, CASE, IF statements
-  - `assignments/` — `csrf_assignment.sql` — Practice exercises for character, string, and function manipulation
+  - `assignments/` — `single_row_assignment.sql` — Practice exercises for character, string, and function manipulation
   - `notes/` — `single_row_function_overview.sql` — Quick reference guide
 - **`functions/aggregate/`** — Aggregate functions (one result per group)
   - `examples/`
@@ -69,7 +69,7 @@ This repository is a practical collection of SQL examples, queries, and schema s
     - `group_by.sql` — Grouping data by department, job, salary, and hire year
     - `having.sql` — Filtering grouped results with HAVING clause
     - `order_by.sql` — Sorting results in ascending/descending order
-  - `assignments/` — `assignment.sql` — Practice queries with aggregation and grouping
+  - `assignments/` — `aggregate_assignment.sql` — Practice queries with aggregation and grouping
 
 ### Query features
 - **`operators/`** — SQL operators for filtering and pattern matching
@@ -82,8 +82,8 @@ This repository is a practical collection of SQL examples, queries, and schema s
 - **`subqueries/`** — Nested queries for complex data retrieval
   - `examples/` — `subquery.sql` — Subquery concepts, types (single-row, multi-row), and execution order
   - `assignments/`
-    - `assignment_0.sql` — HR schema subqueries: nested queries across regions, countries, locations, departments, and employees
-    - `assignment.sql` — SCOTT schema subqueries: manager relationships, location lookups, and salary comparisons
+    - `subquery_assignment_0.sql` — HR schema subqueries: nested queries across regions, countries, locations, departments, and employees
+    - `subquery_assignment.sql` — SCOTT schema subqueries: manager relationships, location lookups, and salary comparisons
   - `query/`
     - `subquery_01.sql` — Basic single-row subqueries for manager and employee relationships
     - `subquery_02.sql` — Salary comparisons and hire date queries with subqueries
@@ -94,7 +94,7 @@ This repository is a practical collection of SQL examples, queries, and schema s
   - `examples/`
     - `query_01.sql` — Basic SELECT queries with WHERE, filtering, and simple conditions
     - `query_02.sql` — Advanced filtering with complex conditions, date/month filtering, pattern matching
-  - `assignments/` — `assignment_01.sql` — Calculated columns, annual salary, bonuses, and aliasing exercises
+  - `assignments/` — `query_assignment_01.sql` — Calculated columns, annual salary, bonuses, and aliasing exercises
 - **`tables/`** — Table reference documentation and schema information
 
 ## Sample schemas
