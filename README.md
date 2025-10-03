@@ -2,7 +2,7 @@
 
 A comprehensive SQL learning resource with hands-on examples, practice queries, and schema definitions for mastering database operations.
 
-Quick links: See the full project index at [`INDEX.md`](INDEX.md).
+**Quick links:** See the full project index at [`INDEX.md`](INDEX.md).
 
 ### Table of Contents
 - [About](#about)
@@ -16,7 +16,6 @@ Quick links: See the full project index at [`INDEX.md`](INDEX.md).
   - [Practice and examples](#practice-and-examples)
 - [Sample schemas](#sample-schemas)
 - [How to use](#how-to-use)
-  - [Quick start (MySQL example)](#quick-start-mysql-example)
 - [Contributing](#contributing)
 - [Conventions](#conventions)
 
@@ -25,11 +24,14 @@ Quick links: See the full project index at [`INDEX.md`](INDEX.md).
 This repository is a practical collection of SQL examples, queries, and schema snippets intended as a learning notebook or quick reference. Content is organized by SQL concepts (DDL, DML, DQL) and features (functions, operators, subqueries, etc.).
 
 **What you'll find:**
-- 30+ SQL files with examples and practice queries
-- Two complete sample schemas (SCOTT and HR) with realistic data
-- Progressive learning path from basics to advanced topics
-- Real-world query patterns and problem-solving approaches
-- Hands-on assignments for skill reinforcement
+- **30+ SQL files** with examples and practice queries covering all major SQL topics
+- **Two complete sample schemas** (SCOTT and HR) with realistic data
+  - SCOTT: 14 employees, 4 departments (classic Oracle training schema)
+  - HR: 107 employees, 27 departments, 23 locations, 25 countries (enterprise-level)
+- **Progressive learning path** from basics to advanced topics
+- **Real-world query patterns** and problem-solving approaches
+- **Hands-on assignments** for skill reinforcement with detailed solutions
+- **Function libraries** covering character, numeric, date, and aggregate functions
 
 **Database compatibility:** Examples primarily use MySQL/MariaDB syntax with notes for Oracle and PostgreSQL where syntax differs.
 
@@ -37,103 +39,242 @@ This repository is a practical collection of SQL examples, queries, and schema s
 
 ### Core SQL concepts
 - **`basics/`** — Foundation concepts for database design
-  - `data_types.sql` — Comprehensive data types guide: CHAR, VARCHAR, INT, DATE, TIMESTAMP, DECIMAL, BOOLEAN, TEXT, FLOAT, TIME with CREATE TABLE examples
-  - `constraints.sql` — Essential constraints with practical examples: NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, CHECK, DEFAULT
+  - [`data_types.sql`](basics/data_types.sql) — Comprehensive data types guide with CREATE TABLE examples
+    - Character types: CHAR (fixed-length), VARCHAR (variable-length, up to 2000 bytes)
+    - Numeric types: INT, DECIMAL, FLOAT
+    - Date/Time types: DATE (7 bytes), TIMESTAMP, TIME
+    - Other types: BOOLEAN/BOOL, TEXT (large text data)
+  - [`constraints.sql`](basics/constraints.sql) — Essential constraints with practical examples
+    - NOT NULL: Ensures columns always have values
+    - UNIQUE: Prevents duplicate values (email, username)
+    - PRIMARY KEY: Uniquely identifies records
+    - FOREIGN KEY: Maintains relationships between tables
+    - CHECK: Validates input values (e.g., salary > 0)
+    - DEFAULT: Auto-assigns values when none provided
 
 ### Database structure (DDL)
 - **`ddl/`** — Data Definition Language for schema management
-  - `ddl_commands.sql` — Core DDL operations: CREATE, ALTER, DROP, TRUNCATE, RENAME with examples
-  - `scott_table.sql` — Classic SCOTT schema (emp, dept, bonus, salgrade) with 14 employees and 4 departments
-  - `hr_schema.sql` — Enterprise HR schema (regions, countries, locations, departments, jobs, employees, job_history) with 100+ employees across 27 departments
+  - [`ddl_commands.sql`](ddl/ddl_commands.sql) — Core DDL operations with examples
+    - CREATE: Create new database objects (tables, indexes)
+    - ALTER: Modify existing objects (add/drop columns)
+    - DROP: Delete objects permanently
+    - TRUNCATE: Remove all rows but keep structure
+    - RENAME: Change object names
+    - Note: DDL is auto-committed (cannot be rolled back)
+  - [`scott_table.sql`](ddl/scott_table.sql) — Classic SCOTT schema (Oracle training schema)
+    - **EMP** (14 employees): empno, ename, job, mgr, hiredate, sal, comm, deptno
+    - **DEPT** (4 departments): deptno, dname, loc
+    - **SALGRADE** (5 grades): grade, losal, hisal
+    - **BONUS** (4 records): ename, job, sal, comm
+  - [`hr_schema.sql`](ddl/hr_schema.sql) — Enterprise HR schema (complete organizational hierarchy)
+    - **REGIONS** (4 regions): region_id, region_name
+    - **COUNTRIES** (25 countries): country_id, country_name, region_id
+    - **LOCATIONS** (23 locations): location_id, street_address, city, state_province, country_id
+    - **DEPARTMENTS** (27 departments): department_id, department_name, manager_id, location_id
+    - **JOBS** (19 job titles): job_id, job_title, min_salary, max_salary
+    - **EMPLOYEES** (107 employees): employee_id, first_name, last_name, email, phone, hire_date, job_id, salary, commission_pct, manager_id, department_id
+    - **JOB_HISTORY** (10 records): employee_id, start_date, end_date, job_id, department_id
 
 ### Data operations
 - **`dml/`** — Data Manipulation Language for modifying data
-  - `dml_commands.sql` — INSERT, UPDATE, DELETE operations with practical examples
+  - [`dml_commands.sql`](dml/dml_commands.sql) — Row-level data operations
+    - INSERT: Add new records to tables
+    - UPDATE: Modify existing records with SET clause
+    - DELETE: Remove records based on conditions
+    - Note: DML focuses on data, not structure
 - **`dql/`** — Data Query Language for retrieving data
-  - `dql_commands.sql` — SELECT statements with WHERE clauses, COUNT, and filtering techniques
-  - `select_alias.sql` — Column and table aliasing for readable query results
-  - `select_distinct.sql` — DISTINCT keyword for removing duplicate rows
+  - [`dql_commands.sql`](dql/dql_commands.sql) — SELECT statements and basic queries
+    - SELECT with projections: Retrieve specific columns
+    - WHERE clause: Filter rows based on conditions
+    - COUNT(): Count records
+    - UNIQUE constraints with ALTER TABLE
+  - [`select_alias.sql`](dql/select_alias.sql) — Column and table aliasing
+    - AS keyword: Give alternative names to columns
+    - Improves readability of query results
+  - [`select_distinct.sql`](dql/select_distinct.sql) — Remove duplicates
+    - DISTINCT: Get unique values from result sets
+    - Applies to all selected columns together
 
 ### Functions and expressions
 - **`functions/single_row/`** — Single-row functions (one result per row)
-  - `examples/`
-    - `character_functions.sql` — String manipulation: UPPER, LOWER, SUBSTR, CONCAT, REPLACE, TRIM, REVERSE, LENGTH, INSTR
-    - `number_functions.sql` — Numeric operations: ROUND, TRUNC, MOD, SQRT, POWER, ABS
-    - `date_functions.sql` — Date/time handling: CURDATE, NOW, DATE_ADD, DATEDIFF, LAST_DAY, DATE_FORMAT
-    - `general_functions.sql` — Conditional logic: IFNULL, COALESCE, NULLIF, CASE, IF statements
-  - `assignments/` — `single_row_assignment.sql` — Practice exercises for character, string, and function manipulation
-  - `notes/` — `single_row_function_overview.sql` — Quick reference guide
+  - **`examples/`**
+    - [`character_functions.sql`](functions/single_row/examples/character_functions.sql) — String manipulation (40+ examples)
+      - Case conversion: UPPER, LOWER, INITCAP alternative
+      - Substring operations: SUBSTR, LEFT
+      - Position finding: INSTR, LOCATE
+      - Concatenation: CONCAT with multiple strings
+      - Replacement: REPLACE, remove characters
+      - Trimming: TRIM (BOTH/LEADING/TRAILING)
+      - Length and counting: LENGTH, character counting
+      - String reversal: REVERSE
+    - [`number_functions.sql`](functions/single_row/examples/number_functions.sql) — Numeric operations
+      - MOD: Remainder calculations
+      - SQRT: Square root values
+      - POWER: Exponential calculations
+      - ABS: Absolute values
+      - ROUND: Round to nearest value with precision
+      - TRUNCATE: Truncate to decimal places
+    - [`date_functions.sql`](functions/single_row/examples/date_functions.sql) — Date/time handling (20+ functions)
+      - Current date/time: CURDATE, NOW, SYSDATE, CURRENT_TIMESTAMP
+      - Date arithmetic: ADDDATE, DATE_ADD, DATEDIFF, TIMESTAMPDIFF
+      - Date parts: DAYNAME, DAYOFWEEK, LAST_DAY
+      - Formatting: DATE_FORMAT with custom formats
+    - [`general_functions.sql`](functions/single_row/examples/general_functions.sql) — Conditional logic
+      - NULL handling: IFNULL, COALESCE, NULLIF
+      - Conditional: CASE statements, IF
+  - **`assignments/`** — [`single_row_assignment.sql`](functions/single_row/assignments/single_row_assignment.sql)
+    - Practice: Annual/quarterly salary calculations, bonus calculations, aliasing
+  - **`notes/`** — [`single_row_function_overview.sql`](functions/single_row/notes/single_row_function_overview.sql)
+    - Quick reference guide and syntax overview
 - **`functions/aggregate/`** — Aggregate functions (one result per group)
-  - `examples/`
-    - `aggregate_functions.sql` — COUNT, SUM, AVG, MIN, MAX with employee data
-    - `group_by.sql` — Grouping data by department, job, salary, and hire year
-    - `having.sql` — Filtering grouped results with HAVING clause
-    - `order_by.sql` — Sorting results in ascending/descending order
-  - `assignments/` — `aggregate_assignment.sql` — Practice queries with aggregation and grouping
+  - **`examples/`**
+    - [`aggregate_functions.sql`](functions/aggregate/examples/aggregate_functions.sql) — Core aggregate functions
+      - MAX: Highest value
+      - MIN: Lowest value
+      - SUM: Total of values
+      - AVG: Average value
+      - COUNT: Count rows/non-null values
+    - [`group_by.sql`](functions/aggregate/examples/group_by.sql) — Grouping data
+      - Group by department, job, salary
+      - Group by hire year using YEAR()
+      - Execution order: FROM → WHERE → GROUP BY → SELECT
+    - [`having.sql`](functions/aggregate/examples/having.sql) — Filter grouped results (12+ examples)
+      - HAVING with COUNT, SUM, AVG, MIN, MAX
+      - Filter groups with conditions
+      - Execution order: FROM → WHERE → GROUP BY → HAVING → SELECT
+    - [`order_by.sql`](functions/aggregate/examples/order_by.sql) — Sort results
+      - ORDER BY ASC/DESC
+  - **`assignments/`** — [`aggregate_assignment.sql`](functions/aggregate/assignments/aggregate_assignment.sql)
+    - Practice: Aggregations with filtering, grouping exercises
 
 ### Query features
 - **`operators/`** — SQL operators for filtering and pattern matching
-  - `examples/` — `operators_examples.sql` — IN, NOT IN, LIKE, BETWEEN, pattern matching with wildcards (%, _)
-  - `assignments/` — `operators_assignment.sql` — Complex filtering exercises with multiple conditions
-- **`joins/`** — JOIN operations for combining tables (placeholder for future content)
-- **`indexes/`** — Index strategies for performance optimization (placeholder for future content)
+  - **`examples/`** — [`operators_examples.sql`](operators/examples/operators_examples.sql) — Complex filtering patterns (10+ examples)
+    - IN operator: Filter by multiple values
+    - NOT IN: Exclude values
+    - LIKE: Pattern matching with wildcards (%, _)
+    - REGEXP: Regular expression matching for vowels/consonants
+    - BETWEEN: Range filtering
+    - Date filtering: MONTHNAME, YEAR functions
+    - Combined conditions: Multiple ANDs and ORs
+    - NULL checking: IS NULL
+  - **`assignments/`** — [`operators_assignment.sql`](operators/assignments/operators_assignment.sql)
+    - Practice: Complex multi-condition queries
+- **`joins/`** — JOIN operations for combining tables
+  - Status: Placeholder for future content (INNER, LEFT, RIGHT, FULL OUTER, CROSS, SELF joins)
+- **`indexes/`** — Index strategies for performance optimization
+  - Status: Placeholder for future content (CREATE INDEX, composite indexes, explain plans)
 
 ### Advanced features
 - **`subqueries/`** — Nested queries for complex data retrieval
-  - `examples/` — `subquery.sql` — Subquery concepts, types (single-row, multi-row), and execution order
-  - `assignments/`
-    - `subquery_assignment_0.sql` — HR schema subqueries: nested queries across regions, countries, locations, departments, and employees
-    - `subquery_assignment.sql` — SCOTT schema subqueries: manager relationships, location lookups, and salary comparisons
-  - `query/`
-    - `subquery_01.sql` — Basic single-row subqueries for manager and employee relationships
-    - `subquery_02.sql` — Salary comparisons and hire date queries with subqueries
-- **`transactions/`** — Transaction management and ACID properties (placeholder for future content)
+  - **`examples/`** — [`subquery.sql`](subqueries/examples/subquery.sql) — Subquery fundamentals
+    - Definition: Query nested inside another query (inner query)
+    - Execution order: Inner query executes first, result passed to outer query
+    - Types: Single-row, multi-row, multi-column, correlated, scalar subqueries
+    - Use cases: Unknown data, multiple tables, filtered aggregations
+  - **`assignments/`**
+    - [`assignment_0.sql`](subqueries/assignments/assignment_0.sql) — HR schema subqueries (10+ nested queries)
+      - Find department names for employees
+      - Multi-level nesting: employee → department → location → country → region
+      - Filter by cities, countries, regions
+      - Query job titles and salary ranges
+    - [`assignment_1.sql`](subqueries/assignments/assignment_1.sql) — Additional HR subqueries
+      - City queries for countries (Australia, USA)
+      - Department queries for cities
+    - [`subquery_assignment.sql`](subqueries/assignments/subquery_assignment.sql) — SCOTT schema exercises
+    - [`subquery_assignment_0.sql`](subqueries/assignments/subquery_assignment_0.sql) — More practice queries
+  - **`query/`** — Progressive subquery examples
+    - [`subquery_01.sql`](subqueries/query/subquery_01.sql) — Basic single-row subqueries
+    - [`subquery_02.sql`](subqueries/query/subquery_02.sql) — Advanced with IN, ANY, ALL operators
+- **`transactions/`** — Transaction management and ACID properties
+  - Status: Placeholder for future content (BEGIN, COMMIT, ROLLBACK, savepoints, isolation levels)
 
 ### Practice and examples
 - **`queries/`** — Comprehensive practice query collections
-  - `examples/`
-    - `query_01.sql` — Basic SELECT queries with WHERE, filtering, and simple conditions
-    - `query_02.sql` — Advanced filtering with complex conditions, date/month filtering, pattern matching
-  - `assignments/` — `query_assignment_01.sql` — Calculated columns, annual salary, bonuses, and aliasing exercises
-- **`tables/`** — Table reference documentation and schema information
+  - **`examples/`**
+    - [`query_01.sql`](queries/examples/query_01.sql) — Basic SELECT queries
+      - Simple WHERE conditions
+      - Filtering by single values
+      - OR conditions for multiple criteria
+    - [`query_02.sql`](queries/examples/query_02.sql) — Advanced filtering (10+ complex queries)
+      - Date filtering: MONTHNAME, YEAR functions
+      - Pattern matching: LIKE with wildcards, REGEXP
+      - Complex conditions: Multiple ANDs, ORs, NOT IN
+      - BETWEEN for range queries
+      - Vowel/consonant filtering with regular expressions
+  - **`assignments/`** — [`query_assignment_01.sql`](queries/assignments/query_assignment_01.sql)
+    - Calculated columns: Annual/quarterly/half-term salary
+    - Bonus calculations: Salary + 1000, 10% increment
+    - Column aliasing: AS keyword
+    - Combined queries with multiple columns
+- **`tables/`** — Table reference documentation
+  - Note: Schema definitions located in `ddl/` folder (scott_table.sql, hr_schema.sql)
 
 ## Sample schemas
 
-This repository includes two complete database schemas with sample data:
+This repository includes two complete database schemas with sample data for practice:
 
-### SCOTT Schema (`ddl/scott_table.sql`)
-Classic Oracle training schema with employee data:
-- **EMP** (14 employees) — Employee information with job, salary, commission, manager, hire date
-- **DEPT** (4 departments) — Department names and locations
-- **SALGRADE** (5 grades) — Salary grade ranges
-- **BONUS** (4 records) — Employee bonus information
+### SCOTT Schema ([`ddl/scott_table.sql`](ddl/scott_table.sql))
+Classic Oracle training schema - perfect for learning SQL fundamentals
 
-Use for: Basic SQL practice, joins, subqueries, aggregations
+**Tables:**
+- **EMP** (14 employees)
+  - Columns: EMPNO (PK), ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO (FK)
+  - Jobs: CLERK, SALESMAN, MANAGER, ANALYST, PRESIDENT
+  - Sample data: SMITH, ALLEN, WARD, JONES, MARTIN, BLAKE, CLARK, SCOTT, KING, TURNER, ADAMS, JAMES, FORD, MILLER
+- **DEPT** (4 departments)
+  - Columns: DEPTNO (PK), DNAME, LOC
+  - Departments: ACCOUNTING (New York), RESEARCH (Dallas), SALES (Chicago), OPERATIONS (Boston)
+- **SALGRADE** (5 grades)
+  - Columns: GRADE, LOSAL, HISAL
+  - Salary ranges: 700-1200, 1201-1400, 1401-2000, 2001-3000, 3001-9999
+- **BONUS** (4 records)
+  - Columns: ENAME, JOB, SAL, COMM
+  - Tracks bonus information for salesmen
 
-### HR Schema (`ddl/hr_schema.sql`)
-Enterprise-level HR database with organizational hierarchy:
-- **REGIONS** (4 regions) — Global regions
-- **COUNTRIES** (25 countries) — Country information by region
-- **LOCATIONS** (23 locations) — Office locations with addresses
-- **DEPARTMENTS** (27 departments) — Organizational departments
-- **JOBS** (19 job titles) — Job definitions with salary ranges
-- **EMPLOYEES** (107 employees) — Complete employee records with managers and departments
-- **JOB_HISTORY** (10 records) — Employee job change history
+**Use for:** Basic SQL practice, simple joins, subqueries, aggregations, GROUP BY, HAVING
 
-Use for: Complex queries, nested subqueries, multi-table joins, hierarchical data
+### HR Schema ([`ddl/hr_schema.sql`](ddl/hr_schema.sql))
+Enterprise-level HR database with complete organizational hierarchy
+
+**Tables:**
+- **REGIONS** (4 regions)
+  - Columns: region_id (PK), region_name
+  - Regions: Europe, Americas, Asia, Middle East and Africa
+- **COUNTRIES** (25 countries)
+  - Columns: country_id (PK), country_name, region_id (FK)
+  - Countries: US, UK, Canada, Germany, India, Australia, Brazil, etc.
+- **LOCATIONS** (23 locations)
+  - Columns: location_id (PK), street_address, postal_code, city, state_province, country_id (FK)
+  - Cities: Seattle, Toronto, London, Munich, Tokyo, Sydney, etc.
+- **DEPARTMENTS** (27 departments)
+  - Columns: department_id (PK), department_name, manager_id, location_id (FK)
+  - Examples: Administration, Marketing, Purchasing, Human Resources, Shipping, IT, Sales, Finance
+- **JOBS** (19 job titles)
+  - Columns: job_id (PK), job_title, min_salary, max_salary
+  - Examples: President, Manager, Programmer, Clerk, Representative
+- **EMPLOYEES** (107 employees)
+  - Columns: employee_id (PK), first_name, last_name, email, phone_number, hire_date, job_id (FK), salary, commission_pct, manager_id (FK), department_id (FK)
+  - Complete employee hierarchy with managers
+- **JOB_HISTORY** (10 records)
+  - Columns: employee_id (PK/FK), start_date (PK), end_date, job_id (FK), department_id (FK)
+  - Tracks employee job change history
+
+**Use for:** Complex queries, nested subqueries (4-5 levels deep), multi-table joins, hierarchical data, self-joins, advanced filtering
 
 ## How to use
 
 ### Getting started
 
-1. **Choose your database system:** MySQL, MariaDB, PostgreSQL, Oracle (most examples use MySQL syntax)
+1. **Choose your database system:** MySQL, MariaDB, PostgreSQL, Oracle (most examples use MySQL/MariaDB syntax)
 2. **Load a sample schema:** Start with SCOTT (simpler) or HR (more complex) from `ddl/` directory
 3. **Follow the learning path:** Progress from basics → DQL → functions → operators → subqueries
 4. **Practice with assignments:** Each topic includes practice exercises to reinforce learning
 5. **Use the index:** See [`INDEX.md`](INDEX.md) for quick navigation to all examples and assignments
 
-### Quick start (MySQL/MariaDB)
+### Quick start
 
+**MySQL/MariaDB:**
 ```bash
 # 1. Create a test database
 mysql -u root -p -e "CREATE DATABASE sql_practice;"
@@ -146,19 +287,55 @@ mysql -u root -p sql_practice < ddl/hr_schema.sql
 
 # 3. Connect and start practicing
 mysql -u root -p sql_practice
+
+# 4. Test your setup
+mysql> SELECT * FROM emp;
+mysql> SELECT * FROM dept;
+```
+
+**PostgreSQL:**
+```bash
+# 1. Create database and connect
+psql -U postgres
+CREATE DATABASE sql_practice;
+\c sql_practice
+
+# 2. Load schema (adjust DROP IF EXISTS syntax if needed)
+\i ddl/scott_table.sql
+
+# 3. Query the tables
+SELECT * FROM emp;
 ```
 
 ### Suggested learning path
 
-1. **Foundation** → `basics/` (data types, constraints)
-2. **Schema creation** → `ddl/` (CREATE, ALTER, DROP)
-3. **Data manipulation** → `dml/` (INSERT, UPDATE, DELETE)
-4. **Querying basics** → `dql/` (SELECT, WHERE, DISTINCT)
-5. **Operators** → `operators/` (IN, LIKE, BETWEEN)
-6. **Single-row functions** → `functions/single_row/` (string, number, date functions)
-7. **Aggregate functions** → `functions/aggregate/` (COUNT, SUM, GROUP BY, HAVING)
-8. **Advanced queries** → `subqueries/` (nested queries)
-9. **Practice integration** → `queries/` (comprehensive exercises)
+**Beginner track (4-6 weeks):**
+1. **Foundation** → [`basics/`](basics/) (data types, constraints)
+2. **Schema creation** → [`ddl/`](ddl/) (CREATE, ALTER, DROP) + Load SCOTT schema
+3. **Querying basics** → [`dql/`](dql/) (SELECT, WHERE, DISTINCT, aliasing)
+4. **Simple queries** → [`queries/examples/query_01.sql`](queries/examples/query_01.sql)
+5. **Operators** → [`operators/`](operators/) (IN, LIKE, BETWEEN, pattern matching)
+6. **Data manipulation** → [`dml/`](dml/) (INSERT, UPDATE, DELETE)
+7. **Single-row functions** → [`functions/single_row/`](functions/single_row/) (string, number, date)
+8. **Aggregate functions** → [`functions/aggregate/`](functions/aggregate/) (COUNT, SUM, GROUP BY, HAVING)
+9. **Practice** → Complete all assignments in each folder
+
+**Intermediate track (2-3 weeks):**
+1. **Advanced filtering** → [`queries/examples/query_02.sql`](queries/examples/query_02.sql) + [`operators/examples/`](operators/examples/)
+2. **Complex aggregations** → [`functions/aggregate/examples/having.sql`](functions/aggregate/examples/having.sql)
+3. **Subqueries basics** → [`subqueries/examples/subquery.sql`](subqueries/examples/subquery.sql)
+4. **Subquery practice** → [`subqueries/query/`](subqueries/query/) (progressive examples)
+5. **Load HR schema** → [`ddl/hr_schema.sql`](ddl/hr_schema.sql)
+6. **Multi-level subqueries** → [`subqueries/assignments/`](subqueries/assignments/)
+7. **Complete all assignments** → Test knowledge with comprehensive exercises
+
+**Advanced track (future content):**
+1. **Joins** → INNER, LEFT, RIGHT, FULL OUTER, CROSS, SELF joins
+2. **Window functions** → ROW_NUMBER, RANK, DENSE_RANK, LEAD, LAG
+3. **Indexes and optimization** → CREATE INDEX, explain plans, performance tuning
+4. **Transactions** → BEGIN, COMMIT, ROLLBACK, isolation levels
+5. **Stored procedures and functions** → CREATE PROCEDURE, CREATE FUNCTION
+6. **Triggers and views** → CREATE TRIGGER, CREATE VIEW
 
 ## Contributing
 
