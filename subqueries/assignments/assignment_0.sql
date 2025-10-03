@@ -105,3 +105,14 @@ WHERE department_id IN (
     FROM departments
     WHERE department_name IN ('Administration', 'Marketing')
 );
+
+-- 7. Write a query to find employee details where the employees working in city 'SEATTLE' and 'TORONTO'
+SELECT *
+FROM employees
+WHERE department_id IN (
+    SELECT department_id FROM departments
+    WHERE location_id IN (
+        SELECT location_id FROM locations
+        WHERE city IN ('Seattle','Toronto')
+    )
+);
