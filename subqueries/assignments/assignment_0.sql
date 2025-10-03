@@ -151,4 +151,3 @@ WHERE region_id IN (
     SELECT region_id FROM regions
     WHERE region_name IN ('Asia','Middle East and Africa')
 );
-
