@@ -66,10 +66,15 @@ WHERE job_id = (
 SELECT max(salary) as max_salary,
        min(salary) as min_salary
         FROM employees
-WHERE job_id = (
+WHERE job_id IN (
     SELECT job_id
     FROM employees
     WHERE first_name = 'Alyssa'
 );
 
 -- write a query to find employee details where employee working in dept administration and markiting
+SELECT * FROM employees
+WHERE department_id IN (
+    SELECT department_id FROM departments
+    WHERE department_name IN ('Administration','Marketing')
+);
