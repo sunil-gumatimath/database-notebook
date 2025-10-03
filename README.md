@@ -31,6 +31,7 @@ Use these files to learn, test, or adapt queries for small practice databases (e
 - `ddl/`
   - `ddl_commands.sql` — `CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME` operations
   - `scott_table.sql` — SCOTT schema tables (emp, dept, bonus, salgrade) with sample data
+  - `hr_schema.sql` — HR schema tables (regions, countries, locations, departments, jobs, employees, job_history) with comprehensive sample data
 
 ### Data operations
 - `dml/`
@@ -53,14 +54,14 @@ Use these files to learn, test, or adapt queries for small practice databases (e
 - `operators/`
   - `examples/` — `operators_examples.sql`
   - `assignments/` — `operators_assignment.sql`
-- `joins/` — Directory for JOIN-related examples (currently empty)
-- `indexes/` — Directory for index-related examples (currently empty)
+- `joins/` — Directory for JOIN-related examples and documentation
+- `indexes/` — Directory for index-related examples and documentation
 
 ### Advanced features
 - `transactions/` — Placeholder directory reserved for transaction management scripts (currently empty)
 - `subqueries/` — Nested query examples and practice
   - `examples/` — `subquery.sql`
-  - `assignments/` — `assignment.sql`
+  - `assignments/` — `assignment_0.sql`, `assignment.sql`
   - `query/` — Additional subquery examples
     - `subquery_01.sql`, `subquery_02.sql` — Progressive subquery practice
 
@@ -68,7 +69,7 @@ Use these files to learn, test, or adapt queries for small practice databases (e
 - `queries/` — Practice query collections
   - `examples/` — `query_01.sql`, `query_02.sql`
   - `assignments/` — `assignment_01.sql`
-- `tables/` — SCOTT schema tables (emp, dept, bonus, salgrade) for SQL practice examples
+- `tables/` — Directory for table-related documentation and reference material
 
 ## How to use
 
