@@ -145,4 +145,10 @@ WHERE department_id IN (
     )
 );
 
--- 10. Write a query to find country name for the region 'Asia', 'Middle East', 'Africa'
+-- 10. Write a query to find country name for the region 'Asia', 'Middle East and Africa'
+SELECT country_name FROM countries
+WHERE region_id IN (
+    SELECT region_id FROM regions
+    WHERE region_name IN ('Asia','Middle East and Africa')
+);
+
