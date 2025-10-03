@@ -23,8 +23,25 @@ WHERE department_id = (
 );
 
 -- write a query to find country-name where the employee first name is nancy
+SELECT country_name
+FROM countries
+WHERE country_id = (
+    SELECT country_id
+    FROM locations
+    WHERE location_id = (
+        SELECT location_id
+        FROM departments
+        WHERE department_id = (
+            SELECT department_id
+            FROM employees
+            WHERE first_name = 'Nancy'
+        )
+    )
+);
+ 
 
 -- write a query to find regin-name where the employee first_name is julia
+
 
 -- write a query to find job-title where the employee firstname is elizabeth
 
