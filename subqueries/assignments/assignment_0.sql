@@ -55,8 +55,12 @@ WHERE region_id IN (
     )
 );
 
-
--- write a query to find job-title where the employee firstname is elizabeth
+-- write a query to find job-title where the employee firstname is Elizabeth
+SELECT job_title FROM jobs
+WHERE job_id = (
+    SELECT job_id FROM employees
+    WHERE first_name = 'Elizabeth'
+);
 
 -- write a query to find max,min salary given to a desigination where employee first_name is alysaa
 
