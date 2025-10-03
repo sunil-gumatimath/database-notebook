@@ -38,9 +38,22 @@ WHERE country_id = (
         )
     )
 );
- 
 
 -- write a query to find regin-name where the employee first_name is julia
+SELECT region_name FROM regions
+WHERE region_id IN (
+    SELECT region_id FROM countries
+    WHERE country_id IN (
+        SELECT country_id FROM locations
+        WHERE location_id IN (
+            SELECT location_id FROM departments
+            WHERE department_id IN (
+                SELECT department_id FROM employees
+                WHERE first_name = 'JULIA'
+            )
+        )
+    )
+);
 
 
 -- write a query to find job-title where the employee firstname is elizabeth
@@ -48,5 +61,3 @@ WHERE country_id = (
 -- write a query to find max,min salary given to a desigination where employee first_name is alysaa
 
 -- write a query to find employee details where employee working in dept administration and markiting
-
--- write a query 
