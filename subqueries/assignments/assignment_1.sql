@@ -5,4 +5,9 @@ WHERE country_id IN (
     WHERE country_name IN ('Australia','United States of America')
 );
 
--- 
+-- 12. Write a query to display dept names where the city is 'Roma','South San Francisco','Southlake','Seattle'
+SELECT department_name FROM departments
+WHERE location_id IN (
+    SELECT location_id FROM locations
+    WHERE city IN ('Roma','South San Francisco','Southlake','Seattle')
+);
