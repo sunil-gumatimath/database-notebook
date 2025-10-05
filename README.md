@@ -1,4 +1,4 @@
-# SQL Learning Repository 111
+# SQL Learning Repository
 
 A comprehensive SQL learning resource with hands-on examples, practice queries, and schema definitions for mastering database operations.
 
