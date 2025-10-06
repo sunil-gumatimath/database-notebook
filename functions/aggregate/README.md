@@ -9,7 +9,7 @@ Contents:
   - [`examples/having.sql`](examples/having.sql) — Filtering group results.
   - [`examples/order_by.sql`](examples/order_by.sql) — Ordering final results.
 - assignments:
-  - [`assignments/assignment.sql`](assignments/assignment.sql) — Practice tasks.
+  - [`assignments/aggregate_assignment.sql`](assignments/aggregate_assignment.sql) — Practice tasks.
 
 Suggested order: aggregate functions → GROUP BY → HAVING → ORDER BY → assignment.
 

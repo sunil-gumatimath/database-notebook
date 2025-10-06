@@ -9,7 +9,7 @@ Contents:
   - [`examples/date_functions.sql`](examples/date_functions.sql) — `CURRENT_DATE`, extraction, formatting.
   - [`examples/general_functions.sql`](examples/general_functions.sql) — Miscellaneous helpers.
 - assignments:
-  - [`assignments/csrf_assignment.sql`](assignments/csrf_assignment.sql) — Practice tasks.
+  - [`assignments/single_row_assignment.sql`](assignments/single_row_assignment.sql) — Practice tasks.
 - notes:
   - [`notes/single_row_function_overview.sql`](notes/single_row_function_overview.sql) — Overview and quick notes.
 

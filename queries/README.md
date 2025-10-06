@@ -9,7 +9,7 @@ Contents:
 - assignments:
   - [`assignments/assignment_01.sql`](assignments/assignment_01.sql) — Practice set with filters and computed columns.
 
-Prereq: Load sample tables from `ddl/sqlplus_table.sql`.
+Prereq: Load sample tables from `ddl/scott_table.sql` or `ddl/hr_schema.sql`.
 
 
 

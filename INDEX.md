@@ -51,6 +51,7 @@ Quick links to all examples and assignments with brief descriptions.
   - [subqueries/assignments/subquery_assignment.sql](subqueries/assignments/subquery_assignment.sql) — SCOTT schema exercises
   - [subqueries/assignments/assignment_0.sql](subqueries/assignments/assignment_0.sql) — HR schema subqueries
   - [subqueries/assignments/assignment_1.sql](subqueries/assignments/assignment_1.sql) — Additional HR subqueries
+  - [subqueries/assignments/chatGPT_Q.sql](subqueries/assignments/chatGPT_Q.sql) — AI-generated practice queries
   - [subqueries/assignments/subquery_assignment_0.sql](subqueries/assignments/subquery_assignment_0.sql) — More practice queries
 - Query
   - [subqueries/query/subquery_01.sql](subqueries/query/subquery_01.sql) — Basic single-row subqueries
