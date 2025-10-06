@@ -21,7 +21,7 @@ This repository provides hands-on SQL examples and practice queries organized by
 - SCOTT schema: Simple schema with 14 employees and 4 departments
 - HR schema: Enterprise-level schema with 107 employees across 27 departments
 - Progressive learning from basics to advanced queries
-- Practice assignments for each topic
+- Practice assignments for each topic with consistent naming conventions
 
 **Database compatibility:** Primarily MySQL/MariaDB syntax with notes for Oracle and PostgreSQL.
 
@@ -135,13 +135,15 @@ Contributions welcome! Add examples for joins, indexes, transactions, window fun
 
 ### File Organization
 - **`examples/`** — Runnable code with comments
-- **`assignments/`** — Practice exercises
+- **`assignments/`** — Practice exercises (numbered: assignment_01.sql, assignment_02.sql, etc.)
 - **`notes/`** — Reference guides
 
-### Naming
-- Files: lowercase with underscores
-- Tables: Uppercase (EMP, DEPT)
-- Keywords: Uppercase (SELECT, FROM)
+### Naming Conventions
+- **Files:** lowercase with underscores (e.g., `assignment_01.sql`, `character_functions.sql`)
+- **Tables:** Uppercase (EMP, DEPT)
+- **Keywords:** Uppercase (SELECT, FROM)
+- **Numbering:** Leading zeros for consistency (01, 02, 03...)
+- **Descriptive:** Clear, concise names indicating content purpose
 
 ### SQL Style
 - Uppercase keywords
