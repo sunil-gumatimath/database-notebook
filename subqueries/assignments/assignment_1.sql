@@ -29,3 +29,24 @@ WHERE job_id IN (
 
 
 -- 14. Write a query to find job title for the employees who are working in region 'ASIA'
+SELECT job_title
+FROM jobs
+WHERE job_id IN (
+    SELECT job_id
+    FROM employees
+    WHERE department_id IN (
+        SELECT department_id
+        FROM departments
+        WHERE location_id IN (
+            SELECT location_id
+            FROM locations
+            WHERE country_id IN (
+                SELECT country_id
+                FROM countries
+                WHERE region_id = (
+                    SELECT region_id FROM regions WHERE region_name = 'Asia'
+                )
+            )
+        )
+    )
+);
