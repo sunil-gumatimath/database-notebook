@@ -10,7 +10,6 @@ WHERE country_id IN (
 );
 
 
-
 -- 12. Write a query to display dept names where the city is 'Roma','South San Francisco','Southlake','Seattle'
 SELECT department_name FROM departments
 WHERE location_id IN (
@@ -29,4 +28,4 @@ WHERE job_id IN (
 
 
 
--- 14. Write a query to find job title for the employees who are working in region 'ASIA' and 'UNITED KINGDOM'
+-- 14. Write a query to find job title for the employees who are working in region 'ASIA'
