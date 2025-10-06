@@ -11,3 +11,10 @@ WHERE location_id IN (
     SELECT location_id FROM locations
     WHERE city IN ('Roma','South San Francisco','Southlake','Seattle')
 );
+
+-- 13. Write a query to display employee details where job title is 'Accountant' and 'Programmer'
+SELECT * FROM employees
+WHERE job_id IN (
+    SELECT job_id FROM jobs
+    WHERE job_title IN ('Accountant','Programmer')
+);
