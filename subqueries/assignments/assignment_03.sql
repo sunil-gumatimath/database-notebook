@@ -38,7 +38,13 @@ WHERE job_id IN (
 
 -- Find the employees who have the same job_id as 'Steven King'.
 
+
 -- Display the department name where the maximum salary employee works.
+SELECT * FROM departments
+WHERE manager_id IN (
+    SELECT manager_id FROM employees
+    WHERE MAX(salary)
+)
 
 -- Find the employee names whose manager is working in department 90.
 SELECT first_name FROM employees
@@ -48,6 +54,23 @@ WHERE department_id IN (
 );
 
 -- Display the job titles of employees working in countries where region name is 'Americas'.
+SELECT job_title FROM jobs
+WHERE job_id IN (
+    SELECT job_id FROM job_history
+    WHERE department_id IN (
+        SELECT department_id FROM departments
+        WHERE location_id IN (
+            SELECT location_id FROM locations
+            WHERE country_id IN (
+                SELECT country_id FROM countries
+                WHERE region_id IN (
+                    SELECT region_id FROM regions
+                    WHERE region_name = 'Americas'
+                )
+            )
+        )
+    )
+);
 
 -- Find the employee names who were hired before the earliest hired employee in department 60.
 
