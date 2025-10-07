@@ -36,7 +36,6 @@ WHERE job_id IN (
 
 -- Display the employee names who are earning more than the average salary of all employees.
 
-
 -- Find the employees who have the same job_id as 'Steven King'.
 
 -- Display the department name where the maximum salary employee works.
@@ -48,3 +47,8 @@ WHERE job_id IN (
 -- Find the employee names who were hired before the earliest hired employee in department 60.
 
 -- Display the department names that have at least one employee earning more than 10,000.
+SELECT department_name FROM departments
+WHERE department_id IN (
+    SELECT department_id FROM employees
+    WHERE salary > 10000
+);
