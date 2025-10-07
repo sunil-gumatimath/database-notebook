@@ -1,9 +1,21 @@
 -- Find the employee names who work in the same department as 'David Austin'.
 -- (Hint: Use a subquery to get David Austin’s department_id.)
 
+
 -- Display job titles of employees earning more than 8000.
+SELECT job_title FROM jobs
+WHERE job_id IN (
+    SELECT job_id FROM job_history
+    WHERE department_id IN (
+        SELECT department_id FROM employees
+        WHERE salary > (
+            SELECT MAX(salary) FROM employees
+        )
+    )
+);
 
 -- Find the department names where the average salary is greater than 7000.
+
 
 -- List employees whose salaries are equal to the minimum salary in their department.
 
