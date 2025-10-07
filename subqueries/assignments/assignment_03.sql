@@ -52,18 +52,27 @@ WHERE job_id = (
 );
 
 -- Display the department name where the maximum salary employee works.
-SELECT * FROM departments
-WHERE manager_id IN (
-    SELECT manager_id FROM employees
-    WHERE MAX(salary)
-)
+SELECT department_name 
+FROM departments
+WHERE department_id = (
+    SELECT department_id 
+    FROM employees
+    WHERE salary = (
+        SELECT MAX(salary) 
+        FROM employees
+    )
+);
 
--- Find the employee names whose manager is working in department 90.
-SELECT first_name FROM employees
-WHERE department_id IN (
-    SELECT department_id FROM departments
+
+-- Find the employee names whose manager is working in department 90
+SELECT first_name, last_name
+FROM employees
+WHERE manager_id IN (
+    SELECT employee_id
+    FROM employees
     WHERE department_id = 90
 );
+
 
 -- Display the job titles of employees working in countries where region name is 'Americas'.
 SELECT job_title FROM jobs
