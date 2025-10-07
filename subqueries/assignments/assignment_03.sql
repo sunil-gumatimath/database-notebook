@@ -16,7 +16,23 @@ WHERE department_id IN (
 
 -- Find the job titles of employees who are working in the region 'Europe'.
 -- (Hint: Follow region → country → location → department → employee → job.)
-
+SELECT job_title FROM jobs
+WHERE job_id IN (
+    SELECT job_id FROM employees
+    WHERE department_id IN (
+        SELECT department_id FROM departments
+        WHERE location_id IN (
+            SELECT location_id FROM locations
+            WHERE country_Id IN (
+                SELECT country_Id FROM countries
+                WHERE region_id IN (
+                    SELECT region_id FROM regions
+                    WHERE region_name = 'Europe'
+                )
+            )
+        )
+    )
+);
 
 -- Display the employee names who are earning more than the average salary of all employees.
 
