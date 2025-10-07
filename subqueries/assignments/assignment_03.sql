@@ -42,7 +42,6 @@ WHERE salary > (
 
 
 -- Find the employees who have the same job_id as 'Steven King'.
--- Find the employees who have the same job_id as 'Steven King'.
 SELECT first_name, last_name 
 FROM employees
 WHERE job_id = (

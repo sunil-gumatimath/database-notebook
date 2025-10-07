@@ -2,6 +2,14 @@
 
 A practical SQL learning resource with examples, queries, and schemas for mastering database operations.
 
+## Project Overview
+A curated collection of SQL scripts, schemas, and exercises designed for learners at all levels.  
+The repository includes:
+
+- Sample schemas (SCOTT & HR) for hands‑on practice.
+- Organized folders covering core concepts, functions, operators, subqueries, and more.
+- Ready‑to‑run assignment files to reinforce each topic.
+
 **Quick links:** See the full project index at [`INDEX.md`](INDEX.md).
 
 ## Table of Contents
