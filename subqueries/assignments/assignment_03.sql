@@ -41,10 +41,16 @@ WHERE job_id IN (
 -- Display the department name where the maximum salary employee works.
 
 -- Find the employee names whose manager is working in department 90.
+SELECT first_name FROM employees
+WHERE department_id IN (
+    SELECT department_id FROM departments
+    WHERE department_id = 90
+);
 
 -- Display the job titles of employees working in countries where region name is 'Americas'.
 
 -- Find the employee names who were hired before the earliest hired employee in department 60.
+
 
 -- Display the department names that have at least one employee earning more than 10,000.
 SELECT department_name FROM departments
