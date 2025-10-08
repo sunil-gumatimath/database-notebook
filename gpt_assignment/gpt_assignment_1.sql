@@ -10,17 +10,20 @@ WHERE department_id = (
 AND NOT (first_name = 'David' AND last_name = 'Austin');
 
 -- Display job titles of employees earning more than 8000.
-SELECT job_title FROM jobs
+SELECT job_title
+FROM jobs
 WHERE job_id IN (
-    SELECT job_id FROM employees
+    SELECT job_id
+    FROM employees
     WHERE salary > 8000
 );
 
-
 -- Find the department names where the average salary is greater than 7000.
-SELECT department_name FROM departments
+SELECT department_name
+FROM departments
 WHERE department_id IN (
-    SELECT department_id FROM employees
+    SELECT department_id
+    FROM employees
     GROUP BY department_id
     HAVING AVG(salary) > 7000
 );
@@ -38,22 +41,26 @@ WHERE salary = (
 SELECT first_name, last_name
 FROM employees
 WHERE employee_id IN (
-    SELECT employee_id 
-    FROM employees 
+    SELECT employee_id
+    FROM employees
     WHERE manager_id IS NULL
 );
 
 -- Display employee names hired in the same month as 'Neena Kochhar'.
-SELECT first_name , last_name FROM employees
+SELECT first_name, last_name
+FROM employees
 WHERE MONTH(hire_date) = (
-    SELECT MONTH(hire_date) FROM employees
+    SELECT MONTH(hire_date)
+    FROM employees
     WHERE first_name = 'Neena' AND last_name = 'Kochhar'
 );
 
 -- Find job titles that are not assigned to any employee currently.
-SELECT job_title FROM jobs
+SELECT job_title
+FROM jobs
 WHERE job_id NOT IN (
-    SELECT job_id FROM employees
+    SELECT job_id
+    FROM employees
 );
 
 -- Display the employee names who work in the same region as 'London'.
@@ -86,22 +93,22 @@ WHERE department_id IN (
 SELECT first_name, last_name, salary
 FROM employees
 WHERE salary BETWEEN (
-        SELECT MIN(salary)
-        FROM employees
-        WHERE department_id = (
-            SELECT department_id
-            FROM departments
-            WHERE department_name = 'Sales'
-        )
-    ) AND (
-        SELECT MAX(salary)
-        FROM employees
-        WHERE department_id = (
-            SELECT department_id
-            FROM departments
-            WHERE department_name = 'Sales'
-        )
-    );
+    SELECT MIN(salary)
+    FROM employees
+    WHERE department_id = (
+        SELECT department_id
+        FROM departments
+        WHERE department_name = 'Sales'
+    )
+) AND (
+    SELECT MAX(salary)
+    FROM employees
+    WHERE department_id = (
+        SELECT department_id
+        FROM departments
+        WHERE department_name = 'Sales'
+    )
+);
 
 -- Display department names that have more than 5 employees.
 SELECT department_name
