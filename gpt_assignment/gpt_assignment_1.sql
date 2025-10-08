@@ -45,7 +45,11 @@ WHERE employee_id IN (
 );
 
 -- Display employee names hired in the same month as 'Neena Kochhar'.
-
+SELECT first_name , last_name FROM employees
+WHERE MONTH(hire_date) = (
+    SELECT MONTH(hire_date) FROM employees
+    WHERE first_name = 'Neena' AND last_name = 'Kochhar'
+);
 
 -- Find job titles that are not assigned to any employee currently.
 
