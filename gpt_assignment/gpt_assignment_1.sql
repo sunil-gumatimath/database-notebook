@@ -27,6 +27,13 @@ WHERE department_id IN (
 );
 
 -- List employees whose salaries are equal to the minimum salary in their department.
+SELECT first_name, last_name, salary, department_id
+FROM employees e
+WHERE salary = (
+    SELECT MIN(salary)
+    FROM employees
+    WHERE department_id = e.department_id
+);
 
 -- Find the employee names who do not have a manager (manager_id is null).
 SELECT first_name, last_name
@@ -38,6 +45,7 @@ WHERE employee_id IN (
 );
 
 -- Display employee names hired in the same month as 'Neena Kochhar'.
+
 
 -- Find job titles that are not assigned to any employee currently.
 
