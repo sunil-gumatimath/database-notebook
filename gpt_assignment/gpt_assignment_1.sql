@@ -52,9 +52,41 @@ WHERE MONTH(hire_date) = (
 );
 
 -- Find job titles that are not assigned to any employee currently.
+SELECT job_title FROM jobs
+WHERE job_id NOT IN (
+    SELECT job_id FROM employees
+);
 
 -- Display the employee names who work in the same region as 'London'.
 -- (Hint: Use locations → countries → regions → employees.)
+SELECT first_name, last_name
+FROM employees
+WHERE department_id IN (
+    SELECT department_id
+    FROM departments
+    WHERE location_id IN (
+        SELECT location_id
+        FROM locations
+        WHERE country_id IN (
+            SELECT country_id
+            FROM countries
+            WHERE region_id = (
+                SELECT region_id
+                FROM regions
+                WHERE region_id = (
+                    SELECT region_id
+                    FROM countries
+                    WHERE country_id = (
+                        SELECT country_id
+                        FROM locations
+                        WHERE city = 'London'
+                    )
+                )
+            )
+        )
+    )
+);
+
 
 -- Find employees whose salary is between the lowest and highest salary of the 'Sales' department.
 
