@@ -83,6 +83,32 @@ WHERE department_id IN (
 );
 
 -- Find employees whose salary is between the lowest and highest salary of the 'Sales' department.
-
+SELECT first_name, last_name, salary
+FROM employees
+WHERE salary BETWEEN (
+        SELECT MIN(salary)
+        FROM employees
+        WHERE department_id = (
+            SELECT department_id
+            FROM departments
+            WHERE department_name = 'Sales'
+        )
+    ) AND (
+        SELECT MAX(salary)
+        FROM employees
+        WHERE department_id = (
+            SELECT department_id
+            FROM departments
+            WHERE department_name = 'Sales'
+        )
+    );
 
 -- Display department names that have more than 5 employees.
+SELECT department_name
+FROM departments
+WHERE department_id IN (
+    SELECT department_id
+    FROM employees
+    GROUP BY department_id
+    HAVING COUNT(*) > 5
+);
