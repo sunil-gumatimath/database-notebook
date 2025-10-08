@@ -48,11 +48,10 @@ Quick links to all examples and assignments with brief descriptions.
 - Examples
   - [subqueries/examples/subquery.sql](subqueries/examples/subquery.sql) — Subquery fundamentals
 - Assignments
-  - [subqueries/assignments/subquery_assignment.sql](subqueries/assignments/subquery_assignment.sql) — SCOTT schema exercises
-  - [subqueries/assignments/assignment_0.sql](subqueries/assignments/assignment_0.sql) — HR schema subqueries
-  - [subqueries/assignments/assignment_1.sql](subqueries/assignments/assignment_1.sql) — Additional HR subqueries
-  - [subqueries/assignments/chatGPT_Q.sql](subqueries/assignments/chatGPT_Q.sql) — AI-generated practice queries
-  - [subqueries/assignments/subquery_assignment_0.sql](subqueries/assignments/subquery_assignment_0.sql) — More practice queries
+  - [subqueries/assignments/assignment_01.sql](subqueries/assignments/assignment_01.sql) — SCOTT schema exercises
+  - [subqueries/assignments/assignment_02.sql](subqueries/assignments/assignment_02.sql) — Additional SCOTT subqueries
+  - [subqueries/assignments/assignment_04.sql](subqueries/assignments/assignment_04.sql) — HR schema subqueries
+  - [subqueries/assignments/assignment_05.sql](subqueries/assignments/assignment_05.sql) — Advanced HR subqueries
 - Query
   - [subqueries/query/subquery_01.sql](subqueries/query/subquery_01.sql) — Basic single-row subqueries
   - [subqueries/query/subquery_02.sql](subqueries/query/subquery_02.sql) — Advanced with IN, ANY, ALL operators
@@ -62,12 +61,17 @@ Quick links to all examples and assignments with brief descriptions.
   - [queries/examples/query_01.sql](queries/examples/query_01.sql) — Basic SELECT queries
   - [queries/examples/query_02.sql](queries/examples/query_02.sql) — Advanced filtering
 - Assignments
-  - [queries/assignments/query_assignment_01.sql](queries/assignments/query_assignment_01.sql) — Calculated columns and aliasing
+  - [queries/assignments/assignment_01.sql](queries/assignments/assignment_01.sql) — Calculated columns and aliasing
 
 ### Tables
 - [ddl/hr_schema.sql](ddl/hr_schema.sql) — Enterprise HR schema
+- [ddl/scott_table.sql](ddl/scott_table.sql) — Classic SCOTT training schema
 
-### Misc
-- [joins/README.md](joins/README.md) — JOIN operations (placeholder)
+### GPT Assignments
+- [gpt_assignment/gpt_assignment_0.sql](gpt_assignment/gpt_assignment_0.sql) — AI-generated practice set 1
+- [gpt_assignment/gpt_assignment_1.sql](gpt_assignment/gpt_assignment_1.sql) — AI-generated practice set 2
+
+### Future Content (Placeholders)
+- [joins/README.md](joins/README.md) — JOIN operations (structure ready)
 - [indexes/README.md](indexes/README.md) — Index strategies (placeholder)
 - [transactions/README.md](transactions/README.md) — Transaction management (placeholder)

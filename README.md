@@ -25,37 +25,38 @@ The repository includes:
 This repository provides hands-on SQL examples and practice queries organized by concepts. It includes two sample schemas (SCOTT and HR) for learning from basics to advanced topics.
 
 **What you'll find:**
-- 30+ SQL files covering DDL, DML, DQL, functions, operators, and subqueries
+- 34 SQL files covering DDL, DML, DQL, functions, operators, and subqueries
 - SCOTT schema: Simple schema with 14 employees and 4 departments
 - HR schema: Enterprise-level schema with 107 employees across 27 departments
 - Progressive learning from basics to advanced queries
 - Practice assignments for each topic with consistent naming conventions
+- Comprehensive function examples with 40+ character functions and 20+ date functions
 
 **Database compatibility:** Primarily MySQL/MariaDB syntax with notes for Oracle and PostgreSQL.
 
 ## Repository Structure
 
 ### Core SQL Concepts
-- **`basics/`** — Data types and constraints
-- **`ddl/`** — Schema creation and management (CREATE, ALTER, DROP)
-- **`dml/`** — Data manipulation (INSERT, UPDATE, DELETE)
-- **`dql/`** — Basic querying (SELECT, WHERE, aliases, DISTINCT)
+- **`basics/`** — Data types and constraints (2 files: data_types.sql, constraints.sql)
+- **`ddl/`** — Schema creation and management (3 files: ddl_commands.sql, scott_table.sql, hr_schema.sql)
+- **`dml/`** — Data manipulation (1 file: dml_commands.sql)
+- **`dql/`** — Basic querying (3 files: dql_commands.sql, select_alias.sql, select_distinct.sql)
 
 ### Functions and Expressions
-- **`functions/single_row/`** — Character, numeric, date, and general functions
-- **`functions/aggregate/`** — Aggregate functions, GROUP BY, HAVING, ORDER BY
+- **`functions/single_row/`** — Character, numeric, date, and general functions (5 files: 4 examples + 1 assignment + notes)
+- **`functions/aggregate/`** — Aggregate functions, GROUP BY, HAVING, ORDER BY (5 files: 4 examples + 1 assignment)
 
 ### Query Features
-- **`operators/`** — Filtering with IN, LIKE, BETWEEN, REGEXP
-- **`joins/`** — Table joins (placeholder for future content)
+- **`operators/`** — Filtering with IN, LIKE, BETWEEN, REGEXP (2 files: 1 example + 1 assignment)
+- **`joins/`** — Table joins (structure ready, content pending)
 - **`indexes/`** — Performance optimization (placeholder)
-- **`subqueries/`** — Nested queries and advanced retrieval
+- **`subqueries/`** — Nested queries and advanced retrieval (8 files: 1 example + 4 assignments + 2 query files)
 - **`transactions/`** — Transaction management (placeholder)
 
 ### Practice and Examples
-- **`queries/`** — Query collections and assignments
-- **`gpt_assignment/`** — AI-generated practice assignments
-- **`tables/`** — Schema reference
+- **`queries/`** — Query collections and assignments (3 files)
+- **`gpt_assignment/`** — AI-generated practice assignments (2 files)
+- **`tables/`** — Schema reference (placeholder)
 
 ## Sample Schemas
 
@@ -82,7 +83,7 @@ Enterprise HR database with organizational hierarchy.
 - **EMPLOYEES** (107 employees): employee_id, first_name, last_name, email, phone, hire_date, job_id, salary, commission_pct, manager_id, department_id
 - **JOB_HISTORY** (10 records): employee_id, start_date, end_date, job_id, department_id
 
-**Use for:** Complex queries, multi-level subqueries, hierarchical data.
+**Use for:** Complex queries, multi-level subqueries, hierarchical data, advanced assignments.
 
 ## How to Use
 
@@ -118,11 +119,11 @@ mysql> SELECT * FROM emp;
 8. Complete assignments
 
 **Intermediate (2-3 weeks):**
-1. Advanced queries and operators
-2. Subqueries basics
-3. Load HR schema
-4. Multi-level subqueries
-5. Complete all assignments
+1. Advanced operators and filtering patterns
+2. Subqueries basics (start with examples/subquery.sql)
+3. Load HR schema for complex queries
+4. Multi-level subqueries (4 assignment files available)
+5. Complete all assignments including GPT-generated practice
 
 **Advanced (future):**
 1. Joins, indexes, transactions
@@ -131,12 +132,22 @@ mysql> SELECT * FROM emp;
 
 ## Contributing
 
-Contributions welcome! Add examples for joins, indexes, transactions, window functions, or improve existing content.
+Contributions welcome! Priority areas for new content:
+
+**High Priority:**
+- JOIN operations (examples and assignments in `joins/`)
+- Transaction management examples
+- Index strategies and optimization
+
+**Medium Priority:**
+- Window functions and advanced analytics
+- Stored procedures and functions
+- Performance optimization examples
 
 **How to contribute:**
 1. Fork the repository
 2. Create a feature branch
-3. Add content following the structure
+3. Add content following the existing structure and naming conventions
 4. Update README.md and INDEX.md
 5. Submit a pull request
 
