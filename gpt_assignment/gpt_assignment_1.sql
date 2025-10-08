@@ -11,8 +11,20 @@ AND NOT (first_name = 'David' AND last_name = 'Austin');
 
 
 -- Display job titles of employees earning more than 8000.
+SELECT job_title FROM jobs
+WHERE job_id IN (
+    SELECT job_id FROM employees
+    WHERE salary > 8000
+);
+
 
 -- Find the department names where the average salary is greater than 7000.
+SELECT department_name FROM departments
+WHERE department_id IN (
+    SELECT department_id FROM employees
+    GROUP BY department_id
+    HAVING AVG(salary) > 7000
+);
 
 -- List employees whose salaries are equal to the minimum salary in their department.
 
