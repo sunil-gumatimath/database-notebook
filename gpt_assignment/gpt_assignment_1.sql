@@ -1,5 +1,14 @@
 -- Find the employee names who work in the same department as 'David Austin'.
 -- (Hint: Use a subquery to get David Austin’s department_id.)
+SELECT first_name, last_name
+FROM employees
+WHERE department_id = (
+    SELECT department_id
+    FROM employees
+    WHERE first_name = 'David' AND last_name = 'Austin'
+)
+AND NOT (first_name = 'David' AND last_name = 'Austin');
+
 
 -- Display job titles of employees earning more than 8000.
 
