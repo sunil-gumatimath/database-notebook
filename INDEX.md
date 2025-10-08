@@ -27,7 +27,7 @@ Quick links to all examples and assignments with brief descriptions.
 - Assignments
   - [functions/single_row/assignments/single_row_assignment.sql](functions/single_row/assignments/single_row_assignment.sql) — Practice exercises
 - Notes
-  - [functions/single_row/notes/single_row_function_overview.sql](functions/single_row/notes/single_row_function_overview.sql) — Quick reference guide
+  - [functions/single_row/notes/overview.sql](functions/single_row/notes/overview.sql) — Quick reference guide
 
 ### Functions: Aggregate
 - Examples
@@ -68,7 +68,7 @@ Quick links to all examples and assignments with brief descriptions.
 - [ddl/scott_table.sql](ddl/scott_table.sql) — Classic SCOTT training schema
 
 ### GPT Assignments
-- [gpt_assignment/gpt_assignment_0.sql](gpt_assignment/gpt_assignment_0.sql) — AI-generated practice set 1
+- [gpt_assignment/gpt_assignment_01.sql](gpt_assignment/gpt_assignment_01.sql) — AI-generated practice set 1
 - [gpt_assignment/gpt_assignment_1.sql](gpt_assignment/gpt_assignment_1.sql) — AI-generated practice set 2
 
 ### Future Content (Placeholders)
