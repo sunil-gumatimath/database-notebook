@@ -54,6 +54,7 @@ This repository provides hands-on SQL examples and practice queries organized by
 
 ### Practice and Examples
 - **`queries/`** — Query collections and assignments
+- **`gpt_assignment/`** — AI-generated practice assignments
 - **`tables/`** — Schema reference
 
 ## Sample Schemas
