@@ -9,7 +9,6 @@ WHERE department_id = (
 )
 AND NOT (first_name = 'David' AND last_name = 'Austin');
 
-
 -- Display job titles of employees earning more than 8000.
 SELECT job_title FROM jobs
 WHERE job_id IN (
@@ -72,22 +71,18 @@ WHERE department_id IN (
             FROM countries
             WHERE region_id = (
                 SELECT region_id
-                FROM regions
-                WHERE region_id = (
-                    SELECT region_id
-                    FROM countries
-                    WHERE country_id = (
-                        SELECT country_id
-                        FROM locations
-                        WHERE city = 'London'
-                    )
+                FROM countries
+                WHERE country_id = (
+                    SELECT country_id
+                    FROM locations
+                    WHERE city = 'London'
                 )
             )
         )
     )
 );
 
-
 -- Find employees whose salary is between the lowest and highest salary of the 'Sales' department.
+
 
 -- Display department names that have more than 5 employees.
