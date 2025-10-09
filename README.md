@@ -28,7 +28,7 @@ This repository provides hands-on SQL examples and practice queries organized by
 
 **What you'll find:**
 
-- 34 SQL files covering DDL, DML, DQL, functions, operators, and subqueries
+- 35 SQL files covering DDL, DML, DQL, functions, operators, and subqueries
 - SCOTT schema: Simple schema with 14 employees and 4 departments
 - HR schema: Enterprise-level schema with 107 employees across 27 departments
 - Progressive learning from basics to advanced queries
@@ -62,7 +62,7 @@ This repository provides hands-on SQL examples and practice queries organized by
 ### Practice and Examples
 
 - **`queries/`** — Query collections and assignments (3 files)
-- **`gpt_assignment/`** — AI-generated practice assignments (2 files)
+- **`gpt_assignment/`** — AI-generated subquery practice assignments using HR schema (3 files)
 - **`tables/`** — Schema reference (placeholder)
 
 ## Sample Schemas
