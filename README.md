@@ -1,5 +1,9 @@
 # SQL Learning Repository
 
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](#)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](#)
+[![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)](#)
+
 A practical SQL learning resource with examples, queries, and schemas for mastering database operations.
 
 ## Project Overview
@@ -19,7 +23,6 @@ The repository includes:
 - [Repository Structure](#repository-structure)
 - [Sample Schemas](#sample-schemas)
 - [How to Use](#how-to-use)
-- [Contributing](#contributing)
 - [Conventions](#conventions)
 
 ## About
@@ -69,32 +72,32 @@ This repository provides hands-on SQL examples and practice queries organized by
 
 ### SCOTT Schema ([`ddl/scott_table.sql`](ddl/scott_table.sql))
 
-Classic training schema for SQL fundamentals.
+A classic, simple schema ideal for learning fundamental SQL concepts.
 
-**Tables:**
+| Table      | Columns                                          | Records | Description                  |
+| :--------- | :----------------------------------------------- | :------ | :--------------------------- |
+| **`EMP`**      | `empno`, `ename`, `job`, `mgr`, `hiredate`, `sal`, `comm`, `deptno` | 14      | Employee details             |
+| **`DEPT`**     | `deptno`, `dname`, `loc`                         | 4       | Department information       |
+| **`SALGRADE`** | `grade`, `losal`, `hisal`                        | 5       | Salary grade levels          |
+| **`BONUS`**    | `ename`, `job`, `sal`, `comm`                    | 4       | Bonus records (can be empty) |
 
-- **EMP** (14 employees): empno, ename, job, mgr, hiredate, sal, comm, deptno
-- **DEPT** (4 departments): deptno, dname, loc
-- **SALGRADE** (5 grades): grade, losal, hisal
-- **BONUS** (4 records): ename, job, sal, comm
-
-**Use for:** Basic queries, joins, subqueries, aggregations.
+**Use for:** Basic queries, joins, subqueries, and aggregations.
 
 ### HR Schema ([`ddl/hr_schema.sql`](ddl/hr_schema.sql))
 
-Enterprise HR database with organizational hierarchy.
+A more complex, enterprise-level schema for practicing advanced queries.
 
-**Tables:**
+| Table           | Columns                                                              | Records | Description                             |
+| :-------------- | :------------------------------------------------------------------- | :------ | :-------------------------------------- |
+| **`REGIONS`**       | `region_id`, `region_name`                                           | 4       | Geographic regions                      |
+| **`COUNTRIES`**     | `country_id`, `country_name`, `region_id`                            | 25      | Country details and their regions       |
+| **`LOCATIONS`**     | `location_id`, `street_address`, `city`, `state_province`, `country_id` | 23      | Office locations                        |
+| **`DEPARTMENTS`**   | `department_id`, `department_name`, `manager_id`, `location_id`      | 27      | Company departments                     |
+| **`JOBS`**          | `job_id`, `job_title`, `min_salary`, `max_salary`                    | 19      | Job roles and salary ranges             |
+| **`EMPLOYEES`**     | `employee_id`, `first_name`, `last_name`, `email`, `hire_date`, `job_id`, `salary`, `manager_id`, `department_id` | 107     | Employee details                        |
+| **`JOB_HISTORY`**   | `employee_id`, `start_date`, `end_date`, `job_id`, `department_id`   | 10      | Employee job history                    |
 
-- **REGIONS** (4 regions): region_id, region_name
-- **COUNTRIES** (25 countries): country_id, country_name, region_id
-- **LOCATIONS** (23 locations): location_id, street_address, city, state_province, country_id
-- **DEPARTMENTS** (27 departments): department_id, department_name, manager_id, location_id
-- **JOBS** (19 jobs): job_id, job_title, min_salary, max_salary
-- **EMPLOYEES** (107 employees): employee_id, first_name, last_name, email, phone, hire_date, job_id, salary, commission_pct, manager_id, department_id
-- **JOB_HISTORY** (10 records): employee_id, start_date, end_date, job_id, department_id
-
-**Use for:** Complex queries, multi-level subqueries, hierarchical data, advanced assignments.
+**Use for:** Complex queries, multi-level subqueries, hierarchical data, and advanced assignments.
 
 ## How to Use
 
@@ -145,30 +148,6 @@ mysql> SELECT * FROM emp;
 1. Joins, indexes, transactions
 2. Window functions, stored procedures
 3. Performance optimization
-
-## Contributing
-
-Contributions welcome! Priority areas for new content:
-
-**High Priority:**
-
-- JOIN operations (examples and assignments in `joins/`)
-- Transaction management examples
-- Index strategies and optimization
-
-**Medium Priority:**
-
-- Window functions and advanced analytics
-- Stored procedures and functions
-- Performance optimization examples
-
-**How to contribute:**
-
-1. Fork the repository
-2. Create a feature branch
-3. Add content following the existing structure and naming conventions
-4. Update README.md and INDEX.md
-5. Submit a pull request
 
 ## Conventions
 
