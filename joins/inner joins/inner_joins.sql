@@ -12,6 +12,8 @@ ON e.job_id = j.job_id;
 
 -- Show all departments located in the city 'Seattle'.
 -- (Hint: departments + locations)
+SELECT d.* FROM departments d  INNER JOIN locations l ON d.location_id = l.location_id
+WHERE l.city = 'Seattle';
 
 -- Find names of employees who work in the same department as 'Neena Kochhar'.
 
