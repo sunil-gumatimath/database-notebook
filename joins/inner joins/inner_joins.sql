@@ -73,6 +73,14 @@ FROM employees e
 
 -- Find the names of employees and their managers’ job titles.
 -- (Hint: self join on employees + jobs)
+SELECT e.first_name AS Employee_FirstName,
+        e.last_name AS Employee_LastName,
+        m.first_name AS Manager_FirstName,
+        m.last_name AS Manager_LastName,
+        j.job_title AS Manager_JobTitle
+FROM employees e
+INNER JOIN employees m ON e.manager_id = m.employee_id
+INNER JOIN jobs j ON m.job_id = j.job_id;
 
 -- Display all departments along with the total number of employees in each department.
 -- (Hint: employees + departments, use GROUP BY)
