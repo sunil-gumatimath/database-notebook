@@ -101,7 +101,11 @@ WHERE e.salary > (
 
 -- Show all employees along with the countries of the locations where their department is based.
 -- (Hint: employees + departments + locations + countries)
-
+SELECT e.first_name,e.last_name,d.department_name,l.city,c.country_name 
+FROM employees e
+    INNER JOIN departments d ON e.department_id = d.department_id
+    INNER JOIN locations l ON d.location_id = l.location_id
+    INNER JOIN countries c ON l.country_id = c.country_id;
 
 -- Display all job titles along with the names of employees currently holding that job.
 -- (Hint: employees + jobs, simple INNER JOIN)
