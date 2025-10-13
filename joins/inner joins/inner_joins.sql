@@ -16,6 +16,11 @@ SELECT d.* FROM departments d  INNER JOIN locations l ON d.location_id = l.locat
 WHERE l.city = 'Seattle';
 
 -- Find names of employees who work in the same department as 'Neena Kochhar'.
+SELECT e.first_name,e.last_name FROM employees e INNER JOIN departments d ON e.department_id = d.department_id
+WHERE d.department_id IN (
+    SELECT department_id FROM employees
+    WHERE first_name = 'Neena' AND last_name = 'Kochhar'
+);
 
 -- Display job titles and average salary for each job.
 -- (Hint: GROUP BY job_id)
