@@ -44,6 +44,13 @@ FROM employees e
 
 -- Display employee names and manager names.
 -- (Hint: self join on employees)
+SELECT e.first_name AS Employee_FirstName,
+       e.last_name  AS Employee_LastName,
+       m.first_name AS Manager_FirstName,
+       m.last_name  AS Manager_LastName 
+FROM employees e 
+    INNER JOIN employees m 
+    ON e.manager_id = m.employee_id;
 
 -- Show all employees who have worked in more than one department (use job_history).
 
