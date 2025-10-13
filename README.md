@@ -32,7 +32,7 @@ This repository provides hands-on SQL examples and practice queries organized by
 
 **What you'll find:**
 
-- 36 SQL files covering DDL, DML, DQL, functions, operators, subqueries, and joins
+- 37 SQL files covering DDL, DML, DQL, functions, operators, subqueries, and inner joins
 - SCOTT schema: Simple schema with 14 employees and 4 departments
 - HR schema: Enterprise-level schema with 107 employees across 27 departments
 - Progressive learning from basics to advanced queries
@@ -58,7 +58,7 @@ This repository provides hands-on SQL examples and practice queries organized by
 ### Query Features
 
 - **`operators/`** — Filtering with IN, LIKE, BETWEEN, REGEXP (2 files: 1 example + 1 assignment)
-- **`joins/inner joins/`** — Table joins (1 file: inner_joins.sql)
+- **`joins/inner joins/`** — INNER JOIN examples (1 file: inner_joins.sql, uses HR schema)
 - **`indexes/`** — Performance optimization (placeholder)
 - **`subqueries/`** — Nested queries and advanced retrieval (8 files: 1 example + 4 assignments + 2 query files)
 - **`transactions/`** — Transaction management (placeholder)
@@ -140,7 +140,7 @@ mysql> SELECT * FROM emp;
 
 1. Advanced operators and filtering patterns
 2. Subqueries basics (start with examples/subquery.sql)
-3. Joins → Combining table data (inner joins using SCOTT schema)
+3. Joins → Combining table data (inner joins using HR schema)
 4. Load HR schema for complex queries
 5. Multi-level subqueries (4 assignment files available)
 6. Complete all assignments including GPT-generated practice

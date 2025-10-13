@@ -1,24 +1,29 @@
-## Project Index
+# Project Index
 
 Quick links to all examples and assignments with brief descriptions.
 
-### Basics
+## Basics
+
 - [basics/data_types.sql](basics/data_types.sql) — Comprehensive data types guide with CREATE TABLE examples
 - [basics/constraints.sql](basics/constraints.sql) — Essential constraints with practical examples
 
-### DDL
+## DDL
+
 - [ddl/ddl_commands.sql](ddl/ddl_commands.sql) — Core DDL operations with examples
 - [ddl/scott_table.sql](ddl/scott_table.sql) — Classic SCOTT schema (Oracle training schema)
 
-### DML
+## DML
+
 - [dml/dml_commands.sql](dml/dml_commands.sql) — Row-level data operations
 
-### DQL
+## DQL
+
 - [dql/dql_commands.sql](dql/dql_commands.sql) — SELECT statements and basic queries
 - [dql/select_alias.sql](dql/select_alias.sql) — Column and table aliasing
 - [dql/select_distinct.sql](dql/select_distinct.sql) — Remove duplicates
 
-### Functions: Single-row
+## Functions: Single-row
+
 - Examples
   - [functions/single_row/examples/character_functions.sql](functions/single_row/examples/character_functions.sql) — String manipulation (40+ examples)
   - [functions/single_row/examples/number_functions.sql](functions/single_row/examples/number_functions.sql) — Numeric operations
@@ -29,7 +34,8 @@ Quick links to all examples and assignments with brief descriptions.
 - Notes
   - [functions/single_row/notes/overview.sql](functions/single_row/notes/overview.sql) — Quick reference guide
 
-### Functions: Aggregate
+## Functions: Aggregate
+
 - Examples
   - [functions/aggregate/examples/aggregate_functions.sql](functions/aggregate/examples/aggregate_functions.sql) — Core aggregate functions
   - [functions/aggregate/examples/group_by.sql](functions/aggregate/examples/group_by.sql) — Grouping data
@@ -38,13 +44,15 @@ Quick links to all examples and assignments with brief descriptions.
 - Assignments
   - [functions/aggregate/assignments/aggregate_assignment.sql](functions/aggregate/assignments/aggregate_assignment.sql) — Practice aggregations
 
-### Operators
+## Operators
+
 - Examples
   - [operators/examples/operators_examples.sql](operators/examples/operators_examples.sql) — Complex filtering patterns
 - Assignments
   - [operators/assignments/operators_assignment.sql](operators/assignments/operators_assignment.sql) — Practice queries
 
-### Subqueries
+## Subqueries
+
 - Examples
   - [subqueries/examples/subquery.sql](subqueries/examples/subquery.sql) — Subquery fundamentals
 - Assignments
@@ -56,22 +64,30 @@ Quick links to all examples and assignments with brief descriptions.
   - [subqueries/query/subquery_01.sql](subqueries/query/subquery_01.sql) — Basic single-row subqueries
   - [subqueries/query/subquery_02.sql](subqueries/query/subquery_02.sql) — Advanced with IN, ANY, ALL operators
 
-### Queries (Practice)
+## Queries (Practice)
+
 - Examples
   - [queries/examples/query_01.sql](queries/examples/query_01.sql) — Basic SELECT queries
   - [queries/examples/query_02.sql](queries/examples/query_02.sql) — Advanced filtering
 - Assignments
   - [queries/assignments/assignment_01.sql](queries/assignments/assignment_01.sql) — Calculated columns and aliasing
 
-### Tables
+## Tables
+
 - [ddl/hr_schema.sql](ddl/hr_schema.sql) — Enterprise HR schema
 - [ddl/scott_table.sql](ddl/scott_table.sql) — Classic SCOTT training schema
 
-### GPT Assignments
+## GPT Assignments
+
 - [gpt_assignment/gpt_assignment_01.sql](gpt_assignment/gpt_assignment_01.sql) — AI-generated practice set 1
 - [gpt_assignment/gpt_assignment_1.sql](gpt_assignment/gpt_assignment_1.sql) — AI-generated practice set 2
 
-### Future Content (Placeholders)
-- [joins/README.md](joins/README.md) — JOIN operations (structure ready)
+## Query Features
+
+- **`joins/`** — JOIN operations (1 file: inner joins)
+  - [joins/inner joins/inner_joins.sql](joins/inner joins/inner_joins.sql) — INNER JOIN examples using HR schema
+
+## Future Content (Placeholders)
+
 - [indexes/README.md](indexes/README.md) — Index strategies (placeholder)
 - [transactions/README.md](transactions/README.md) — Transaction management (placeholder)
