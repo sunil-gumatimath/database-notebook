@@ -65,8 +65,8 @@ FROM countries c
 
 -- List all employees along with their job title and department location (city).
 -- (Hint: employees + jobs + departments + locations)
-SELECT e.first_name,e.last_name ,j.job_title ,d.department_name,l.city
-FROM employees e 
+SELECT e.first_name, e.last_name, j.job_title, d.department_name, l.city
+FROM employees e
     INNER JOIN jobs j ON e.job_id = j.job_id
     INNER JOIN departments d ON e.department_id = d.department_id
     INNER JOIN locations l ON d.location_id = l.location_id;
@@ -74,23 +74,24 @@ FROM employees e
 -- Find the names of employees and their managers’ job titles.
 -- (Hint: self join on employees + jobs)
 SELECT e.first_name AS Employee_FirstName,
-        e.last_name AS Employee_LastName,
-        m.first_name AS Manager_FirstName,
-        m.last_name AS Manager_LastName,
-        j.job_title AS Manager_JobTitle
+    e.last_name AS Employee_LastName,
+    m.first_name AS Manager_FirstName,
+    m.last_name AS Manager_LastName,
+    j.job_title AS Manager_JobTitle
 FROM employees e
-INNER JOIN employees m ON e.manager_id = m.employee_id
-INNER JOIN jobs j ON m.job_id = j.job_id;
+    INNER JOIN employees m ON e.manager_id = m.employee_id
+    INNER JOIN jobs j ON m.job_id = j.job_id;
 
 -- Display all departments along with the total number of employees in each department.
 -- (Hint: employees + departments, use GROUP BY)
-SELECT d.department_name ,COUNT(e.employee_id) AS total_employees
+SELECT d.department_name, COUNT(e.employee_id) AS total_employees
 FROM departments d
     INNER JOIN employees e ON d.department_id = e.department_id
 GROUP BY d.department_name;
 
 -- List all employees who earn more than the average salary of their job title.
 -- (Hint: employees + jobs, use JOIN and aggregate subquery)
+
 
 -- Show all employees along with the countries of the locations where their department is based.
 -- (Hint: employees + departments + locations + countries)
