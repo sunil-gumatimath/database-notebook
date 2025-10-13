@@ -37,22 +37,26 @@ GROUP BY j.job_title;
 
 -- List employee names, their department names, and city names.
 -- (Hint: employees + departments + locations)
-SELECT e.first_name,e.last_name,d.department_name,l.city 
-FROM employees e 
+SELECT e.first_name, e.last_name, d.department_name, l.city
+FROM employees e
     INNER JOIN departments d ON e.department_id = d.department_id
     INNER JOIN locations l ON d.location_id = l.location_id;
 
 -- Display employee names and manager names.
 -- (Hint: self join on employees)
 SELECT e.first_name AS Employee_FirstName,
-       e.last_name  AS Employee_LastName,
-       m.first_name AS Manager_FirstName,
-       m.last_name  AS Manager_LastName 
-FROM employees e 
-    INNER JOIN employees m 
-    ON e.manager_id = m.employee_id;
+    e.last_name AS Employee_LastName,
+    m.first_name AS Manager_FirstName,
+    m.last_name AS Manager_LastName
+FROM employees e
+    INNER JOIN employees m ON e.manager_id = m.employee_id;
 
 -- Show all employees who have worked in more than one department (use job_history).
+SELECT e.employee_id, e.first_name, e.last_name
+FROM employees e
+    INNER JOIN job_history j ON e.employee_id = j.employee_id
+GROUP BY e.employee_id, e.first_name, e.last_name
+HAVING COUNT(DISTINCT j.department_id) > 1;
 
 -- Find department names where no employees are working.
 
