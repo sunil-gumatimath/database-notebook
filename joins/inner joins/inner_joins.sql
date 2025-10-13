@@ -58,6 +58,23 @@ FROM employees e
 GROUP BY e.employee_id, e.first_name, e.last_name
 HAVING COUNT(DISTINCT j.department_id) > 1;
 
--- Find department names where no employees are working.
-
 -- Display country names and their corresponding region names.
+SELECT c.country_name , r.region_name FROM countries c INNER JOIN regions r ON c.region_id = r.region_id; 
+
+-- List all employees along with their job title and department location (city).
+-- (Hint: employees + jobs + departments + locations)
+
+-- Find the names of employees and their managers’ job titles.
+-- (Hint: self join on employees + jobs)
+
+-- Display all departments along with the total number of employees in each department.
+-- (Hint: employees + departments, use GROUP BY)
+
+-- List all employees who earn more than the average salary of their job title.
+-- (Hint: employees + jobs, use JOIN and aggregate subquery)
+
+-- Show all employees along with the countries of the locations where their department is based.
+-- (Hint: employees + departments + locations + countries)
+
+-- Display all job titles along with the names of employees currently holding that job.
+-- (Hint: employees + jobs, simple INNER JOIN)
