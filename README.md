@@ -15,6 +15,7 @@ The repository includes:
 - Organized folders covering core concepts, functions, operators, subqueries, and more.
 - Ready‑to‑run assignment files to reinforce each topic.
 
+**Repository:** [database-notebook](https://github.com/sunil-gumatimah/database-notebook)
 **Quick links:** See the full project index at [`INDEX.md`](INDEX.md).
 
 ## Table of Contents

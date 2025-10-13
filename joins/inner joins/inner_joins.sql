@@ -65,6 +65,11 @@ FROM countries c
 
 -- List all employees along with their job title and department location (city).
 -- (Hint: employees + jobs + departments + locations)
+SELECT e.first_name,e.last_name ,j.job_title ,d.department_name,l.city
+FROM employees e 
+    INNER JOIN jobs j ON e.job_id = j.job_id
+    INNER JOIN departments d ON e.department_id = d.department_id
+    INNER JOIN locations l ON d.location_id = l.location_id;
 
 -- Find the names of employees and their managers’ job titles.
 -- (Hint: self join on employees + jobs)
