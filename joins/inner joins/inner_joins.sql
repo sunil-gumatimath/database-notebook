@@ -37,6 +37,10 @@ GROUP BY j.job_title;
 
 -- List employee names, their department names, and city names.
 -- (Hint: employees + departments + locations)
+SELECT e.first_name,e.last_name,d.department_name,l.city 
+FROM employees e 
+    INNER JOIN departments d ON e.department_id = d.department_id
+    INNER JOIN locations l ON d.location_id = l.location_id;
 
 -- Display employee names and manager names.
 -- (Hint: self join on employees)
