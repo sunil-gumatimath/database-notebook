@@ -59,7 +59,9 @@ GROUP BY e.employee_id, e.first_name, e.last_name
 HAVING COUNT(DISTINCT j.department_id) > 1;
 
 -- Display country names and their corresponding region names.
-SELECT c.country_name , r.region_name FROM countries c INNER JOIN regions r ON c.region_id = r.region_id; 
+SELECT c.country_name, r.region_name
+FROM countries c
+    INNER JOIN regions r ON c.region_id = r.region_id; 
 
 -- List all employees along with their job title and department location (city).
 -- (Hint: employees + jobs + departments + locations)
