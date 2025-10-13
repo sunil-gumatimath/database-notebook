@@ -84,6 +84,10 @@ INNER JOIN jobs j ON m.job_id = j.job_id;
 
 -- Display all departments along with the total number of employees in each department.
 -- (Hint: employees + departments, use GROUP BY)
+SELECT d.department_name ,COUNT(e.employee_id) AS total_employees
+FROM departments d
+    INNER JOIN employees e ON d.department_id = e.department_id
+GROUP BY d.department_name;
 
 -- List all employees who earn more than the average salary of their job title.
 -- (Hint: employees + jobs, use JOIN and aggregate subquery)
