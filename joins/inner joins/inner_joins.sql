@@ -92,16 +92,17 @@ GROUP BY d.department_name;
 -- List all employees who earn more than the average salary of their job title.
 -- (Hint: employees + jobs, use JOIN and aggregate subquery)
 SELECT e.first_name, e.last_name, e.salary, j.job_title
-FROM employees e 
-INNER JOIN jobs j ON e.job_id = j.job_id
+FROM employees e
+    INNER JOIN jobs j ON e.job_id = j.job_id
 WHERE e.salary > (
-    SELECT AVG(salary) FROM employees
+    SELECT AVG(salary)
+    FROM employees
     WHERE job_id = e.job_id
 );
 
 -- Show all employees along with the countries of the locations where their department is based.
 -- (Hint: employees + departments + locations + countries)
-SELECT e.first_name,e.last_name,d.department_name,l.city,c.country_name 
+SELECT e.first_name, e.last_name, d.department_name, l.city, c.country_name
 FROM employees e
     INNER JOIN departments d ON e.department_id = d.department_id
     INNER JOIN locations l ON d.location_id = l.location_id
@@ -109,3 +110,6 @@ FROM employees e
 
 -- Display all job titles along with the names of employees currently holding that job.
 -- (Hint: employees + jobs, simple INNER JOIN)
+SELECT j.job_title, e.first_name, e.last_name
+FROM employees e
+    INNER JOIN jobs j ON e.job_id = j.job_id;
