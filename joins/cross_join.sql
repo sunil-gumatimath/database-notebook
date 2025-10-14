@@ -12,6 +12,8 @@ SELECT d.*,l.* FROM departments d CROSS JOIN locations l;
 
 -- List every employee with every manager in the company.
 -- (employees × employees self join as CROSS JOIN)
+SELECT e.first_name,e.last_name,m.first_name,m.last_name 
+FROM employees e CROSS JOIN employees m;
 
 -- Display all countries combined with all regions.
 -- (countries × regions)
