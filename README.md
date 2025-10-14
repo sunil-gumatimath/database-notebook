@@ -32,7 +32,7 @@ This repository provides hands-on SQL examples and practice queries organized by
 
 **What you'll find:**
 
-- 37 SQL files covering DDL, DML, DQL, functions, operators, subqueries, and inner joins
+- A comprehensive collection of SQL files covering DDL, DML, DQL, various functions, operators, subqueries, and all major JOIN types (INNER, LEFT, RIGHT, CROSS, FULL OUTER).
 - SCOTT schema: Simple schema with 14 employees and 4 departments
 - HR schema: Enterprise-level schema with 107 employees across 27 departments
 - Progressive learning from basics to advanced queries
@@ -58,7 +58,7 @@ This repository provides hands-on SQL examples and practice queries organized by
 ### Query Features
 
 - **`operators/`** — Filtering with IN, LIKE, BETWEEN, REGEXP (2 files: 1 example + 1 assignment)
-- **`joins/`** — Examples of INNER JOIN, LEFT JOIN, and RIGHT JOIN operations using the HR schema to combine data from multiple tables. Includes `inner_joins.sql`, `left_join.sql`, and `right_join.sql`.
+- **`joins/`** — Examples of INNER JOIN, LEFT JOIN, RIGHT JOIN, CROSS JOIN, and FULL OUTER JOIN operations using the HR schema to combine data from multiple tables. Includes `inner_joins.sql`, `left_join.sql`, `right_join.sql`, `cross_join.sql`, and `full_outer_join.sql`.
 - **`indexes/`** — Performance optimization (placeholder)
 - **`subqueries/`** — Explores nested queries and advanced retrieval techniques with 8 files, including introductory examples, practice assignments, and query files.
 - **`transactions/`** — Transaction management concepts (placeholder for future content).

@@ -84,10 +84,15 @@ Quick links to all examples and assignments with brief descriptions.
 
 ## Query Features
 
-- **`joins/`** — JOIN operations (1 file: inner joins)
-  - [joins/inner joins/inner_joins.sql](joins/inner joins/inner_joins.sql) — INNER JOIN examples using HR schema
+- **`joins/`** — Comprehensive JOIN operations using the HR schema to combine data from multiple tables.
+  - [joins/inner_joins.sql](joins/inner_joins.sql) — INNER JOIN examples
+  - [joins/left_join.sql](joins/left_join.sql) — LEFT JOIN examples
+  - [joins/right_join.sql](joins/right_join.sql) — RIGHT JOIN examples
+  - [joins/cross_join.sql](joins/cross_join.sql) — CROSS JOIN examples
+  - [joins/full_outer_join.sql](joins/full_outer_join.sql) — FULL OUTER JOIN examples
 
-## Future Content (Placeholders)
+## Placeholders for Future Content
 
-- [indexes/README.md](indexes/README.md) — Index strategies (placeholder)
-- [transactions/README.md](transactions/README.md) — Transaction management (placeholder)
+- **`indexes/`** — Index strategies (placeholder)
+- **`transactions/`** — Transaction management (placeholder)
+- **`tables/`** — Schema reference (placeholder)
