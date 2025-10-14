@@ -28,6 +28,7 @@ FROM departments d
 -- Show all jobs and employees currently assigned to those jobs, including jobs that have no employees yet.
 -- (jobs + employees)
 
+
 -- Display all countries and the locations in them, even if some countries have no locations.
 -- (countries + locations)
 

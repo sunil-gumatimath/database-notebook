@@ -58,7 +58,7 @@ This repository provides hands-on SQL examples and practice queries organized by
 ### Query Features
 
 - **`operators/`** — Filtering with IN, LIKE, BETWEEN, REGEXP (2 files: 1 example + 1 assignment)
-- **`joins/inner joins/`** — INNER JOIN examples (1 file: inner_joins.sql, uses HR schema)
+- **`joins/`** — Examples of INNER JOIN and LEFT JOIN operations using the HR schema to combine data from multiple tables. Includes `inner_joins.sql` and `left_join.sql`.
 - **`indexes/`** — Performance optimization (placeholder)
 - **`subqueries/`** — Nested queries and advanced retrieval (8 files: 1 example + 4 assignments + 2 query files)
 - **`transactions/`** — Transaction management (placeholder)
