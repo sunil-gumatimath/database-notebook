@@ -33,7 +33,10 @@ FROM jobs j
 
 -- Display all countries and the locations in them, even if some countries have no locations.
 -- (countries + locations)
-
+SELECT c.country_name,l.city 
+FROM countries c 
+    LEFT JOIN locations l ON c.country_id = l.country_id;
+    
 -- List all locations and the departments based there, including locations that don’t have any departments.
 -- (locations + departments)
 
