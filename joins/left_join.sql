@@ -58,3 +58,6 @@ FROM employees e
 
 -- List all regions and the countries in them, including regions that don’t have any countries.
 -- (regions + countries)
+SELECT r.region_name,c.country_name 
+FROM regions r 
+    LEFT JOIN countries c ON r.region_id = c.region_id;
