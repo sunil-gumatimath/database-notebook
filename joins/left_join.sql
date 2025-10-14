@@ -52,6 +52,9 @@ GROUP BY d.department_name;
 
 -- Display all employees and their job history (start date, end date), including employees who never changed jobs.
 -- (employees + job_history)
+SELECT e.first_name,e.last_name,j.start_date,j.end_date 
+FROM employees e 
+    LEFT JOIN job_history j ON e.employee_id = j.employee_id;
 
 -- List all regions and the countries in them, including regions that don’t have any countries.
 -- (regions + countries)
