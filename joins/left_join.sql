@@ -1,1 +1,29 @@
--- left joins
+-- List all employees and their department names, including employees who are not assigned to any department.
+-- (employees + departments)
+
+-- Show all departments and their employees, including departments that have no employees.
+-- (departments + employees)
+
+-- Display all employees and their manager names, including employees who don’t have a manager.
+-- (self join on employees)
+
+-- List all departments and their locations (city), including departments where location information is missing.
+-- (departments + locations)
+
+-- Show all jobs and employees currently assigned to those jobs, including jobs that have no employees yet.
+-- (jobs + employees)
+
+-- Display all countries and the locations in them, even if some countries have no locations.
+-- (countries + locations)
+
+-- List all locations and the departments based there, including locations that don’t have any departments.
+-- (locations + departments)
+
+-- Show all departments and the total salary of their employees. Include departments that have no employees.
+-- (departments + employees with GROUP BY)
+
+-- Display all employees and their job history (start date, end date), including employees who never changed jobs.
+-- (employees + job_history)
+
+-- List all regions and the countries in them, including regions that don’t have any countries.
+-- (regions + countries)
