@@ -17,9 +17,11 @@ FROM employees e CROSS JOIN employees m;
 
 -- Display all countries combined with all regions.
 -- (countries × regions)
+SELECT c.country_name,r.region_name FROM countries c CROSS JOIN regions r;
 
 -- Show every department with every employee who has ever worked in job history.
 -- (departments × job_history)
+SELECT d.department_name,j.employee_id FROM departments d CROSS JOIN job_history j;
 
 -- List all employees with every city from the locations table.
 -- (employees × locations)
