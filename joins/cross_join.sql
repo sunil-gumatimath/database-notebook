@@ -8,6 +8,7 @@ SELECT e.*,j.* FROM employees e CROSS JOIN jobs j;
 
 -- Show all combinations of departments and locations, even if a department is not assigned to a location.
 -- (departments × locations)
+SELECT d.*,l.* FROM departments d CROSS JOIN locations l;
 
 -- List every employee with every manager in the company.
 -- (employees × employees self join as CROSS JOIN)
