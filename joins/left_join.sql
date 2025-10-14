@@ -1,5 +1,6 @@
 -- List all employees and their department names, including employees who are not assigned to any department.
 -- (employees + departments)
+SELECT e.first_name, e.last_name, d.department_name FROM employees e LEFT JOIN departments d ON e.department_id = d.department_id;
 
 -- Show all departments and their employees, including departments that have no employees.
 -- (departments + employees)
