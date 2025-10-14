@@ -58,7 +58,7 @@ This repository provides hands-on SQL examples and practice queries organized by
 ### Query Features
 
 - **`operators/`** — Filtering with IN, LIKE, BETWEEN, REGEXP (2 files: 1 example + 1 assignment)
-- **`joins/`** — Examples of INNER JOIN and LEFT JOIN operations using the HR schema to combine data from multiple tables. Includes `inner_joins.sql` and `left_join.sql`.
+- **`joins/`** — Examples of INNER JOIN, LEFT JOIN, and RIGHT JOIN operations using the HR schema to combine data from multiple tables. Includes `inner_joins.sql`, `left_join.sql`, and `right_join.sql`.
 - **`indexes/`** — Performance optimization (placeholder)
 - **`subqueries/`** — Explores nested queries and advanced retrieval techniques with 8 files, including introductory examples, practice assignments, and query files.
 - **`transactions/`** — Transaction management concepts (placeholder for future content).
@@ -122,6 +122,7 @@ mysql -u root -p sql_practice < ddl/scott_table.sql
 mysql -u root -p sql_practice
 mysql> SELECT * FROM emp;
 ```
+
 **Note:** These commands are specific to MySQL/MariaDB. For other databases, please refer to the "Getting Started" section for general guidance on schema loading.
 
 ### Suggested Learning Path
