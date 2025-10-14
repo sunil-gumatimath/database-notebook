@@ -25,6 +25,7 @@ SELECT d.department_name,j.employee_id FROM departments d CROSS JOIN job_history
 
 -- List all employees with every city from the locations table.
 -- (employees × locations)
+SELECT e.*,l.city FROM employees e CROSS JOIN locations l;
 
 -- Display every job with every country in the database.
 -- (jobs × countries)
