@@ -4,6 +4,7 @@ SELECT e.first_name, e.last_name, d.department_name FROM employees e LEFT JOIN d
 
 -- Show all departments and their employees, including departments that have no employees.
 -- (departments + employees)
+SELECT d.department_name,e.first_name,e.last_name FROM departments d LEFT JOIN employees e ON d.department_id = e.department_id;
 
 -- Display all employees and their manager names, including employees who don’t have a manager.
 -- (self join on employees)
