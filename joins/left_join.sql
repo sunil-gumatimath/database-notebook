@@ -36,12 +36,19 @@ FROM jobs j
 SELECT c.country_name,l.city 
 FROM countries c 
     LEFT JOIN locations l ON c.country_id = l.country_id;
-    
+
 -- List all locations and the departments based there, including locations that don’t have any departments.
 -- (locations + departments)
+SELECT l.city,d.department_name 
+FROM locations l 
+    LEFT JOIN departments d ON l.location_id = d.location_id;
 
 -- Show all departments and the total salary of their employees. Include departments that have no employees.
 -- (departments + employees with GROUP BY)
+SELECT d.department_name,SUM(e.salary)
+FROM departments d 
+    LEFT JOIN employees e ON d.department_id = e.department_id
+GROUP BY d.department_name;
 
 -- Display all employees and their job history (start date, end date), including employees who never changed jobs.
 -- (employees + job_history)
