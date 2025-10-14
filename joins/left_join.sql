@@ -27,7 +27,9 @@ FROM departments d
 
 -- Show all jobs and employees currently assigned to those jobs, including jobs that have no employees yet.
 -- (jobs + employees)
-
+SELECT j.job_title,e.first_name,e.last_name 
+FROM jobs j 
+    LEFT JOIN employees e ON j.job_id = e.job_id;
 
 -- Display all countries and the locations in them, even if some countries have no locations.
 -- (countries + locations)
