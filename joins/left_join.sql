@@ -8,6 +8,12 @@ SELECT d.department_name,e.first_name,e.last_name FROM departments d LEFT JOIN e
 
 -- Display all employees and their manager names, including employees who don’t have a manager.
 -- (self join on employees)
+SELECT e.first_name AS emp_firstName,
+       e.last_name AS emp_lastName,
+       m.first_name AS manager_firstName,
+       m.last_name AS manager_lastName
+FROM employees e
+LEFT JOIN employees m ON e.manager_id = m.employee_id;
 
 -- List all departments and their locations (city), including departments where location information is missing.
 -- (departments + locations)
