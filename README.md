@@ -39,7 +39,7 @@ This repository provides hands-on SQL examples and practice queries organized by
 - Practice assignments for each topic with consistent naming conventions
 - Comprehensive function examples with 40+ character functions and 20+ date functions
 
-**Database compatibility:** Primarily MySQL/MariaDB syntax with notes for Oracle and PostgreSQL.
+**Database compatibility:** Primarily MySQL/MariaDB syntax. Specific notes for Oracle and PostgreSQL differences may be found within individual SQL files.
 
 ## Repository Structure
 
@@ -60,8 +60,8 @@ This repository provides hands-on SQL examples and practice queries organized by
 - **`operators/`** — Filtering with IN, LIKE, BETWEEN, REGEXP (2 files: 1 example + 1 assignment)
 - **`joins/`** — Examples of INNER JOIN and LEFT JOIN operations using the HR schema to combine data from multiple tables. Includes `inner_joins.sql` and `left_join.sql`.
 - **`indexes/`** — Performance optimization (placeholder)
-- **`subqueries/`** — Nested queries and advanced retrieval (8 files: 1 example + 4 assignments + 2 query files)
-- **`transactions/`** — Transaction management (placeholder)
+- **`subqueries/`** — Explores nested queries and advanced retrieval techniques with 8 files, including introductory examples, practice assignments, and query files.
+- **`transactions/`** — Transaction management concepts (placeholder for future content).
 
 ### Practice and Examples
 
@@ -122,6 +122,7 @@ mysql -u root -p sql_practice < ddl/scott_table.sql
 mysql -u root -p sql_practice
 mysql> SELECT * FROM emp;
 ```
+**Note:** These commands are specific to MySQL/MariaDB. For other databases, please refer to the "Getting Started" section for general guidance on schema loading.
 
 ### Suggested Learning Path
 
