@@ -1,10 +1,16 @@
 -- List all employees and their department names, including employees who are not assigned to any department.
 -- (employees + departments)
-SELECT e.first_name, e.last_name, d.department_name FROM employees e LEFT JOIN departments d ON e.department_id = d.department_id;
+SELECT e.first_name, e.last_name, d.department_name 
+FROM employees e 
+    LEFT JOIN departments d 
+    ON e.department_id = d.department_id;
 
 -- Show all departments and their employees, including departments that have no employees.
 -- (departments + employees)
-SELECT d.department_name,e.first_name,e.last_name FROM departments d LEFT JOIN employees e ON d.department_id = e.department_id;
+SELECT d.department_name,e.first_name,e.last_name 
+FROM departments d 
+    LEFT JOIN employees e 
+    ON d.department_id = e.department_id;
 
 -- Display all employees and their manager names, including employees who don’t have a manager.
 -- (self join on employees)
@@ -17,6 +23,7 @@ LEFT JOIN employees m ON e.manager_id = m.employee_id;
 
 -- List all departments and their locations (city), including departments where location information is missing.
 -- (departments + locations)
+
 
 -- Show all jobs and employees currently assigned to those jobs, including jobs that have no employees yet.
 -- (jobs + employees)
