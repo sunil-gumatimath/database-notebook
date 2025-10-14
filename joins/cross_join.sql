@@ -29,9 +29,12 @@ SELECT e.*,l.city FROM employees e CROSS JOIN locations l;
 
 -- Display every job with every country in the database.
 -- (jobs × countries)
+SELECT j.job_title,c.country_name FROM jobs j CROSS JOIN countries c;
 
 -- Show all combinations of regions and job titles.
 -- (regions × jobs)
+SELECT r.region_name,j.job_title FROM regions r CROSS JOIN jobs j;
 
 -- List all employees with every department and location combination.
 -- (employees × departments × locations)
+SELECT e.first_name,e.last_name,d.department_name,l.city FROM employees e CROSS JOIN departments d CROSS JOIN locations l;
