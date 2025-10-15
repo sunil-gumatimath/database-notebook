@@ -1,15 +1,13 @@
-## Practice Queries
+# Practice Queries: Hands-on Exercises
 
-Small self-contained query exercises.
+This directory contains a collection of small, self-contained SQL query exercises designed for hands-on practice. These queries reinforce concepts learned in other sections of the repository.
 
-Contents:
-- examples:
-  - [`examples/query_01.sql`](examples/query_01.sql) — Basic selection and filtering.
-  - [`examples/query_02.sql`](examples/query_02.sql) — Additional practice queries.
-- assignments:
-  - [`assignments/assignment_01.sql`](assignments/assignment_01.sql) — Practice set with filters and computed columns.
+## Contents:
 
-Prereq: Load sample tables from `ddl/scott_table.sql` or `ddl/hr_schema.sql`.
+- **Examples:**
+  - [`queries/examples/query_01.sql`](queries/examples/query_01.sql) — Basic `SELECT` statements, filtering, and projections.
+  - [`queries/examples/query_02.sql`](queries/examples/query_02.sql) — Additional practice queries covering various fundamental SQL concepts.
+- **Assignments:**
+  - [`queries/assignments/assignment_01.sql`](queries/assignments/assignment_01.sql) — A practice set focusing on filters, computed columns, and basic aggregations.
 
-
-
+**Prerequisite:** To effectively work with these queries, ensure you have loaded sample tables from either `ddl/scott_table.sql` or `ddl/hr_schema.sql` into your database.

@@ -1,12 +1,10 @@
-## Basics
+# Basics: Foundational SQL Concepts
 
-Overview of foundational SQL concepts.
+This directory covers the fundamental building blocks of SQL, essential for creating and managing database structures.
 
-Contents:
-- [`data_types.sql`](data_types.sql) — Common data types with simple `CREATE TABLE` examples.
-- [`constraints.sql`](constraints.sql) — `NOT NULL`, `UNIQUE`, `PRIMARY KEY`, `FOREIGN KEY`, `CHECK`, `DEFAULT`.
+## Contents:
 
-Suggested order: data types → constraints.
+- [`basics/data_types.sql`](basics/data_types.sql) — A guide to common SQL data types with simple `CREATE TABLE` examples.
+- [`basics/constraints.sql`](basics/constraints.sql) — Explanation and examples of essential SQL constraints: `NOT NULL`, `UNIQUE`, `PRIMARY KEY`, `FOREIGN KEY`, `CHECK`, `DEFAULT`.
 
-
-
+**Suggested Learning Order:** Start with `data_types.sql` to understand data representation, then move to `constraints.sql` to learn how to enforce data integrity.

@@ -1,12 +1,10 @@
-## Operators
+# Operators: Filtering and Logical Operations
 
-Examples and exercises for comparison/logical operators.
+This directory covers SQL operators, which are used in `WHERE` clauses and other expressions to filter data, perform comparisons, and implement logical operations.
 
-Contents:
-- examples:
-  - [`examples/operators_examples.sql`](examples/operators_examples.sql) — `IN`, `LIKE`, `BETWEEN`, `IS NULL`, boolean logic.
-- assignments:
-  - [`assignments/operators_assignment.sql`](assignments/operators_assignment.sql) — Practice tasks using operators.
+## Contents:
 
-
-
+- **Examples:**
+  - [`operators/examples/operators_examples.sql`](operators/examples/operators_examples.sql) — Demonstrates various operators including comparison operators (`=`, `>`, `<`, etc.), logical operators (`AND`, `OR`, `NOT`), `IN`, `LIKE`, `BETWEEN`, `IS NULL`, and boolean logic.
+- **Assignments:**
+  - [`operators/assignments/operators_assignment.sql`](operators/assignments/operators_assignment.sql) — Practice tasks designed to reinforce the understanding and application of SQL operators.

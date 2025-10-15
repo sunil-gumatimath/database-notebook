@@ -8,14 +8,14 @@ A practical SQL learning resource with examples, queries, and schemas for master
 
 ## Project Overview
 
-A curated collection of SQL scripts, schemas, and exercises designed for learners at all levels.  
+A curated collection of SQL scripts, schemas, and exercises designed for learners at all levels.
 The repository includes:
 
 - Sample schemas (SCOTT & HR) for hands‑on practice.
 - Organized folders covering core concepts, functions, operators, subqueries, and more.
 - Ready‑to‑run assignment files to reinforce each topic.
 
-**Repository:** [database-notebook](https://github.com/sunil-gumatimah/database-notebook)
+**Repository:** [database-notebook](https://github.com/sunil-gumatimath/database-notebook)
 **Quick links:** See the full project index at [`INDEX.md`](INDEX.md).
 
 ## Table of Contents
@@ -45,29 +45,29 @@ This repository provides hands-on SQL examples and practice queries organized by
 
 ### Core SQL Concepts
 
-- **`basics/`** — Data types and constraints (2 files: data_types.sql, constraints.sql)
-- **`ddl/`** — Schema creation and management (3 files: ddl_commands.sql, scott_table.sql, hr_schema.sql)
-- **`dml/`** — Data manipulation (1 file: dml_commands.sql)
-- **`dql/`** — Basic querying (3 files: dql_commands.sql, select_alias.sql, select_distinct.sql)
+- **`basics/`** — Data types and constraints (2 files: `data_types.sql`, `constraints.sql`)
+- **`ddl/`** — Schema creation and management (4 files: `ddl_commands.sql`, `hr_schema.sql`, `ddl_commands.sql`, `scott_table.sql`)
+- **`dml/`** — Data manipulation (1 file: `dml_commands.sql`)
+- **`dql/`** — Basic querying (3 files: `dql_commands.sql`, `select_alias.sql`, `select_distinct.sql`)
 
 ### Functions and Expressions
 
-- **`functions/single_row/`** — Character, numeric, date, and general functions (5 files: 4 examples + 1 assignment + notes)
-- **`functions/aggregate/`** — Aggregate functions, GROUP BY, HAVING, ORDER BY (5 files: 4 examples + 1 assignment)
+- **`functions/single_row/`** — Character, numeric, date, and general functions (5 files: `README.md`, `assignments/`, `examples/`, `notes/`)
+- **`functions/aggregate/`** — Aggregate functions, GROUP BY, HAVING, ORDER BY (3 files: `README.md`, `assignments/`, `examples/`)
 
 ### Query Features
 
-- **`operators/`** — Filtering with IN, LIKE, BETWEEN, REGEXP (2 files: 1 example + 1 assignment)
-- **`joins/`** — Examples of INNER JOIN, LEFT JOIN, RIGHT JOIN, CROSS JOIN, and FULL OUTER JOIN operations using the HR schema to combine data from multiple tables. Includes `inner_joins.sql`, `left_join.sql`, `right_join.sql`, `cross_join.sql`, and `full_outer_join.sql`.
-- **`indexes/`** — Performance optimization (placeholder)
-- **`subqueries/`** — Explores nested queries and advanced retrieval techniques with 8 files, including introductory examples, practice assignments, and query files.
-- **`transactions/`** — Transaction management concepts (placeholder for future content).
+- **`operators/`** — Filtering with IN, LIKE, BETWEEN, REGEXP (3 files: `README.md`, `assignments/`, `examples/`)
+- **`joins/`** — Examples of INNER JOIN, LEFT JOIN, RIGHT JOIN, CROSS JOIN, and FULL OUTER JOIN operations using the HR schema to combine data from multiple tables. (7 files: `cross_join.sql`, `full_outer_join.sql`, `inner_join.sql`, `left_join.sql`, `README.md`, `right_join.sql`, `self_join.sql`)
+- **`indexes/`** — Performance optimization (1 file: `README.md`)
+- **`subqueries/`** — Explores nested queries and advanced retrieval techniques (9 files: `README.md`, `assignments/`, `examples/`, `query/`)
+- **`transactions/`** — Transaction management concepts (1 file: `README.md`)
 
 ### Practice and Examples
 
-- **`queries/`** — Query collections and assignments (3 files)
-- **`gpt_assignment/`** — AI-generated subquery practice assignments using HR schema (3 files)
-- **`tables/`** — Schema reference (placeholder)
+- **`queries/`** — Query collections and assignments (3 files: `README.md`, `assignments/`, `examples/`)
+- **`gpt_assignment/`** — AI-generated subquery practice assignments using HR schema (3 files: `gpt_assignment_01.sql`, `gpt_assignment_1.sql`, `gpt_assignment_02.sql`)
+- **`tables/`** — Schema reference (1 file: `README.md`)
 
 ## Sample Schemas
 

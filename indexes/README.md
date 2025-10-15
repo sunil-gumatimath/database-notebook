@@ -1,13 +1,13 @@
-## Indexes
+# Indexes: Performance Optimization
 
-Purpose: Scripts and notes on indexing strategies for performance.
+This directory is intended to contain scripts and notes on SQL indexing strategies for performance optimization.
 
-Topics to cover:
-- Creating and dropping indexes; unique vs non-unique
-- Composite and covering indexes
-- When indexes help vs hurt; explain plans
+## Current Status:
 
-Status: Folder placeholder created. Add `.sql` files when ready.
+This folder currently serves as a placeholder. SQL files (`.sql`) detailing indexing concepts are yet to be added.
 
+## Planned Topics:
 
-
+- Creating and dropping indexes (unique vs. non-unique).
+- Understanding composite and covering indexes.
+- Analyzing scenarios where indexes improve or degrade performance, including the use of `EXPLAIN` plans.
