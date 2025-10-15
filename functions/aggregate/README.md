@@ -2,7 +2,7 @@
 
 This directory explores aggregate functions, which perform calculations across a set of rows to return a single summary value. It also covers related clauses like `GROUP BY`, `HAVING`, and `ORDER BY` that are crucial for effective data summarization.
 
-## Contents:
+## Contents
 
 - **Examples:**
   - [`functions/aggregate/examples/aggregate_functions.sql`](functions/aggregate/examples/aggregate_functions.sql) — Introduces core aggregate functions: `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`.
