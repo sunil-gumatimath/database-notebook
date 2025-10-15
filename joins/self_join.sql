@@ -6,11 +6,13 @@ SELECT
     m.first_name AS manager_first_name,
     m.last_name AS manager_last_name
 FROM employees e
-JOIN employees m
-ON e.manager_id = m.employee_id;
-
+    JOIN employees m ON e.manager_id = m.employee_id;
 
 -- List employees who have the same manager.
+SELECT e1.*,e2.* 
+FROM employees e1 
+    JOIN employees e2 ON e1.manager_id = e2.manager_id
+    AND e1.employee_id <> e2.employee_id;
 
 -- Show all managers and the number of employees they manage.
 
