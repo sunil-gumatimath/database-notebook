@@ -47,6 +47,15 @@ SELECT
 FROM employees e JOIN employees m ON e.manager_id = m.employee_id;
 
 -- Display the manager-employee pairs working in the same department.
+SELECT 
+    m.first_name as managerFirstName,
+    m.last_name as managerLastName,
+    e.first_name as employeeFirstName,
+    e.last_name as employeeLastName
+FROM employees e 
+JOIN employees m 
+    ON e.manager_id = m.employee_id
+WHERE e.department_id = m.department_id;
 
 -- List all employees who don’t have a manager (top-level managers).
 
