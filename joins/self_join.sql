@@ -1,4 +1,14 @@
 -- Display employee names along with their manager names.
+-- Display employee names along with their manager names.
+SELECT 
+    e.first_name AS employee_first_name,
+    e.last_name AS employee_last_name,
+    m.first_name AS manager_first_name,
+    m.last_name AS manager_last_name
+FROM employees e
+JOIN employees m
+ON e.manager_id = m.employee_id;
+
 
 -- List employees who have the same manager.
 
