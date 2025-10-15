@@ -2,7 +2,7 @@
 
 This directory covers the fundamental building blocks of SQL, essential for creating and managing database structures.
 
-## Contents:
+## Contents
 
 - [`basics/data_types.sql`](basics/data_types.sql) — A guide to common SQL data types with simple `CREATE TABLE` examples.
 - [`basics/constraints.sql`](basics/constraints.sql) — Explanation and examples of essential SQL constraints: `NOT NULL`, `UNIQUE`, `PRIMARY KEY`, `FOREIGN KEY`, `CHECK`, `DEFAULT`.

@@ -2,7 +2,7 @@
 
 This directory covers single-row functions, which operate on individual rows to return a single result for each row processed. These functions are essential for data transformation and manipulation at the row level.
 
-## Contents:
+## Contents
 
 - **Examples:**
   - [`functions/single_row/examples/character_functions.sql`](functions/single_row/examples/character_functions.sql) — Functions for manipulating character strings (e.g., `UPPER`, `LOWER`, `SUBSTR`, `LENGTH`).

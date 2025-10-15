@@ -2,7 +2,7 @@
 
 This directory serves as a reference for the tables used within this SQL learning repository. It provides a high-level overview of the primary tables in the SCOTT and HR schemas.
 
-## Sample Schemas:
+## Sample Schemas
 
 ### SCOTT Schema
 A classic, simple schema ideal for learning fundamental SQL concepts. Key tables include:

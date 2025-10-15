@@ -2,7 +2,7 @@
 
 This directory focuses on DML, the SQL commands used to modify the data within database tables.
 
-## Contents:
+## Contents
 
 - [`dml/dml_commands.sql`](dml/dml_commands.sql) — Demonstrates fundamental DML operations: `INSERT` (adding new rows), `UPDATE` (modifying existing rows), and `DELETE` (removing rows), with practical examples.
 

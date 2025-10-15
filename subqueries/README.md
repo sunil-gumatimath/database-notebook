@@ -2,7 +2,7 @@
 
 This directory delves into subqueries (also known as inner queries or nested queries), which are queries embedded within other SQL statements. They are powerful tools for performing complex data retrieval and manipulation.
 
-## Contents:
+## Contents
 
 - **Examples:**
   - [`subqueries/examples/subquery.sql`](subqueries/examples/subquery.sql) — Covers core subquery concepts and provides simple, illustrative examples.

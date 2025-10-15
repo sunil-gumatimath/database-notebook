@@ -2,7 +2,7 @@
 
 This directory provides examples of how to combine rows from two or more tables based on related columns using various SQL JOIN types. Understanding joins is fundamental for querying complex datasets.
 
-## Planned Content:
+## Planned Content
 
 - **INNER JOIN:** Retrieving rows where the join condition is met in both tables.
   - [`joins/inner_join.sql`](joins/inner_join.sql)
@@ -15,7 +15,7 @@ This directory provides examples of how to combine rows from two or more tables 
 - **SELF JOIN:** Joining a table to itself to query hierarchical data or compare rows within the same table.
   - [`joins/self_join.sql`](joins/self_join.sql)
 
-## Key Concepts Covered:
+## Key Concepts Covered
 
 - Defining join conditions using `ON` clause.
 - Using table aliases for clarity.

@@ -2,7 +2,7 @@
 
 This directory contains scripts for defining and managing database schemas, including table creation, modification, and deletion.
 
-## Contents:
+## Contents
 
 - [`ddl/ddl_commands.sql`](ddl/ddl_commands.sql) — Demonstrates core DDL commands: `CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME`.
 - [`ddl/scott_table.sql`](ddl/scott_table.sql) — Definition for the classic SCOTT schema, including `EMP`, `DEPT`, `BONUS`, and `SALGRADE` tables with sample data.
