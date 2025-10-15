@@ -40,6 +40,11 @@ FROM employees e JOIN employees m ON e.manager_id = m.employee_id
 WHERE e.hire_date < m.hire_date;
 
 -- Show all employees along with their manager’s job ID.
+SELECT 
+    e.first_name AS employee_first_name,
+    e.last_name AS employee_last_name,
+    m.job_id AS manager_job_id
+FROM employees e JOIN employees m ON e.manager_id = m.employee_id;
 
 -- Display the manager-employee pairs working in the same department.
 
