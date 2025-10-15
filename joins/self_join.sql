@@ -57,8 +57,8 @@ JOIN employees m
     ON e.manager_id = m.employee_id
 WHERE e.department_id = m.department_id;
 
--- List all employees who don’t have a manager (top-level managers).
-
 -- Find employees who earn more than their manager.
+SELECT e.first_name,e.last_name FROM employees e JOIN employees m ON e.manager_id = m.employee_id
+WHERE e.salary > m.salary;
 
 -- Show employees whose job title matches their manager’s job title.
