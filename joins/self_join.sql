@@ -31,6 +31,13 @@ JOIN employees m
 WHERE e.salary > m.salary;
 
 -- List employees who joined before their manager.
+SELECT
+    e.first_name AS employee_first_name,
+    e.last_name AS employee_last_name,
+    m.first_name AS manager_first_name,
+    m.last_name AS manager_last_name
+FROM employees e JOIN employees m ON e.manager_id = m.employee_id
+WHERE e.hire_date < m.hire_date;
 
 -- Show all employees along with their manager’s job ID.
 
