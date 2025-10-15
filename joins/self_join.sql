@@ -62,3 +62,6 @@ SELECT e.first_name,e.last_name FROM employees e JOIN employees m ON e.manager_i
 WHERE e.salary > m.salary;
 
 -- Show employees whose job title matches their manager’s job title.
+SELECT e.first_name,e.last_name,m.first_name,m.last_name 
+FROM employees e JOIN employees m ON e.manager_id = m.employee_id
+WHERE e.job_id = m.job_id;
