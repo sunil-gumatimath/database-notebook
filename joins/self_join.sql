@@ -15,8 +15,12 @@ FROM employees e1
     AND e1.employee_id <> e2.employee_id;
 
 -- Show all managers and the number of employees they manage.
+SELECT e1.manager_id,COUNT(e1.employee_id) 
+FROM employees e1 JOIN employees e2 ON e1.manager_id = e2.employee_id
+GROUP BY e1.manager_id;
 
 -- Display employees whose salary is higher than their manager’s salary.
+
 
 -- List employees who joined before their manager.
 
