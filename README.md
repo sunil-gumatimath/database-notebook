@@ -111,27 +111,36 @@ A more complex, enterprise-level schema for practicing advanced queries.
 
 This repository is primarily designed for MySQL/MariaDB. To get started, you can set up a local database and load one of the provided schemas.
 
-1.  **Create a database:**
-    ```bash
-    mysql -u root -p -e "CREATE DATABASE sql_practice;"
-    ```
-2.  **Load a schema:**
-    *   For basic practice:
-        ```bash
-        mysql -u root -p sql_practice < ddl/scott_table.sql
-        ```
-    *   For advanced practice (requires HR schema setup):
-        ```bash
-        mysql -u root -p sql_practice < ddl/hr_schema.sql
-        ```
-3.  **Connect and practice:**
-    ```bash
-    mysql -u root -p sql_practice
-    ```
-    Once connected, you can start querying, for example:
-    ```sql
-    mysql> SELECT * FROM emp;
-    ```
+1. **Create a database:**
+
+   ```bash
+   mysql -u root -p -e "CREATE DATABASE sql_practice;"
+   ```
+
+2. **Load a schema:**
+   - For basic practice:
+
+     ```bash
+     mysql -u root -p sql_practice < ddl/scott_table.sql
+     ```
+
+   - For advanced practice (requires HR schema setup):
+
+     ```bash
+     mysql -u root -p sql_practice < ddl/hr_schema.sql
+     ```
+
+3. **Connect and practice:**
+
+   ```bash
+   mysql -u root -p sql_practice
+   ```
+
+   Once connected, you can start querying, for example:
+
+   ```sql
+   mysql> SELECT * FROM emp;
+   ```
 
 **Note:** For other database systems like PostgreSQL or Oracle, please refer to the specific documentation or adapt the schema loading commands accordingly.
 
@@ -186,12 +195,6 @@ This repository is primarily designed for MySQL/MariaDB. To get started, you can
 - Consistent indentation
 - Semicolons at statement ends
 - Comments with -- or /**/
-
-### Database Compatibility
-
-- Primary: MySQL/MariaDB
-- Notes for Oracle/PostgreSQL differences
-- Test in your RDBMS
 
 ### Query Execution Order
 
