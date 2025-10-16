@@ -8,6 +8,7 @@ SELECT first_name,last_name,job_title FROM employees  NATURAL JOIN jobs;
 SELECT first_name,last_name,city FROM employees NATURAL JOIN departments NATURAL JOIN locations;
 
 -- Show department name and manager name using NATURAL JOIN on departments and employees tables.
+SELECT department_name,first_name,last_name FROM departments NATURAL JOIN employees;
 
 -- Write a query to display employee name, job title, and department name using NATURAL JOIN on all related tables.
 
