@@ -17,6 +17,7 @@ SELECT first_name,last_name,job_title,department_name FROM employees NATURAL JOI
 SELECT first_name,last_name,job_id FROM employees NATURAL JOIN job_history;
 
 -- List all employees and their country names using NATURAL JOIN across employees, departments, locations, and countries.
+SELECT first_name,last_name,country_name FROM employees NATURAL JOIN departments NATURAL JOIN locations NATURAL JOIN countries;
 
 -- Find departments that have at least one employee using NATURAL JOIN.
 
