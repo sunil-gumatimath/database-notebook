@@ -1,4 +1,5 @@
 -- Display employee details along with their department name using NATURAL JOIN.
+SELECT * FROM employees NATURAL JOIN departments;
 
 -- List all employees with their job titles using NATURAL JOIN between employees and jobs.
 
