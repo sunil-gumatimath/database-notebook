@@ -20,7 +20,9 @@ SELECT first_name,last_name,job_id FROM employees NATURAL JOIN job_history;
 SELECT first_name,last_name,country_name FROM employees NATURAL JOIN departments NATURAL JOIN locations NATURAL JOIN countries;
 
 -- Find departments that have at least one employee using NATURAL JOIN.
-
+SELECT department_name FROM departments NATURAL JOIN employees
+GROUP BY department_name
+HAVING COUNT(*) >= 1;
 -- Show job titles and corresponding department names using NATURAL JOIN between jobs and departments.
 
 -- Write a query to display all columns from employees and departments using NATURAL JOIN — and explain the result.
