@@ -11,6 +11,7 @@ SELECT first_name,last_name,city FROM employees NATURAL JOIN departments NATURAL
 SELECT department_name,first_name,last_name FROM departments NATURAL JOIN employees;
 
 -- Write a query to display employee name, job title, and department name using NATURAL JOIN on all related tables.
+SELECT first_name,last_name,job_title,department_name FROM employees NATURAL JOIN jobs NATURAL JOIN departments; 
 
 -- Retrieve details of employees who have job history records using NATURAL JOIN on employees and job_history.
 
