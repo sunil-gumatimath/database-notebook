@@ -8,3 +8,9 @@
 -- Hide certain columns or sensitive data
 -- Reuse queries without rewriting them
 
+CREATE VIEW emp_dept_view AS
+SELECT e.first_name,e.last_name,d.department_name
+FROM employees e
+JOIN departments d ON e.department_id = d.department_id;
+
+SELECT * FROM emp_dept_view;
