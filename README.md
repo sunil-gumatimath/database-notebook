@@ -39,14 +39,18 @@ This repository provides hands-on SQL examples and practice queries organized by
 - Practice assignments for each topic with consistent naming conventions
 - Comprehensive function examples with 40+ character functions and 20+ date functions
 
-**Database compatibility:** Primarily MySQL/MariaDB syntax. Specific notes for Oracle and PostgreSQL differences may be found within individual SQL files.
+## Database Compatibility
+
+This repository is primarily designed for **MySQL/MariaDB**. While many scripts are standard SQL and may work on other RDBMS like PostgreSQL or Oracle, specific syntax or features might require adjustments. Notes for Oracle and PostgreSQL differences are included within individual SQL files where applicable.
+
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 
 ## Repository Structure
 
 ### Core SQL Concepts
 
 - **`basics/`** — Data types and constraints (2 files: `data_types.sql`, `constraints.sql`)
-- **`ddl/`** — Schema creation and management (4 files: `ddl_commands.sql`, `hr_schema.sql`, `ddl_commands.sql`, `scott_table.sql`)
+- **`ddl/`** — Schema creation and management (4 files: `ddl_commands.sql`, `hr_schema.sql`, `scott_table.sql`)
 - **`dml/`** — Data manipulation (1 file: `dml_commands.sql`)
 - **`dql/`** — Basic querying (3 files: `dql_commands.sql`, `select_alias.sql`, `select_distinct.sql`)
 
@@ -61,12 +65,13 @@ This repository provides hands-on SQL examples and practice queries organized by
 - **`joins/`** — Examples of INNER JOIN, LEFT JOIN, RIGHT JOIN, CROSS JOIN, and FULL OUTER JOIN operations using the HR schema to combine data from multiple tables. (7 files: `cross_join.sql`, `full_outer_join.sql`, `inner_join.sql`, `left_join.sql`, `README.md`, `right_join.sql`, `self_join.sql`)
 - **`indexes/`** — Performance optimization (1 file: `README.md`)
 - **`subqueries/`** — Explores nested queries and advanced retrieval techniques (9 files: `README.md`, `assignments/`, `examples/`, `query/`)
+  - **`query/`** — Nested query examples (3 files: `subquery_01.sql`, `subquery_02.sql`)
 - **`transactions/`** — Transaction management concepts (1 file: `README.md`)
 
 ### Practice and Examples
 
 - **`queries/`** — Query collections and assignments (3 files: `README.md`, `assignments/`, `examples/`)
-- **`gpt_assignment/`** — AI-generated subquery practice assignments using HR schema (3 files: `gpt_assignment_01.sql`, `gpt_assignment_1.sql`, `gpt_assignment_02.sql`)
+- **`gpt_assignment/`** — AI-generated subquery practice assignments using HR schema (3 files: `gpt_assignment_01.sql`, `gpt_assignment_02.sql`, `gpt_assignment_1.sql`)
 - **`tables/`** — Schema reference (1 file: `README.md`)
 
 ## Sample Schemas
@@ -102,28 +107,33 @@ A more complex, enterprise-level schema for practicing advanced queries.
 
 ## How to Use
 
-### Getting Started
+### Getting Started (MySQL/MariaDB)
 
-1. Choose your database: MySQL, MariaDB, PostgreSQL, or Oracle
-2. Load a schema: Start with SCOTT (simple) or HR (advanced)
-3. Follow the learning path below
-4. Practice with assignments in each folder
+This repository is primarily designed for MySQL/MariaDB. To get started, you can set up a local database and load one of the provided schemas.
 
-### Quick Start (MySQL/MariaDB)
+1.  **Create a database:**
+    ```bash
+    mysql -u root -p -e "CREATE DATABASE sql_practice;"
+    ```
+2.  **Load a schema:**
+    *   For basic practice:
+        ```bash
+        mysql -u root -p sql_practice < ddl/scott_table.sql
+        ```
+    *   For advanced practice (requires HR schema setup):
+        ```bash
+        mysql -u root -p sql_practice < ddl/hr_schema.sql
+        ```
+3.  **Connect and practice:**
+    ```bash
+    mysql -u root -p sql_practice
+    ```
+    Once connected, you can start querying, for example:
+    ```sql
+    mysql> SELECT * FROM emp;
+    ```
 
-```bash
-# Create database
-mysql -u root -p -e "CREATE DATABASE sql_practice;"
-
-# Load SCOTT schema
-mysql -u root -p sql_practice < ddl/scott_table.sql
-
-# Connect and practice
-mysql -u root -p sql_practice
-mysql> SELECT * FROM emp;
-```
-
-**Note:** These commands are specific to MySQL/MariaDB. For other databases, please refer to the "Getting Started" section for general guidance on schema loading.
+**Note:** For other database systems like PostgreSQL or Oracle, please refer to the specific documentation or adapt the schema loading commands accordingly.
 
 ### Suggested Learning Path
 
