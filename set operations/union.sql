@@ -6,9 +6,19 @@ UNION
 SELECT first_name,last_name,department_id FROM employees
 WHERE department_id = 20;
 
-
 -- Employee First Names in Two Locations
 -- Get all employees’ first names who work in locations 100 or 200 using UNION.
+SELECT e.first_name
+FROM employees e
+JOIN departments d ON e.department_id = d.department_id
+JOIN locations l ON d.location_id = l.location_id
+WHERE l.location_id = 100
+UNION
+SELECT e.first_name
+FROM employees e
+JOIN departments d ON e.department_id = d.department_id
+JOIN locations l ON d.location_id = l.location_id
+WHERE l.location_id = 200;
 
 -- Distinct Job IDs from Employees and Job History
 -- Find all distinct job_id values present in employees or job_history tables.
