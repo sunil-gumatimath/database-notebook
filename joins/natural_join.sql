@@ -14,6 +14,7 @@ SELECT department_name,first_name,last_name FROM departments NATURAL JOIN employ
 SELECT first_name,last_name,job_title,department_name FROM employees NATURAL JOIN jobs NATURAL JOIN departments; 
 
 -- Retrieve details of employees who have job history records using NATURAL JOIN on employees and job_history.
+SELECT first_name,last_name,job_id FROM employees NATURAL JOIN job_history;
 
 -- List all employees and their country names using NATURAL JOIN across employees, departments, locations, and countries.
 
