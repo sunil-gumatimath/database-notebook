@@ -28,3 +28,4 @@ HAVING COUNT(*) >= 1;
 SELECT job_title,department_name FROM jobs NATURAL JOIN departments NATURAL JOIN employees;
 
 -- Write a query to display all columns from employees and departments using NATURAL JOIN — and explain the result.
+SELECT * FROM employees NATURAL JOIN departments;
