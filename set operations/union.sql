@@ -1,5 +1,10 @@
 -- Departments 10 or 20 Employees
 -- List all employees who belong to department 10 or department 20 using UNION.
+SELECT first_name,last_name,department_id FROM employees
+WHERE department_id = 10
+UNION
+SELECT first_name,last_name,department_id FROM employees
+WHERE department_id = 20;
 
 
 -- Employee First Names in Two Locations
