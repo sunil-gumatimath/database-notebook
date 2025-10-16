@@ -23,6 +23,8 @@ SELECT first_name,last_name,country_name FROM employees NATURAL JOIN departments
 SELECT department_name FROM departments NATURAL JOIN employees
 GROUP BY department_name
 HAVING COUNT(*) >= 1;
+
 -- Show job titles and corresponding department names using NATURAL JOIN between jobs and departments.
+SELECT job_title,department_name FROM jobs NATURAL JOIN departments NATURAL JOIN employees;
 
 -- Write a query to display all columns from employees and departments using NATURAL JOIN — and explain the result.
