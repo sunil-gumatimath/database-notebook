@@ -2,6 +2,7 @@
 SELECT * FROM employees NATURAL JOIN departments;
 
 -- List all employees with their job titles using NATURAL JOIN between employees and jobs.
+SELECT first_name,last_name,job_title FROM employees  NATURAL JOIN jobs;
 
 -- Find all employees who work in locations present in the locations table using NATURAL JOIN.
 
