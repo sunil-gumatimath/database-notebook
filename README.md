@@ -62,9 +62,9 @@ This repository is primarily designed for **MySQL/MariaDB**. While many scripts 
 ### Query Features
 
 - **`operators/`** — Filtering with IN, LIKE, BETWEEN, REGEXP (3 files: `README.md`, `assignments/`, `examples/`)
-- **`joins/`** — Examples of INNER JOIN, LEFT JOIN, RIGHT JOIN, CROSS JOIN, and FULL OUTER JOIN operations using the HR schema to combine data from multiple tables. (7 files: `cross_join.sql`, `full_outer_join.sql`, `inner_join.sql`, `left_join.sql`, `README.md`, `right_join.sql`, `self_join.sql`)
-- **`indexes/`** — Performance optimization (1 file: `README.md`)
-- **`subqueries/`** — Explores nested queries and advanced retrieval techniques (9 files: `README.md`, `assignments/`, `examples/`, `query/`)
+- **`joins/`** — Examples of INNER JOIN, LEFT JOIN, RIGHT JOIN, CROSS JOIN, FULL OUTER JOIN, NATURAL JOIN, and SELF JOIN operations using the HR schema to combine data from multiple tables. (9 files: `cross_join.sql`, `full_outer_join.sql`, `gpt_assignment.joins.sql`, `inner_join.sql`, `left_join.sql`, `natural_join.sql`, `README.md`, `right_join.sql`, `self_join.sql`)
+- **`indexes/`** — Performance optimization (2 files: `indexes.sql`, `README.md`)
+- **`subqueries/`** — Explores nested queries and advanced retrieval techniques (10 files: `README.md`, `assignments/`, `examples/`, `query/`)
   - **`query/`** — Nested query examples (3 files: `subquery_01.sql`, `subquery_02.sql`)
 - **`transactions/`** — Transaction management concepts (1 file: `README.md`)
 
@@ -73,6 +73,8 @@ This repository is primarily designed for **MySQL/MariaDB**. While many scripts 
 - **`queries/`** — Query collections and assignments (3 files: `README.md`, `assignments/`, `examples/`)
 - **`gpt_assignment/`** — AI-generated subquery practice assignments using HR schema (3 files: `gpt_assignment_01.sql`, `gpt_assignment_02.sql`, `gpt_assignment_1.sql`)
 - **`tables/`** — Schema reference (1 file: `README.md`)
+- **`sequences/`** — Sequence objects for auto-incrementing values (0 files: placeholder)
+- **`views/`** — Database views for virtual tables (0 files: placeholder)
 
 ## Sample Schemas
 

@@ -66,11 +66,15 @@ A comprehensive index of SQL examples, assignments, and schema definitions withi
   - [joins/right_join.sql](joins/right_join.sql) — RIGHT JOIN examples.
   - [joins/cross_join.sql](joins/cross_join.sql) — CROSS JOIN examples.
   - [joins/full_outer_join.sql](joins/full_outer_join.sql) — FULL OUTER JOIN examples.
+  - [joins/natural_join.sql](joins/natural_join.sql) — NATURAL JOIN examples.
+  - [joins/self_join.sql](joins/self_join.sql) — SELF JOIN examples.
+  - [joins/gpt_assignment.joins.sql](joins/gpt_assignment.joins.sql) — AI-generated JOIN practice assignments.
 
 ### Indexes
 
-- **`indexes/`** — Performance optimization strategies (placeholder).
-  - [indexes/README.md](indexes/README.md)
+- **`indexes/`** — Performance optimization strategies.
+  - [indexes/indexes.sql](indexes/indexes.sql) — Database views concepts and examples.
+  - [indexes/README.md](indexes/README.md) — Indexes planning and placeholder content.
 
 ### Subqueries
 
@@ -110,8 +114,10 @@ A comprehensive index of SQL examples, assignments, and schema definitions withi
 
 ### Tables
 
-- **`tables/`** — Schema reference (placeholder).
+- **`tables/`** — Schema reference.
   - [tables/README.md](tables/README.md)
+- **`sequences/`** — Sequence objects for auto-incrementing values (placeholder).
+- **`views/`** — Database views for virtual tables (placeholder).
 
 ## Sample Schemas
 

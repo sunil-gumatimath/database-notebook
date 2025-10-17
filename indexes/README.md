@@ -4,7 +4,7 @@ This directory is intended to contain scripts and notes on SQL indexing strategi
 
 ## Current Status
 
-This folder currently serves as a placeholder. SQL files (`.sql`) detailing indexing concepts are yet to be added.
+This folder contains content on database views rather than indexes. The [`indexes/indexes.sql`](indexes/indexes.sql) file includes examples of creating, querying, and dropping views. SQL files specifically detailing indexing concepts are yet to be added.
 
 ## Planned Topics
 
