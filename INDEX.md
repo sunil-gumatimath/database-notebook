@@ -117,7 +117,8 @@ A comprehensive index of SQL examples, assignments, and schema definitions withi
 - **`tables/`** — Schema reference.
   - [tables/README.md](tables/README.md)
 - **`sequences/`** — Sequence objects for auto-incrementing values (placeholder).
-- **`views/`** — Database views for virtual tables (placeholder).
+- **`views/`** — Database views for virtual tables.
+  - [views/views.sql](views/views.sql) — Examples of creating, querying, and dropping views.
 
 ## Sample Schemas
 

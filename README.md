@@ -74,7 +74,7 @@ This repository is primarily designed for **MySQL/MariaDB**. While many scripts 
 - **`gpt_assignment/`** — AI-generated subquery practice assignments using HR schema (3 files: `gpt_assignment_01.sql`, `gpt_assignment_02.sql`, `gpt_assignment_1.sql`)
 - **`tables/`** — Schema reference (1 file: `README.md`)
 - **`sequences/`** — Sequence objects for auto-incrementing values (0 files: placeholder)
-- **`views/`** — Database views for virtual tables (0 files: placeholder)
+- **`views/`** — Database views for virtual tables (1 file: `views.sql`)
 
 ## Sample Schemas
 
