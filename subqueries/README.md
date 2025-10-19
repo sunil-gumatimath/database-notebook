@@ -16,4 +16,11 @@ This directory delves into subqueries (also known as inner queries or nested que
   - [`subqueries/query/subquery_01.sql`](subqueries/query/subquery_01.sql) — Demonstrates basic single-row subqueries.
   - [`subqueries/query/subquery_02.sql`](subqueries/query/subquery_02.sql) — Explores advanced subqueries, including those using `IN`, `ANY`, and `ALL` operators.
 
+## Key Concepts Covered
+
+- **Single-Row Subqueries:** Subqueries that return a single value.
+- **Multi-Row Subqueries:** Subqueries that return multiple values, used with `IN`, `ANY`, `ALL`.
+- **Correlated Subqueries:** Subqueries that reference the outer query.
+- **Subquery Usage:** In `WHERE`, `FROM`, `SELECT` clauses.
+
 **Suggested Learning Order:** Start with the core concepts in `examples/subquery.sql`, then explore practical applications in the `query/` directory, and finally solidify your understanding by completing the assignments.

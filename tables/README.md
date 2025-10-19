@@ -2,6 +2,12 @@
 
 This directory serves as a reference for the tables used within this SQL learning repository. It provides a high-level overview of the primary tables in the SCOTT and HR schemas.
 
+## Key Concepts Covered
+
+- **SCOTT Schema:** Simple schema with basic tables for fundamental SQL practice.
+- **HR Schema:** Complex schema with relationships for advanced querying.
+- **Table Relationships:** Understanding foreign keys and data integrity.
+
 ## Sample Schemas
 
 ### SCOTT Schema

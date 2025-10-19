@@ -1,20 +1,14 @@
 # Indexes: Performance Optimization
 
-This directory contains scripts on SQL indexing strategies for performance optimization.
+This directory contains basic scripts on SQL indexes for performance optimization.
 
 ## Contents
 
-- [`indexes/indexes.sql`](indexes/indexes.sql) — Demonstrates how to create, view, and drop indexes for optimizing query performance.
+- [`indexes/indexes.sql`](indexes/indexes.sql) — Basic examples of creating, viewing, and dropping indexes.
 
 ## Key Concepts Covered
 
+- **What is an Index:** Definition and purpose of database indexes.
 - **Index Creation:** Using `CREATE INDEX` for single-column and composite indexes.
-- **Index Usage:** Understanding when and how to use indexes effectively.
-- **Index Management:** Viewing existing indexes with `SHOW INDEXES` and dropping indexes with `DROP INDEX`.
-- **Performance Impact:** Analyzing scenarios where indexes improve query performance.
-
-## Planned Topics
-
-- Composite and covering indexes.
-- Analyzing performance impact using `EXPLAIN` plans.
-- Best practices for index creation and maintenance.
+- **Index Management:** Viewing indexes with `SHOW INDEXES` and dropping with `DROP INDEX`.
+- **Basic Usage:** When to use indexes for improving query performance.

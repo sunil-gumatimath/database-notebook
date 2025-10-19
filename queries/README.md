@@ -10,4 +10,11 @@ This directory contains a collection of small, self-contained SQL query exercise
 - **Assignments:**
   - [`queries/assignments/assignment_01.sql`](queries/assignments/assignment_01.sql) — A practice set focusing on filters, computed columns, and basic aggregations.
 
+## Key Concepts Covered
+
+- **Query Writing:** Constructing `SELECT` statements with various clauses.
+- **Data Filtering:** Using `WHERE` with different conditions.
+- **Computed Columns:** Creating calculated fields in queries.
+- **Basic Aggregations:** Simple use of aggregate functions.
+
 **Prerequisite:** To effectively work with these queries, ensure you have loaded sample tables from either `ddl/scott_table.sql` or `ddl/hr_schema.sql` into your database.

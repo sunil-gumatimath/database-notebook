@@ -73,8 +73,8 @@ A comprehensive index of SQL examples, assignments, and schema definitions withi
 ### Indexes
 
 - **`indexes/`** — Performance optimization strategies.
-  - [indexes/indexes.sql](indexes/indexes.sql) — Database views concepts and examples.
-  - [indexes/README.md](indexes/README.md) — Indexes planning and placeholder content.
+  - [indexes/indexes.sql](indexes/indexes.sql) — Database indexes concepts and examples.
+  - [indexes/README.md](indexes/README.md) — Indexes overview and key concepts.
 
 ### Subqueries
 

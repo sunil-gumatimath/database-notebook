@@ -12,4 +12,11 @@ This directory explores aggregate functions, which perform calculations across a
 - **Assignments:**
   - [`functions/aggregate/assignments/aggregate_assignment.sql`](functions/aggregate/assignments/aggregate_assignment.sql) — Practice tasks to reinforce understanding of aggregate functions and clauses.
 
+## Key Concepts Covered
+
+- **Aggregate Functions:** `COUNT`, `SUM`, `AVG`, `MIN`, `MAX` for data summarization.
+- **GROUP BY:** Grouping rows for per-group calculations.
+- **HAVING:** Filtering groups based on aggregate conditions.
+- **ORDER BY:** Sorting aggregated results.
+
 **Suggested Learning Order:** Start with `aggregate_functions.sql` to understand the functions themselves, then move to `group_by.sql`, `having.sql`, and `order_by.sql` to learn how to structure and refine aggregated results, and finally complete the `aggregate_assignment.sql` for practice.
