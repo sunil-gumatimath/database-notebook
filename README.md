@@ -49,36 +49,35 @@ This repository is primarily designed for **MySQL/MariaDB**. While many scripts 
 
 ### Core SQL Concepts
 
-- **`basics/`** — Data types and constraints (2 files: `data_types.sql`, `constraints.sql`)
-- **`ddl/`** — Schema creation and management (4 files: `ddl_commands.sql`, `hr_schema.sql`, `scott_table.sql`)
-- **`dml/`** — Data manipulation (1 file: `dml_commands.sql`)
-- **`dql/`** — Basic querying (3 files: `dql_commands.sql`, `select_alias.sql`, `select_distinct.sql`)
+- **`01-fundamentals/`** — Data types and constraints (2 files: `data-types.sql`, `constraints.sql`)
+- **`02-ddl/`** — Schema creation and management (schemas subfolder: `scott-schema.sql`, `hr-schema.sql`)
+- **`03-dml/`** — Data manipulation (1 file: `dml-operations.sql`)
+- **`04-dql/`** — Basic querying (3 files: `select-basics.sql`, `select-alias.sql`, `select-distinct.sql`)
 
 ### Functions and Expressions
 
-- **`functions/single_row/`** — Character, numeric, date, and general functions (5 files: `README.md`, `assignments/`, `examples/`, `notes/`)
-- **`functions/aggregate/`** — Aggregate functions, GROUP BY, HAVING, ORDER BY (3 files: `README.md`, `assignments/`, `examples/`)
+- **`06-functions/single-row/`** — Character, numeric, date, and general functions (5 files: `README.md`, `assignments/`, `examples/`, `notes/`)
+- **`06-functions/aggregate/`** — Aggregate functions, GROUP BY, HAVING, ORDER BY (3 files: `README.md`, `assignments/`, `examples/`)
 
 ### Query Features
 
-- **`operators/`** — Filtering with IN, LIKE, BETWEEN, REGEXP (3 files: `README.md`, `assignments/`, `examples/`)
-- **`joins/`** — Examples of INNER JOIN, LEFT JOIN, RIGHT JOIN, CROSS JOIN, FULL OUTER JOIN, NATURAL JOIN, and SELF JOIN operations using the HR schema to combine data from multiple tables. (9 files: `cross_join.sql`, `full_outer_join.sql`, `gpt_assignment.joins.sql`, `inner_join.sql`, `left_join.sql`, `natural_join.sql`, `README.md`, `right_join.sql`, `self_join.sql`)
-- **`indexes/`** — Performance optimization (2 files: `indexes.sql`, `README.md`)
-- **`subqueries/`** — Explores nested queries and advanced retrieval techniques (10 files: `README.md`, `assignments/`, `examples/`, `query/`)
-  - **`query/`** — Nested query examples (3 files: `subquery_01.sql`, `subquery_02.sql`)
-- **`transactions/`** — Transaction management concepts (1 file: `README.md`)
+- **`05-operators/`** — Filtering with IN, LIKE, BETWEEN, REGEXP (3 files: `README.md`, `assignments/`, `examples/`)
+- **`07-joins/`** — Examples of INNER JOIN, LEFT JOIN, RIGHT JOIN, CROSS JOIN, FULL OUTER JOIN, NATURAL JOIN, and SELF JOIN operations using the HR schema to combine data from multiple tables. (9 files with hyphenated names)
+- **`08-subqueries/`** — Explores nested queries and advanced retrieval techniques (`README.md`, `assignments/`, `examples/`)
+- **`09-advanced-topics/indexes/`** — Performance optimization (2 files: `indexes-examples.sql`, `README.md`)
+- **`09-advanced-topics/transactions/`** — Transaction management concepts (1 file: `README.md`)
+- **`09-advanced-topics/sequences/`** — Sequence objects for auto-incrementing values (placeholder)
+- **`09-advanced-topics/views/`** — Database views for virtual tables (2 files: `views-examples.sql`, `README.md`)
 
 ### Practice and Examples
 
+- **`10-practice/ai-generated-exercises/`** — AI-generated subquery practice assignments using HR schema (3 files: `subqueries-set-01.sql`, `subqueries-set-02.sql`, `subqueries-set-03.sql`)
 - **`queries/`** — Query collections and assignments (3 files: `README.md`, `assignments/`, `examples/`)
-- **`gpt_assignment/`** — AI-generated subquery practice assignments using HR schema (3 files: `gpt_assignment_01.sql`, `gpt_assignment_02.sql`, `gpt_assignment_1.sql`)
 - **`tables/`** — Schema reference (1 file: `README.md`)
-- **`sequences/`** — Sequence objects for auto-incrementing values (0 files: placeholder)
-- **`views/`** — Database views for virtual tables (2 files: `views.sql`, `README.md`)
 
 ## Sample Schemas
 
-### SCOTT Schema ([`ddl/scott_table.sql`](ddl/scott_table.sql))
+### SCOTT Schema ([`02-ddl/schemas/scott-schema.sql`](02-ddl/schemas/scott-schema.sql))
 
 A classic, simple schema ideal for learning fundamental SQL concepts.
 
@@ -91,7 +90,7 @@ A classic, simple schema ideal for learning fundamental SQL concepts.
 
 **Use for:** Basic queries, joins, subqueries, and aggregations.
 
-### HR Schema ([`ddl/hr_schema.sql`](ddl/hr_schema.sql))
+### HR Schema ([`02-ddl/schemas/hr-schema.sql`](02-ddl/schemas/hr-schema.sql))
 
 A more complex, enterprise-level schema for practicing advanced queries.
 
@@ -123,13 +122,13 @@ This repository is primarily designed for MySQL/MariaDB. To get started, you can
    - For basic practice:
 
      ```bash
-     mysql -u root -p sql_practice < ddl/scott_table.sql
+     mysql -u root -p sql_practice < 02-ddl/schemas/scott-schema.sql
      ```
 
    - For advanced practice (requires HR schema setup):
 
      ```bash
-     mysql -u root -p sql_practice < ddl/hr_schema.sql
+     mysql -u root -p sql_practice < 02-ddl/schemas/hr-schema.sql
      ```
 
 3. **Connect and practice:**

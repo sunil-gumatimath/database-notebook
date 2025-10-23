@@ -5,10 +5,10 @@ This directory contains a collection of small, self-contained SQL query exercise
 ## Contents
 
 - **Examples:**
-  - [`queries/examples/query_01.sql`](queries/examples/query_01.sql) — Basic `SELECT` statements, filtering, and projections.
-  - [`queries/examples/query_02.sql`](queries/examples/query_02.sql) — Additional practice queries covering various fundamental SQL concepts.
+  - [`examples/query_01.sql`](examples/query_01.sql) — Basic `SELECT` statements, filtering, and projections.
+  - [`examples/query_02.sql`](examples/query_02.sql) — Additional practice queries covering various fundamental SQL concepts.
 - **Assignments:**
-  - [`queries/assignments/assignment_01.sql`](queries/assignments/assignment_01.sql) — A practice set focusing on filters, computed columns, and basic aggregations.
+  - [`assignments/assignment_01.sql`](assignments/assignment_01.sql) — A practice set focusing on filters, computed columns, and basic aggregations.
 
 ## Key Concepts Covered
 
@@ -17,4 +17,4 @@ This directory contains a collection of small, self-contained SQL query exercise
 - **Computed Columns:** Creating calculated fields in queries.
 - **Basic Aggregations:** Simple use of aggregate functions.
 
-**Prerequisite:** To effectively work with these queries, ensure you have loaded sample tables from either `ddl/scott_table.sql` or `ddl/hr_schema.sql` into your database.
+**Prerequisite:** To effectively work with these queries, ensure you have loaded sample tables from either `../02-ddl/schemas/scott-schema.sql` or `../02-ddl/schemas/hr-schema.sql` into your database.

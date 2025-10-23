@@ -30,7 +30,7 @@ A more complex, enterprise-level schema for practicing advanced queries. Key tab
 - **`COUNTRIES`**: Country details.
 - **`REGIONS`**: Geographic regions.
 
-**Full Schema Definitions:** For complete table structures, column details, and data loading scripts, please refer to the `ddl/` directory:
+**Full Schema Definitions:** For complete table structures, column details, and data loading scripts, please refer to the `02-ddl/schemas/` directory:
 
-- [`ddl/scott_table.sql`](ddl/scott_table.sql)
-- [`ddl/hr_schema.sql`](ddl/hr_schema.sql)
+- [`../02-ddl/schemas/scott-schema.sql`](../02-ddl/schemas/scott-schema.sql)
+- [`../02-ddl/schemas/hr-schema.sql`](../02-ddl/schemas/hr-schema.sql)
