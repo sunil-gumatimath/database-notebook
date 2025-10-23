@@ -5,12 +5,12 @@ This directory explores aggregate functions, which perform calculations across a
 ## Contents
 
 - **Examples:**
-  - [`functions/aggregate/examples/aggregate_functions.sql`](functions/aggregate/examples/aggregate_functions.sql) — Introduces core aggregate functions: `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`.
-  - [`functions/aggregate/examples/group_by.sql`](functions/aggregate/examples/group_by.sql) — Demonstrates how to group rows using the `GROUP BY` clause for per-group aggregations.
-  - [`functions/aggregate/examples/having.sql`](functions/aggregate/examples/having.sql) — Explains how to filter aggregated results using the `HAVING` clause.
-  - [`functions/aggregate/examples/order_by.sql`](functions/aggregate/examples/order_by.sql) — Shows how to sort the final aggregated results using `ORDER BY`.
+  - [`examples/aggregate-functions.sql`](examples/aggregate-functions.sql) — Introduces core aggregate functions: `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`.
+  - [`examples/group-by.sql`](examples/group-by.sql) — Demonstrates how to group rows using the `GROUP BY` clause for per-group aggregations.
+  - [`examples/having.sql`](examples/having.sql) — Explains how to filter aggregated results using the `HAVING` clause.
+  - [`examples/order-by.sql`](examples/order-by.sql) — Shows how to sort the final aggregated results using `ORDER BY`.
 - **Assignments:**
-  - [`functions/aggregate/assignments/aggregate_assignment.sql`](functions/aggregate/assignments/aggregate_assignment.sql) — Practice tasks to reinforce understanding of aggregate functions and clauses.
+  - [`assignments/aggregate-practice.sql`](assignments/aggregate-practice.sql) — Practice tasks to reinforce understanding of aggregate functions and clauses.
 
 ## Key Concepts Covered
 
@@ -19,4 +19,4 @@ This directory explores aggregate functions, which perform calculations across a
 - **HAVING:** Filtering groups based on aggregate conditions.
 - **ORDER BY:** Sorting aggregated results.
 
-**Suggested Learning Order:** Start with `aggregate_functions.sql` to understand the functions themselves, then move to `group_by.sql`, `having.sql`, and `order_by.sql` to learn how to structure and refine aggregated results, and finally complete the `aggregate_assignment.sql` for practice.
+**Suggested Learning Order:** Start with `examples/aggregate-functions.sql` to understand the functions themselves, then move to `examples/group-by.sql`, `examples/having.sql`, and `examples/order-by.sql` to learn how to structure and refine aggregated results, and finally complete the `assignments/aggregate-practice.sql` for practice.

@@ -5,16 +5,15 @@ This directory delves into subqueries (also known as inner queries or nested que
 ## Contents
 
 - **Examples:**
-  - [`subqueries/examples/subquery.sql`](subqueries/examples/subquery.sql) — Covers core subquery concepts and provides simple, illustrative examples.
+  - [`examples/subquery-basics.sql`](examples/subquery-basics.sql) — Covers core subquery concepts and provides simple, illustrative examples.
+  - [`examples/single-row-subqueries.sql`](examples/single-row-subqueries.sql) — Demonstrates basic single-row subqueries.
+  - [`examples/multi-row-subqueries.sql`](examples/multi-row-subqueries.sql) — Explores advanced subqueries, including those using `IN`, `ANY`, and `ALL` operators.
 - **Assignments:**
   - A collection of practice sets to reinforce subquery usage:
-    - [`subqueries/assignments/assignment_01.sql`](subqueries/assignments/assignment_01.sql) — SCOTT schema subquery exercises.
-    - [`subqueries/assignments/assignment_02.sql`](subqueries/assignments/assignment_02.sql) — Additional SCOTT schema subqueries.
-    - [`subqueries/assignments/assignment_04.sql`](subqueries/assignments/assignment_04.sql) — HR schema subqueries.
-    - [`subqueries/assignments/assignment_05.sql`](subqueries/assignments/assignment_05.sql) — Advanced HR schema subqueries.
-- **Query Examples:**
-  - [`subqueries/query/subquery_01.sql`](subqueries/query/subquery_01.sql) — Demonstrates basic single-row subqueries.
-  - [`subqueries/query/subquery_02.sql`](subqueries/query/subquery_02.sql) — Explores advanced subqueries, including those using `IN`, `ANY`, and `ALL` operators.
+    - [`assignments/scott-schema-practice-01.sql`](assignments/scott-schema-practice-01.sql) — SCOTT schema subquery exercises.
+    - [`assignments/scott-schema-practice-02.sql`](assignments/scott-schema-practice-02.sql) — Additional SCOTT schema subqueries.
+    - [`assignments/hr-schema-practice-01.sql`](assignments/hr-schema-practice-01.sql) — HR schema subqueries.
+    - [`assignments/hr-schema-practice-02.sql`](assignments/hr-schema-practice-02.sql) — Advanced HR schema subqueries.
 
 ## Key Concepts Covered
 
@@ -23,4 +22,4 @@ This directory delves into subqueries (also known as inner queries or nested que
 - **Correlated Subqueries:** Subqueries that reference the outer query.
 - **Subquery Usage:** In `WHERE`, `FROM`, `SELECT` clauses.
 
-**Suggested Learning Order:** Start with the core concepts in `examples/subquery.sql`, then explore practical applications in the `query/` directory, and finally solidify your understanding by completing the assignments.
+**Suggested Learning Order:** Start with the core concepts in `examples/subquery-basics.sql`, then explore `examples/single-row-subqueries.sql` and `examples/multi-row-subqueries.sql` for practical applications, and finally solidify your understanding by completing the assignments.

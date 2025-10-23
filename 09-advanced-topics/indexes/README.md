@@ -4,7 +4,7 @@ This directory contains basic scripts on SQL indexes for performance optimizatio
 
 ## Contents
 
-- [`indexes/indexes.sql`](indexes/indexes.sql) — Basic examples of creating, viewing, and dropping indexes.
+- [`indexes-examples.sql`](indexes-examples.sql) — Basic examples of creating, viewing, and dropping indexes.
 
 ## Key Concepts Covered
 

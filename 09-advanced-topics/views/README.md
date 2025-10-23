@@ -4,7 +4,7 @@ This directory covers basic concepts of database views, which are virtual tables
 
 ## Contents
 
-- [`views/views.sql`](views/views.sql) — Basic examples of creating, querying, and dropping views.
+- [`views-examples.sql`](views-examples.sql) — Basic examples of creating, querying, and dropping views.
 
 ## Key Concepts Covered
 
@@ -13,4 +13,4 @@ This directory covers basic concepts of database views, which are virtual tables
 - **View Usage:** Querying views like regular tables using `SELECT`.
 - **View Management:** Dropping views with `DROP VIEW`.
 
-**Prerequisite:** Ensure you have loaded the HR schema using [`ddl/hr_schema.sql`](../ddl/hr_schema.sql) before executing the view examples.
+**Prerequisite:** Ensure you have loaded the HR schema using [`../../02-ddl/schemas/hr-schema.sql`](../../02-ddl/schemas/hr-schema.sql) before executing the view examples.

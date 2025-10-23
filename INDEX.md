@@ -6,94 +6,93 @@ A comprehensive index of SQL examples, assignments, and schema definitions withi
 
 ### Basics
 
-- [basics/data_types.sql](basics/data_types.sql) — Guide to SQL data types with `CREATE TABLE` examples.
-- [basics/constraints.sql](basics/constraints.sql) — Essential SQL constraints with practical examples.
+- [01-fundamentals/data-types.sql](01-fundamentals/data-types.sql) — Guide to SQL data types with `CREATE TABLE` examples.
+- [01-fundamentals/constraints.sql](01-fundamentals/constraints.sql) — Essential SQL constraints with practical examples.
 
 ### DDL (Data Definition Language)
 
-- [ddl/ddl_commands.sql](ddl/ddl_commands.sql) — Core DDL operations for schema management.
-- [ddl/scott_table.sql](ddl/scott_table.sql) — Classic SCOTT schema definition.
-- [ddl/hr_schema.sql](ddl/hr_schema.sql) — Enterprise-level HR schema definition.
+- [02-ddl/ddl-operations.sql](02-ddl/ddl-operations.sql) — Core DDL operations for schema management.
+- [02-ddl/schemas/scott-schema.sql](02-ddl/schemas/scott-schema.sql) — Classic SCOTT schema definition.
+- [02-ddl/schemas/hr-schema.sql](02-ddl/schemas/hr-schema.sql) — Enterprise-level HR schema definition.
 
 ### DML (Data Manipulation Language)
 
-- [dml/dml_commands.sql](dml/dml_commands.sql) — Row-level data manipulation operations.
+- [03-dml/examples/dml-operations.sql](03-dml/examples/dml-operations.sql) — Row-level data manipulation operations.
 
 ### DQL (Data Query Language)
 
-- [dql/dql_commands.sql](dql/dql_commands.sql) — Basic `SELECT` statements and querying fundamentals.
-- [dql/select_alias.sql](dql/select_alias.sql) — Using column and table aliases in `SELECT` statements.
-- [dql/select_distinct.sql](dql/select_distinct.sql) — Removing duplicate rows with `DISTINCT`.
+- [04-dql/examples/select-basics.sql](04-dql/examples/select-basics.sql) — Basic `SELECT` statements and querying fundamentals.
+- [04-dql/examples/select-alias.sql](04-dql/examples/select-alias.sql) — Using column and table aliases in `SELECT` statements.
+- [04-dql/examples/select-distinct.sql](04-dql/examples/select-distinct.sql) — Removing duplicate rows with `DISTINCT`.
 
 ## Functions and Expressions
 
 ### Single-Row Functions
 
 - **Examples:**
-  - [functions/single_row/examples/character_functions.sql](functions/single_row/examples/character_functions.sql) — String manipulation functions (40+ examples).
-  - [functions/single_row/examples/number_functions.sql](functions/single_row/examples/number_functions.sql) — Numeric and mathematical functions.
-  - [functions/single_row/examples/date_functions.sql](functions/single_row/examples/date_functions.sql) — Date and time handling functions (20+ examples).
-  - [functions/single_row/examples/general_functions.sql](functions/single_row/examples/general_functions.sql) — Conditional logic and general utility functions.
+  - [06-functions/single-row/examples/character-functions.sql](06-functions/single-row/examples/character-functions.sql) — String manipulation functions (40+ examples).
+  - [06-functions/single-row/examples/number-functions.sql](06-functions/single-row/examples/number-functions.sql) — Numeric and mathematical functions.
+  - [06-functions/single-row/examples/date-functions.sql](06-functions/single-row/examples/date-functions.sql) — Date and time handling functions (20+ examples).
+  - [06-functions/single-row/examples/general-functions.sql](06-functions/single-row/examples/general-functions.sql) — Conditional logic and general utility functions.
 - **Assignments:**
-  - [functions/single_row/assignments/single_row_assignment.sql](functions/single_row/assignments/single_row_assignment.sql) — Practice exercises for single-row functions.
+  - [06-functions/single-row/assignments/single-row-practice.sql](06-functions/single-row/assignments/single-row-practice.sql) — Practice exercises for single-row functions.
 - **Notes:**
-  - [functions/single_row/notes/overview.sql](functions/single_row/notes/overview.sql) — Quick reference guide for single-row functions.
+  - [06-functions/single-row/notes/quick-reference.sql](06-functions/single-row/notes/quick-reference.sql) — Quick reference guide for single-row functions.
 
 ### Aggregate Functions
 
 - **Examples:**
-  - [functions/aggregate/examples/aggregate_functions.sql](functions/aggregate/examples/aggregate_functions.sql) — Core aggregate functions (`COUNT`, `SUM`, `AVG`, `MIN`, `MAX`).
-  - [functions/aggregate/examples/group_by.sql](functions/aggregate/examples/group_by.sql) — Grouping data using `GROUP BY`.
-  - [functions/aggregate/examples/having.sql](functions/aggregate/examples/having.sql) — Filtering grouped results with `HAVING`.
-  - [functions/aggregate/examples/order_by.sql](functions/aggregate/examples/order_by.sql) — Sorting results with `ORDER BY`.
+  - [06-functions/aggregate/examples/aggregate-functions.sql](06-functions/aggregate/examples/aggregate-functions.sql) — Core aggregate functions (`COUNT`, `SUM`, `AVG`, `MIN`, `MAX`).
+  - [06-functions/aggregate/examples/group-by.sql](06-functions/aggregate/examples/group-by.sql) — Grouping data using `GROUP BY`.
+  - [06-functions/aggregate/examples/having.sql](06-functions/aggregate/examples/having.sql) — Filtering grouped results with `HAVING`.
+  - [06-functions/aggregate/examples/order-by.sql](06-functions/aggregate/examples/order-by.sql) — Sorting results with `ORDER BY`.
 - **Assignments:**
-  - [functions/aggregate/assignments/aggregate_assignment.sql](functions/aggregate/assignments/aggregate_assignment.sql) — Practice exercises for aggregate functions.
+  - [06-functions/aggregate/assignments/aggregate-practice.sql](06-functions/aggregate/assignments/aggregate-practice.sql) — Practice exercises for aggregate functions.
 
 ## Query Features
 
 ### Operators
 
 - **Examples:**
-  - [operators/examples/operators_examples.sql](operators/examples/operators_examples.sql) — Examples of various SQL operators (e.g., `IN`, `LIKE`, `BETWEEN`, `REGEXP`).
+  - [05-operators/examples/operators-demo.sql](05-operators/examples/operators-demo.sql) — Examples of various SQL operators (e.g., `IN`, `LIKE`, `BETWEEN`, `REGEXP`).
 - **Assignments:**
-  - [operators/assignments/operators_assignment.sql](operators/assignments/operators_assignment.sql) — Practice queries using different operators.
+  - [05-operators/assignments/operators-practice.sql](05-operators/assignments/operators-practice.sql) — Practice queries using different operators.
 
 ### Joins
 
 - Comprehensive examples using the HR schema to combine data from multiple tables.
-  - [joins/inner_join.sql](joins/inner_join.sql) — INNER JOIN examples.
-  - [joins/left_join.sql](joins/left_join.sql) — LEFT JOIN examples.
-  - [joins/right_join.sql](joins/right_join.sql) — RIGHT JOIN examples.
-  - [joins/cross_join.sql](joins/cross_join.sql) — CROSS JOIN examples.
-  - [joins/full_outer_join.sql](joins/full_outer_join.sql) — FULL OUTER JOIN examples.
-  - [joins/natural_join.sql](joins/natural_join.sql) — NATURAL JOIN examples.
-  - [joins/self_join.sql](joins/self_join.sql) — SELF JOIN examples.
-  - [joins/gpt_assignment.joins.sql](joins/gpt_assignment.joins.sql) — AI-generated JOIN practice assignments.
+  - [07-joins/examples/inner-join.sql](07-joins/examples/inner-join.sql) — INNER JOIN examples.
+  - [07-joins/examples/left-join.sql](07-joins/examples/left-join.sql) — LEFT JOIN examples.
+  - [07-joins/examples/right-join.sql](07-joins/examples/right-join.sql) — RIGHT JOIN examples.
+  - [07-joins/examples/cross-join.sql](07-joins/examples/cross-join.sql) — CROSS JOIN examples.
+  - [07-joins/examples/full-outer-join.sql](07-joins/examples/full-outer-join.sql) — FULL OUTER JOIN examples.
+  - [07-joins/examples/natural-join.sql](07-joins/examples/natural-join.sql) — NATURAL JOIN examples.
+  - [07-joins/examples/self-join.sql](07-joins/examples/self-join.sql) — SELF JOIN examples.
+  - [07-joins/assignments/joins-practice.sql](07-joins/assignments/joins-practice.sql) — AI-generated JOIN practice assignments.
 
 ### Indexes
 
-- **`indexes/`** — Performance optimization strategies.
-  - [indexes/indexes.sql](indexes/indexes.sql) — Database indexes concepts and examples.
-  - [indexes/README.md](indexes/README.md) — Indexes overview and key concepts.
+- **`09-advanced-topics/indexes/`** — Performance optimization strategies.
+  - [09-advanced-topics/indexes/indexes-examples.sql](09-advanced-topics/indexes/indexes-examples.sql) — Database indexes concepts and examples.
+  - [09-advanced-topics/indexes/README.md](09-advanced-topics/indexes/README.md) — Indexes overview and key concepts.
 
 ### Subqueries
 
 - Explores nested queries and advanced retrieval techniques.
 - **Examples:**
-  - [subqueries/examples/subquery.sql](subqueries/examples/subquery.sql) — Subquery fundamentals.
+  - [08-subqueries/examples/subquery-basics.sql](08-subqueries/examples/subquery-basics.sql) — Subquery fundamentals.
+  - [08-subqueries/examples/single-row-subqueries.sql](08-subqueries/examples/single-row-subqueries.sql) — Basic single-row subqueries.
+  - [08-subqueries/examples/multi-row-subqueries.sql](08-subqueries/examples/multi-row-subqueries.sql) — Advanced subqueries with `IN`, `ANY`, `ALL` operators.
 - **Assignments:**
-  - [subqueries/assignments/assignment_01.sql](subqueries/assignments/assignment_01.sql) — SCOTT schema subquery exercises.
-  - [subqueries/assignments/assignment_02.sql](subqueries/assignments/assignment_02.sql) — Additional SCOTT schema subqueries.
-  - [subqueries/assignments/assignment_04.sql](subqueries/assignments/assignment_04.sql) — HR schema subqueries.
-  - [subqueries/assignments/assignment_05.sql](subqueries/assignments/assignment_05.sql) — Advanced HR schema subqueries.
-- **Query:**
-  - [subqueries/query/subquery_01.sql](subqueries/query/subquery_01.sql) — Basic single-row subqueries.
-  - [subqueries/query/subquery_02.sql](subqueries/query/subquery_02.sql) — Advanced subqueries with `IN`, `ANY`, `ALL` operators.
+  - [08-subqueries/assignments/scott-schema-practice-01.sql](08-subqueries/assignments/scott-schema-practice-01.sql) — SCOTT schema subquery exercises.
+  - [08-subqueries/assignments/scott-schema-practice-02.sql](08-subqueries/assignments/scott-schema-practice-02.sql) — Additional SCOTT schema subqueries.
+  - [08-subqueries/assignments/hr-schema-practice-01.sql](08-subqueries/assignments/hr-schema-practice-01.sql) — HR schema subqueries.
+  - [08-subqueries/assignments/hr-schema-practice-02.sql](08-subqueries/assignments/hr-schema-practice-02.sql) — Advanced HR schema subqueries.
 
 ### Transactions
 
-- **`transactions/`** — Transaction management concepts (placeholder).
-  - [transactions/README.md](transactions/README.md)
+- **`09-advanced-topics/transactions/`** — Transaction management concepts (placeholder).
+  - [09-advanced-topics/transactions/README.md](09-advanced-topics/transactions/README.md)
 
 ## Practice and Examples
 
@@ -108,32 +107,32 @@ A comprehensive index of SQL examples, assignments, and schema definitions withi
 ### GPT Assignments
 
 - AI-generated subquery practice assignments using the HR schema.
-  - [gpt_assignment/gpt_assignment_01.sql](gpt_assignment/gpt_assignment_01.sql) — AI-generated practice set 1.
-  - [gpt_assignment/gpt_assignment_1.sql](gpt_assignment/gpt_assignment_1.sql) — AI-generated practice set 2.
-  - [gpt_assignment/gpt_assignment_02.sql](gpt_assignment/gpt_assignment_02.sql) — AI-generated practice set 3.
+  - [10-practice/ai-generated-exercises/subqueries-set-01.sql](10-practice/ai-generated-exercises/subqueries-set-01.sql) — AI-generated practice set 1.
+  - [10-practice/ai-generated-exercises/subqueries-set-02.sql](10-practice/ai-generated-exercises/subqueries-set-02.sql) — AI-generated practice set 2.
+  - [10-practice/ai-generated-exercises/subqueries-set-03.sql](10-practice/ai-generated-exercises/subqueries-set-03.sql) — AI-generated practice set 3.
 
 ### Tables
 
 - **`tables/`** — Schema reference.
   - [tables/README.md](tables/README.md)
-- **`sequences/`** — Sequence objects for auto-incrementing values (placeholder).
-- **`views/`** — Database views for virtual tables.
-  - [views/views.sql](views/views.sql) — Examples of creating, querying, and dropping views.
+- **`09-advanced-topics/sequences/`** — Sequence objects for auto-incrementing values (placeholder).
+- **`09-advanced-topics/views/`** — Database views for virtual tables.
+  - [09-advanced-topics/views/views-examples.sql](09-advanced-topics/views/views-examples.sql) — Examples of creating, querying, and dropping views.
 
 ## Sample Schemas
 
 ### SCOTT Schema
 
-- [ddl/scott_table.sql](ddl/scott_table.sql) — Classic SCOTT schema definition.
+- [02-ddl/schemas/scott-schema.sql](02-ddl/schemas/scott-schema.sql) — Classic SCOTT schema definition.
 
 ### HR Schema
 
-- [ddl/hr_schema.sql](ddl/hr_schema.sql) — Enterprise-level HR schema definition.
+- [02-ddl/schemas/hr-schema.sql](02-ddl/schemas/hr-schema.sql) — Enterprise-level HR schema definition.
 
 ## Conventions
 
-- **File Organization:** `examples/`, `assignments/`, `notes/` subdirectories within concept folders.
-- **Naming Conventions:** Files (lowercase_with_underscores), Tables (UPPERCASE), Keywords (UPPERCASE).
+- **File Organization:** Numbered folders (01-10) for learning progression; `examples/`, `assignments/`, `notes/` subdirectories within concept folders.
+- **Naming Conventions:** Files (lowercase-with-hyphens), Tables (UPPERCASE), Keywords (UPPERCASE).
 - **SQL Style:** Uppercase keywords, consistent indentation, semicolons, comments.
 - **Database Compatibility:** Primarily MySQL/MariaDB, with notes for Oracle/PostgreSQL.
 - **Query Execution Order:** FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY.

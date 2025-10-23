@@ -4,7 +4,8 @@ This folder contains progressive subquery practice files.
 
 Recommended order:
 
-1. `subquery_01.sql` — Basic single-row subqueries
-2. `subquery_02.sql` — Multi-row subqueries with `IN`, `ANY`, `ALL`
+1. `subquery-basics.sql` — Core subquery concepts
+2. `single-row-subqueries.sql` — Basic single-row subqueries
+3. `multi-row-subqueries.sql` — Multi-row subqueries with `IN`, `ANY`, `ALL`
 
-Tip: Ensure sample tables from `ddl/scott_table.sql` or `ddl/hr_schema.sql` are loaded before running these.
+Tip: Ensure sample tables from `../../02-ddl/schemas/scott-schema.sql` or `../../02-ddl/schemas/hr-schema.sql` are loaded before running these.
