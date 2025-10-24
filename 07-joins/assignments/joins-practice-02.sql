@@ -1,5 +1,12 @@
 -- 1. Employees with Department Manager Info
 -- employees + departments self-join through manager_id
+SELECT 
+    e1.first_name,
+    e1.last_name,
+    e2.first_name AS manager_first_name,
+    e2.last_name AS manager_last_name 
+FROM employees e1 
+    INNER JOIN employees e2 ON e1.manager_id = e2.employee_id;
 
 -- 2. Managers Who Work in the Same City as Their Department
 -- employees + departments + locations
