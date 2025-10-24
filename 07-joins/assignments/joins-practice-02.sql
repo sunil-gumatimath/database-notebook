@@ -1,74 +1,44 @@
 -- 1. Employees with Department Manager Info
+-- employees + departments self-join through manager_id
 
--- Display employee names, their department names, and the manager of that department.
--- → (employees + departments self-join through manager_id)
+-- 2. Managers Who Work in the Same City as Their Department
+-- employees + departments + locations
 
--- 🔹 2. Managers Who Work in the Same City as Their Department
+-- 3. Employees Hired After Their Department Manager
+-- employees SELF JOIN employees
 
--- List all managers whose department location city matches their work location.
--- → (employees + departments + locations)
+-- 4. Department with the Highest Average Salary
+-- employees + departments + subquery join
 
--- 🔹 3. Employees Hired After Their Department Manager
+-- 5. Employees Whose Job Title Changed Over Time
+-- employees + job_history + jobs
 
--- Show employee names and their managers’ names for cases where the employee was hired after the manager.
--- → (employees SELF JOIN employees)
+-- 6. Employees Who Worked Under Multiple Managers
+-- job_history SELF JOIN or join with employees
 
--- 🔹 4. Department with the Highest Average Salary
+-- 7. Departments Located in the Same Country as "IT" Department
+-- departments + locations + countries
 
--- Find the department that has the highest average employee salary.
--- → (employees + departments + subquery join)
+-- 8. Countries with More Than 2 Departments
+-- departments + locations + countries
 
--- 🔹 5. Employees Whose Job Title Changed Over Time
+-- 9. Employees Sharing the Same Job and Department
+-- employees SELF JOIN
 
--- List employees who have different job titles in job_history compared to their current job.
--- → (employees + job_history + jobs)
+-- 10. Employees Who Worked in Multiple Countries
+-- employees + job_history + departments + locations + countries
 
--- 🔹 6. Employees Who Worked Under Multiple Managers
+-- 11. Managers Without Any Subordinates
+-- employees SELF JOIN
 
--- Find employees who were managed by different managers in the past.
--- → (job_history SELF JOIN or join with employees)
+-- 12. Employees With Salary Greater Than Department Average
+-- employees + departments
 
--- 🔹 7. Departments Located in the Same Country as “IT” Department
+-- 13. Job Titles Not Currently Assigned to Any Employee
+-- jobs LEFT JOIN employees
 
--- Display all department names that are in the same country as the IT department.
--- → (departments + locations + countries)
+-- 14. Departments and Their Oldest Employee
+-- employees + departments with aggregate + join
 
--- 🔹 8. Countries with More Than 2 Departments
-
--- List all countries that have more than two departments.
--- → (departments + locations + countries)
-
--- 🔹 9. Employees Sharing the Same Job and Department
-
--- Display employees who share both the same job ID and department ID.
--- → (employees SELF JOIN)
-
--- 🔹 10. Employees Who Worked in Multiple Countries
-
--- List employees who have worked in departments located in different countries (based on job_history).
--- → (employees + job_history + departments + locations + countries)
-
--- 🔹 11. Managers Without Any Subordinates
-
--- Find all managers who don’t have any employees reporting to them.
--- → (employees SELF JOIN)
-
--- 🔹 12. Employees With Salary Greater Than Department Average
-
--- Show employee names, department names, and salaries for those who earn above their department’s average.
--- → (employees + departments)
-
--- 🔹 13. Job Titles Not Currently Assigned to Any Employee
-
--- List all job titles that no employee currently holds but exist in the jobs table.
--- → (jobs LEFT JOIN employees)
-
--- 🔹 14. Departments and Their Oldest Employee
-
--- Show each department’s name along with the employee who was hired earliest in that department.
--- → (employees + departments with aggregate + join)
-
--- 🔹 15. Employees Working in Regions Starting with “A”
-
--- List all employees whose departments are located in regions where the region name starts with ‘A’.
--- → (employees + departments + locations + countries + regions)
+-- 15. Employees Working in Regions Starting with "A"
+-- employees + departments + locations + countries + regions
