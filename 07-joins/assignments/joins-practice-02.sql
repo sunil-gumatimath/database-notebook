@@ -10,6 +10,12 @@ FROM employees e1
 
 -- 2. Managers Who Work in the Same City as Their Department
 -- employees + departments + locations
+SELECT DISTINCT e.first_name,e.last_name FROM employees e
+    INNER JOIN departments d ON e.department_id = d.department_id
+    INNER JOIN locations l ON d.location_id = l.location_id
+WHERE e.employee_id IN (
+    SELECT manager_id FROM employees
+);
 
 -- 3. Employees Hired After Their Department Manager
 -- employees SELF JOIN employees
