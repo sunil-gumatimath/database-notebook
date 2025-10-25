@@ -68,7 +68,8 @@ A comprehensive index of SQL examples, assignments, and schema definitions withi
   - [07-joins/examples/full-outer-join.sql](07-joins/examples/full-outer-join.sql) — FULL OUTER JOIN examples.
   - [07-joins/examples/natural-join.sql](07-joins/examples/natural-join.sql) — NATURAL JOIN examples.
   - [07-joins/examples/self-join.sql](07-joins/examples/self-join.sql) — SELF JOIN examples.
-  - [07-joins/assignments/joins-practice.sql](07-joins/assignments/joins-practice.sql) — AI-generated JOIN practice assignments.
+  - [07-joins/assignments/joins-practice-01.sql](07-joins/assignments/joins-practice-01.sql) — JOIN practice assignments set 1.
+  - [07-joins/assignments/joins-practice-02.sql](07-joins/assignments/joins-practice-02.sql) — JOIN practice assignments set 2.
 
 ### Indexes
 

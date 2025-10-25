@@ -1,9 +1,11 @@
+# Learning Path
+
 GROUP BY and Aggregate Functions
 (SUM, AVG, COUNT, MIN, MAX)
 
 HAVING clause
 
-Set Operators
+Set Operators (planned)
 (UNION, INTERSECT, MINUS)
 
 DDL Commands

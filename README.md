@@ -161,7 +161,7 @@ This repository is primarily designed for MySQL/MariaDB. To get started, you can
 **Intermediate (2-3 weeks):**
 
 1. Advanced operators and filtering patterns
-2. Subqueries basics (start with examples/subquery.sql)
+2. Subqueries basics (start with 08-subqueries/examples/subquery-basics.sql)
 3. Joins → Combining table data (inner joins using HR schema)
 4. Load HR schema for complex queries
 5. Multi-level subqueries (4 assignment files available)
@@ -184,7 +184,7 @@ This repository is primarily designed for MySQL/MariaDB. To get started, you can
 
 ### Naming Conventions
 
-- **Files:** lowercase with underscores (e.g., `assignment_01.sql`, `character_functions.sql`)
+- **Files:** lowercase with hyphens; underscores reserved for numbering (e.g., `assignment_01.sql`, `character-functions.sql`)
 - **Tables:** Uppercase (EMP, DEPT)
 - **Keywords:** Uppercase (SELECT, FROM)
 - **Numbering:** Leading zeros for consistency (01, 02, 03...)

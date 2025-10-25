@@ -17,7 +17,8 @@ This directory provides examples of how to combine rows from two or more tables 
 - **SELF JOIN:** Joining a table to itself to query hierarchical data or compare rows within the same table.
   - [`examples/self-join.sql`](examples/self-join.sql)
 - **Practice Assignments:** AI-generated JOIN exercises.
-  - [`assignments/joins-practice.sql`](assignments/joins-practice.sql)
+  - [`assignments/joins-practice-01.sql`](assignments/joins-practice-01.sql)
+  - [`assignments/joins-practice-02.sql`](assignments/joins-practice-02.sql)
 
 ## Key Concepts Covered
 
