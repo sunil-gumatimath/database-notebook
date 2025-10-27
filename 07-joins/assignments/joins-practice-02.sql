@@ -1,18 +1,22 @@
 -- 1. Employees with Department Manager Info
 -- employees + departments self-join through manager_id
-SELECT 
+SELECT
     e1.first_name,
     e1.last_name,
+    d.department_name,
     e2.first_name AS manager_first_name,
-    e2.last_name AS manager_last_name 
-FROM employees e1 
-    INNER JOIN employees e2 ON e1.manager_id = e2.employee_id;
+    e2.last_name AS manager_last_name
+FROM employees e1
+    INNER JOIN employees e2 ON e1.manager_id = e2.employee_id
+    INNER JOIN departments d ON e1.department_id = d.department_id;
 
 -- 2. Managers Who Work in the Same City as Their Department
 -- employees + departments + locations
 SELECT
     m.first_name,
-    m.last_name
+    m.last_name,
+    l_managed.city AS department_city,
+    l_manager_works_in.city AS manager_city
 FROM
     departments d
 JOIN
@@ -28,20 +32,25 @@ WHERE
 
 -- 3. Employees Hired After Their Department Manager
 -- employees SELF JOIN employees
-SELECT 
-    e1.first_name  AS employee_first_name,  
+SELECT
+    e1.first_name  AS employee_first_name,
     e1.last_name   AS employee_last_name,
+    d.department_name,
     e2.first_name  AS manager_first_name,
     e2.last_name   AS manager_last_name,
     e1.hire_date   AS employee_hire_date,
     e2.hire_date   AS manager_hire_date
-FROM employees e1 JOIN employees e2 ON e1.manager_id = e2.employee_id
-WHERE e1.hire_date >  e2.hire_date;
+FROM employees e1
+JOIN employees e2 ON e1.manager_id = e2.employee_id
+JOIN departments d ON e1.department_id = d.department_id
+WHERE e1.hire_date > e2.hire_date;
 
 -- 4. Department with the Highest Average Salary
 -- employees + departments + subquery join
-SELECT d.department_id,d.department_name, AVG(e.salary) AS avg_salary FROM employees e INNER JOIN departments d ON e.department_id = d.department_id
-GROUP BY d.department_id,d.department_name
+SELECT d.department_id, d.department_name, AVG(e.salary) AS avg_salary
+FROM employees e
+INNER JOIN departments d ON e.department_id = d.department_id
+GROUP BY d.department_id, d.department_name
 ORDER BY avg_salary DESC
 LIMIT 1;
 
