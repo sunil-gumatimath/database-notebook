@@ -1,10 +1,21 @@
 # Transactions: Ensuring Data Integrity
 
-This directory is dedicated to understanding and demonstrating SQL transactions, which are crucial for maintaining data consistency and integrity. It covers the fundamental concepts of ACID properties, isolation levels, and error handling within database operations.
+This directory contains a short reference to transactional control for maintaining data consistency.
 
-## Planned Content
+## Key Concepts Covered
 
+- ACID: Atomicity, Consistency, Isolation, Durability.
+- Control: START/BEGIN, COMMIT, ROLLBACK, SAVEPOINT.
+- Isolation Levels: READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ, SERIALIZABLE.
+- Best Practices: Keep transactions short, avoid user interaction, handle errors, choose appropriate isolation.
+- Notes: Engine defaults vary (e.g., MySQL InnoDB, PostgreSQL MVCC, Oracle/SQL Server READ COMMITTED).
 
-## Current Status
+## Simple example
 
-This folder currently serves as a placeholder. SQL files (`.sql`) detailing transaction management concepts are yet to be added.
+```sql
+START TRANSACTION;
+UPDATE accounts SET balance = balance - 100 WHERE account_id = 1;
+UPDATE accounts SET balance = balance + 100 WHERE account_id = 2;
+COMMIT;
+-- If any step fails, use ROLLBACK instead of COMMIT
+```

@@ -1,6 +1,6 @@
 # Views: Virtual Tables
 
-This directory covers basic concepts of database views, which are virtual tables based on SQL queries.
+This directory contains a brief overview of database views (virtual tables defined by a SELECT) for simplifying queries and controlling access.
 
 ## Contents
 
@@ -8,9 +8,21 @@ This directory covers basic concepts of database views, which are virtual tables
 
 ## Key Concepts Covered
 
-- **What is a View:** Definition and purpose of database views.
-- **View Creation:** Syntax for creating views using `CREATE VIEW`.
-- **View Usage:** Querying views like regular tables using `SELECT`.
-- **View Management:** Dropping views with `DROP VIEW`.
+- What is a View: Virtual table defined by a SELECT over base tables.
+- Creation and Modification: CREATE VIEW, CREATE OR REPLACE VIEW, DROP VIEW.
+- Updatability: Simple views may be updatable; complex views usually read-only.
+- Materialized/Indexed Views: Persisted results (DB-specific).
+- Use Cases: Simplification, security, and a consistent access layer.
 
-**Prerequisite:** Ensure you have loaded the HR schema using [`../../02-ddl/schemas/hr-schema.sql`](../../02-ddl/schemas/hr-schema.sql) before executing the view examples.
+## Simple example
+
+```sql
+-- Create a simple view
+CREATE VIEW active_employees AS
+SELECT employee_id, first_name, last_name
+FROM employees
+WHERE status = 'ACTIVE';
+
+-- Query the view
+SELECT * FROM active_employees;
+```
