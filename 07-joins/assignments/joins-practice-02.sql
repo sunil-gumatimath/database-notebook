@@ -10,12 +10,21 @@ FROM employees e1
 
 -- 2. Managers Who Work in the Same City as Their Department
 -- employees + departments + locations
-SELECT DISTINCT e.first_name,e.last_name FROM employees e
-    INNER JOIN departments d ON e.department_id = d.department_id
-    INNER JOIN locations l ON d.location_id = l.location_id
-WHERE e.employee_id IN (
-    SELECT manager_id FROM employees
-);
+SELECT
+    m.first_name,
+    m.last_name
+FROM
+    departments d
+JOIN
+    employees m ON d.manager_id = m.employee_id -- Manager of the department
+JOIN
+    locations l_managed ON d.location_id = l_managed.location_id -- Location of the managed department
+JOIN
+    departments d_manager_works_in ON m.department_id = d_manager_works_in.department_id -- Department the manager works in
+JOIN
+    locations l_manager_works_in ON d_manager_works_in.location_id = l_manager_works_in.location_id -- Location of the department the manager works in
+WHERE
+    l_managed.city = l_manager_works_in.city;
 
 -- 3. Employees Hired After Their Department Manager
 -- employees SELF JOIN employees
@@ -31,6 +40,10 @@ WHERE e1.hire_date >  e2.hire_date;
 
 -- 4. Department with the Highest Average Salary
 -- employees + departments + subquery join
+SELECT d.department_id,d.department_name, AVG(e.salary) AS avg_salary FROM employees e INNER JOIN departments d ON e.department_id = d.department_id
+GROUP BY d.department_id,d.department_name
+ORDER BY avg_salary DESC
+LIMIT 1;
 
 -- 5. Employees Whose Job Title Changed Over Time
 -- employees + job_history + jobs
