@@ -174,30 +174,7 @@ This repository is primarily designed for MySQL/MariaDB. To get started, you can
 3. Window functions, stored procedures
 4. Performance optimization
 
-## Conventions
-
-### File Organization
-
-- **`examples/`** — Runnable code with comments
-- **`assignments/`** — Practice exercises (numbered: assignment_01.sql, assignment_02.sql, etc.)
-- **`notes/`** — Reference guides
-
-### Naming Conventions
-
-- **Files:** lowercase with hyphens; underscores reserved for numbering (e.g., `assignment_01.sql`, `character-functions.sql`)
-- **Tables:** Uppercase (EMP, DEPT)
-- **Keywords:** Uppercase (SELECT, FROM)
-- **Numbering:** Leading zeros for consistency (01, 02, 03...)
-- **Descriptive:** Clear, concise names indicating content purpose
-
-### SQL Style
-
-- Uppercase keywords
-- Consistent indentation
-- Semicolons at statement ends
-- Comments with -- or /**/
-
-### Query Execution Order
+## Query Execution Order
 
 1. FROM — Source tables
 2. WHERE — Filter rows
