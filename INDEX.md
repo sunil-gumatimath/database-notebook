@@ -61,6 +61,7 @@ A comprehensive index of SQL examples, assignments, and schema definitions withi
 ### Joins
 
 - Comprehensive examples using the HR schema to combine data from multiple tables.
+- **Examples:**
   - [07-joins/examples/inner-join.sql](07-joins/examples/inner-join.sql) — INNER JOIN examples.
   - [07-joins/examples/left-join.sql](07-joins/examples/left-join.sql) — LEFT JOIN examples.
   - [07-joins/examples/right-join.sql](07-joins/examples/right-join.sql) — RIGHT JOIN examples.
@@ -68,6 +69,7 @@ A comprehensive index of SQL examples, assignments, and schema definitions withi
   - [07-joins/examples/full-outer-join.sql](07-joins/examples/full-outer-join.sql) — FULL OUTER JOIN examples.
   - [07-joins/examples/natural-join.sql](07-joins/examples/natural-join.sql) — NATURAL JOIN examples.
   - [07-joins/examples/self-join.sql](07-joins/examples/self-join.sql) — SELF JOIN examples.
+- **Assignments:**
   - [07-joins/assignments/joins-practice-01.sql](07-joins/assignments/joins-practice-01.sql) — JOIN practice assignments set 1.
   - [07-joins/assignments/joins-practice-02.sql](07-joins/assignments/joins-practice-02.sql) — JOIN practice assignments set 2.
 
@@ -116,9 +118,17 @@ A comprehensive index of SQL examples, assignments, and schema definitions withi
 
 - **`tables/`** — Schema reference.
   - [tables/README.md](tables/README.md)
-- **`09-advanced-topics/sequences/`** — Sequence objects for auto-incrementing values (placeholder).
+
+### Sequences
+
+- **`09-advanced-topics/sequences/`** — Sequence objects for auto-incrementing values.
+  - [09-advanced-topics/sequences/README.md](09-advanced-topics/sequences/README.md) — Comprehensive guide to sequence creation, usage, and management.
+
+### Views
+
 - **`09-advanced-topics/views/`** — Database views for virtual tables.
   - [09-advanced-topics/views/views-examples.sql](09-advanced-topics/views/views-examples.sql) — Examples of creating, querying, and dropping views.
+  - [09-advanced-topics/views/README.md](09-advanced-topics/views/README.md) — Views overview and key concepts.
 
 ## Sample Schemas
 

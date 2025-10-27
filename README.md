@@ -66,7 +66,7 @@ This repository is primarily designed for **MySQL/MariaDB**. While many scripts 
 - **`08-subqueries/`** — Explores nested queries and advanced retrieval techniques (`README.md`, `assignments/`, `examples/`)
 - **`09-advanced-topics/indexes/`** — Performance optimization (2 files: `indexes-examples.sql`, `README.md`)
 - **`09-advanced-topics/transactions/`** — Transaction management concepts (1 file: `README.md`)
-- **`09-advanced-topics/sequences/`** — Sequence objects for auto-incrementing values (placeholder)
+- **`09-advanced-topics/sequences/`** — Sequence objects for auto-incrementing values (1 file: `README.md` with comprehensive guide on sequence creation, usage, and management)
 - **`09-advanced-topics/views/`** — Database views for virtual tables (2 files: `views-examples.sql`, `README.md`)
 
 ### Practice and Examples

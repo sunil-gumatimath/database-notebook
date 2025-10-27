@@ -4,12 +4,6 @@ This directory is dedicated to understanding and demonstrating SQL transactions,
 
 ## Planned Content
 
-- **Transaction Control:**
-  - Demonstrations of `BEGIN TRANSACTION` (or equivalent), `COMMIT`, and `ROLLBACK` commands.
-- **Advanced Transaction Concepts:**
-  - Usage of savepoints for nested transactions.
-  - Explanation of different isolation levels (e.g., READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ, SERIALIZABLE).
-  - Discussion of concurrency anomalies (e.g., dirty reads, non-repeatable reads, phantom reads) and how isolation levels mitigate them.
 
 ## Current Status
 
