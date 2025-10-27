@@ -167,10 +167,10 @@ This repository is primarily designed for MySQL/MariaDB. To get started, you can
 5. Multi-level subqueries (4 assignment files available)
 6. Complete all assignments including GPT-generated practice
 
-**Advanced (future):**
+**Advanced:**
 
-1. Outer joins, full joins, cross joins
-2. Indexes, transactions
+1. [x] Outer joins, full joins, cross joins
+2. [x] Indexes, transactions
 3. Window functions, stored procedures
 4. Performance optimization
 
