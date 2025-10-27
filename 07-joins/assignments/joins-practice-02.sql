@@ -19,6 +19,15 @@ WHERE e.employee_id IN (
 
 -- 3. Employees Hired After Their Department Manager
 -- employees SELF JOIN employees
+SELECT 
+    e1.first_name  AS employee_first_name,  
+    e1.last_name   AS employee_last_name,
+    e2.first_name  AS manager_first_name,
+    e2.last_name   AS manager_last_name,
+    e1.hire_date   AS employee_hire_date,
+    e2.hire_date   AS manager_hire_date
+FROM employees e1 JOIN employees e2 ON e1.manager_id = e2.employee_id
+WHERE e1.hire_date >  e2.hire_date;
 
 -- 4. Department with the Highest Average Salary
 -- employees + departments + subquery join
