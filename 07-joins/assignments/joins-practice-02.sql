@@ -56,6 +56,22 @@ LIMIT 1;
 
 -- 5. Employees Whose Job Title Changed Over Time
 -- employees + job_history + jobs
+SELECT e.employee_id, e.first_name, e.last_name
+FROM employees e
+JOIN (
+    SELECT employee_id
+    FROM (
+        SELECT DISTINCT employee_id, j.job_title
+        FROM job_history jh
+        JOIN jobs j ON jh.job_id = j.job_id
+        UNION
+        SELECT DISTINCT employee_id, j.job_title
+        FROM employees e2
+        JOIN jobs j ON e2.job_id = j.job_id
+    ) all_titles
+    GROUP BY employee_id
+    HAVING COUNT(*) > 1
+) changed ON e.employee_id = changed.employee_id;
 
 -- 6. Employees Who Worked Under Multiple Managers
 -- job_history SELF JOIN or join with employees

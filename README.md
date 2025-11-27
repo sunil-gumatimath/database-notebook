@@ -143,8 +143,6 @@ This repository is primarily designed for MySQL/MariaDB. To get started, you can
    mysql> SELECT * FROM emp;
    ```
 
-**Note:** For other database systems like PostgreSQL or Oracle, please refer to the specific documentation or adapt the schema loading commands accordingly.
-
 ### Suggested Learning Path
 
 **Beginner (4-6 weeks):**
