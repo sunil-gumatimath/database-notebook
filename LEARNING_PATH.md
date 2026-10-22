@@ -1,110 +1,66 @@
 # Learning Path
 
-A structured approach to mastering SQL concepts in this repository.
+A structured path from your first `SELECT` to advanced SQL. Work through the stages in order; each column links to the folder that holds the examples and assignments.
 
-## Beginner Level (4-6 weeks)
+## Overview
 
-### 1. Fundamentals
+| Level | Stages | Suggested time |
+| :--- | :--- | :--- |
+| Beginner | 1–7 | 4–6 weeks |
+| Intermediate | 8–10 | 2–3 weeks |
+| Advanced | 11–15 | Self-paced |
 
-- Data types and constraints
-- Basic SQL syntax and conventions
+## Beginner — Stages 1–7
 
-### 2. DDL (Data Definition Language)
+| Stage | Topic | Folder | What you learn |
+| :--- | :--- | :--- | :--- |
+| 1 | Fundamentals | [`01-fundamentals/`](01-fundamentals/) | Data types and constraints |
+| 2 | DDL | [`02-ddl/`](02-ddl/) | `CREATE`, `ALTER`, `DROP`, `TRUNCATE`, schema management |
+| 3 | DQL | [`04-dql/`](04-dql/) | Basic `SELECT`s, aliases, `DISTINCT` |
+| 4 | Operators | [`05-operators/`](05-operators/) | `WHERE` filtering: comparison, logical, `IN`, `LIKE`, `BETWEEN`, `IS NULL` |
+| 5 | DML | [`03-dml/`](03-dml/) | `INSERT`, `UPDATE`, `DELETE` |
+| 6 | Single-row functions | [`06-functions/single-row/`](06-functions/single-row/) | String, number, date, and conditional functions |
+| 7 | Aggregate functions | [`06-functions/aggregate/`](06-functions/aggregate/) | `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`, `GROUP BY`, `HAVING`, `ORDER BY` |
 
-- Schema creation and management
-- Table operations: CREATE, ALTER, DROP, TRUNCATE
+## Intermediate — Stages 8–10
 
-### 3. DQL (Data Query Language)
+| Stage | Topic | Folder | What you learn |
+| :--- | :--- | :--- | :--- |
+| 8 | Operators deep-dive | [`05-operators/`](05-operators/) | `REGEXP` and advanced pattern matching |
+| 9 | Joins | [`07-joins/`](07-joins/) | `INNER`, `LEFT`, `RIGHT`, `FULL OUTER`, `CROSS`, `NATURAL`, `SELF` |
+| 10 | Subqueries | [`08-subqueries/`](08-subqueries/) | Single-row, multi-row (`IN`/`ANY`/`ALL`), correlated |
 
-- Basic SELECT queries
-- Column selection and projections
-- DISTINCT keyword
+## Advanced — Stages 11–15
 
-### 4. Operators
+| Stage | Topic | Folder | What you learn |
+| :--- | :--- | :--- | :--- |
+| 11 | Query techniques | — | Complex multi-table queries, window functions, CTEs (planned) |
+| 12 | Database objects | [`09-advanced-topics/`](09-advanced-topics/) | Views, indexes, sequences |
+| 13 | Transactions | [`09-advanced-topics/transactions/`](09-advanced-topics/transactions/) | ACID, `COMMIT`, `ROLLBACK`, isolation levels |
+| 14 | Set operators | — | `UNION`, `UNION ALL`, `INTERSECT`, `EXCEPT` (planned) |
+| 15 | Stored programs | — | Stored procedures, triggers, user-defined functions (planned) |
 
-- Filtering patterns and logical operations
-- Comparison operators
-- Special operators: IN, LIKE, BETWEEN, IS NULL
+## How to Practice
 
-### 5. DML (Data Manipulation Language)
+- Complete the assignments inside each folder before moving to the next stage.
+- Start each exercise on the SCOTT schema, then re-solve it against HR for a bigger dataset.
+- Finish with the drills in [`10-practice/`](10-practice/) once subqueries feel natural.
+- Write your own queries that combine two or more concepts from different stages.
 
-- INSERT, UPDATE, DELETE operations
-- Data modification techniques
+## Progress Tracker
 
-### 6. Single-Row Functions
-
-- String manipulation functions
-- Numeric functions
-- Date and time functions
-- Conditional logic
-
-### 7. Aggregate Functions
-
-- SUM, AVG, COUNT, MIN, MAX
-- GROUP BY clause
-- HAVING clause for filtering groups
-- ORDER BY for sorting results
-
-## Intermediate Level (2-3 weeks)
-
-### 8. Advanced Operators and Filtering
-
-- Complex filtering patterns
-- Regular expressions (REGEXP)
-- Advanced pattern matching
-
-### 9. Joins
-
-- INNER JOIN
-- LEFT JOIN, RIGHT JOIN
-- CROSS JOIN
-- FULL OUTER JOIN
-- NATURAL JOIN
-- SELF JOIN
-
-### 10. Subqueries
-
-- Single-row subqueries
-- Multi-row subqueries (IN, ANY, ALL)
-- Correlated subqueries
-- Subqueries in different clauses
-
-## Advanced Level (Future Topics)
-
-### 11. Advanced Query Techniques
-
-- Complex joins and multi-table queries
-- Window functions
-- Common Table Expressions (CTEs)
-
-### 12. Database Objects
-
-- Views: Virtual tables
-- Indexes: Performance optimization
-- Sequences: Auto-incrementing values
-
-### 13. Transaction Management
-
-- ACID properties
-- Transaction control: COMMIT, ROLLBACK
-- Isolation levels
-
-### 14. Set Operators (Planned)
-
-- UNION, UNION ALL
-- INTERSECT
-- MINUS/EXCEPT
-
-### 15. Advanced Topics (Planned)
-
-- Stored procedures
-- Triggers
-- User-defined functions
-- Performance tuning
-
-## Practice Recommendations
-
-- Complete assignments in each section before moving forward
-- Work with both SCOTT schema (simple) and HR schema (complex)
-- Practice AI-generated exercises in the `10-practice/` directory
-- Build your own queries combining multiple concepts
+- [ ] 1. Fundamentals
+- [ ] 2. DDL
+- [ ] 3. DQL
+- [ ] 4. Operators
+- [ ] 5. DML
+- [ ] 6. Single-row functions
+- [ ] 7. Aggregate functions
+- [ ] 8. Operators deep-dive
+- [ ] 9. Joins
+- [ ] 10. Subqueries
+- [ ] 11. Query techniques
+- [ ] 12. Database objects
+- [ ] 13. Transactions
+- [ ] 14. Set operators
+- [ ] 15. Stored programs
