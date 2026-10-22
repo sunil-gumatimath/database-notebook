@@ -1,36 +1,44 @@
-# Tables: Database Structures
+# Schema Reference
 
-This directory serves as a reference for the tables used within this SQL learning repository. It provides a high-level overview of the primary tables in the SCOTT and HR schemas.
+A high-level overview of the tables behind every example in this repository. Full definitions and sample data live in [`../02-ddl/schemas/`](../02-ddl/schemas/).
 
-## Key Concepts Covered
+## SCOTT Schema
 
-- **SCOTT Schema:** Simple schema with basic tables for fundamental SQL practice.
-- **HR Schema:** Complex schema with relationships for advanced querying.
-- **Table Relationships:** Understanding foreign keys and data integrity.
+Simple and classic — ideal for fundamentals. Defined in [`../02-ddl/schemas/scott-schema.sql`](../02-ddl/schemas/scott-schema.sql).
 
-## Sample Schemas
+| Table | Description |
+| :--- | :--- |
+| `EMP` | Employee details |
+| `DEPT` | Department information |
+| `SALGRADE` | Salary grade levels |
+| `BONUS` | Bonus records |
 
-### SCOTT Schema
+## HR Schema
 
-A classic, simple schema ideal for learning fundamental SQL concepts. Key tables include:
+Enterprise-level — built for advanced querying. Defined in [`../02-ddl/schemas/hr-schema.sql`](../02-ddl/schemas/hr-schema.sql).
 
-- **`EMP`**: Employee details.
-- **`DEPT`**: Department information.
-- **`SALGRADE`**: Salary grade levels.
-- **`BONUS`**: Bonus records.
+| Table | Description |
+| :--- | :--- |
+| `REGIONS` | Geographic regions |
+| `COUNTRIES` | Countries and their regions |
+| `LOCATIONS` | Office locations |
+| `DEPARTMENTS` | Company departments |
+| `JOBS` | Job roles and salary ranges |
+| `EMPLOYEES` | Employee details |
+| `JOB_HISTORY` | Employee job history |
 
-### HR Schema
+## Relationships
 
-A more complex, enterprise-level schema for practicing advanced queries. Key tables include:
+| Relationship | Meaning |
+| :--- | :--- |
+| `COUNTRIES` → `REGIONS` | Every country belongs to a region |
+| `LOCATIONS` → `COUNTRIES` | Every location is in a country |
+| `DEPARTMENTS` → `LOCATIONS` | Every department operates at a location |
+| `EMPLOYEES` → `DEPARTMENTS` | Every employee belongs to a department |
+| `EMPLOYEES` → `JOBS` | Every employee holds a job |
+| `EMPLOYEES` → `EMPLOYEES` | Every employee reports to a manager (self-referencing key) |
+| `JOB_HISTORY` → `EMPLOYEES` / `JOBS` / `DEPARTMENTS` | History rows record a past job and department per employee |
 
-- **`EMPLOYEES`**: Detailed employee information.
-- **`DEPARTMENTS`**: Company departments.
-- **`JOBS`**: Job roles and salary ranges.
-- **`LOCATIONS`**: Office locations.
-- **`COUNTRIES`**: Country details.
-- **`REGIONS`**: Geographic regions.
+---
 
-**Full Schema Definitions:** For complete table structures, column details, and data loading scripts, please refer to the `02-ddl/schemas/` directory:
-
-- [`../02-ddl/schemas/scott-schema.sql`](../02-ddl/schemas/scott-schema.sql)
-- [`../02-ddl/schemas/hr-schema.sql`](../02-ddl/schemas/hr-schema.sql)
+[← Home](../README.md) · [Index](../INDEX.md)

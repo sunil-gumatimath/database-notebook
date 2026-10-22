@@ -1,20 +1,28 @@
-# Practice Queries: Hands-on Exercises
+# Practice Queries
 
-This directory contains a collection of small, self-contained SQL query exercises designed for hands-on practice. These queries reinforce concepts learned in other sections of the repository.
+Small, self-contained SQL exercises that reinforce concepts from the numbered topic folders.
 
 ## Contents
 
-- **Examples:**
-  - [`examples/query_01.sql`](examples/query_01.sql) — Basic `SELECT` statements, filtering, and projections.
-  - [`examples/query_02.sql`](examples/query_02.sql) — Additional practice queries covering various fundamental SQL concepts.
-- **Assignments:**
-  - [`assignments/assignment_01.sql`](assignments/assignment_01.sql) — A practice set focusing on filters, computed columns, and basic aggregations.
+| File | Description |
+| :--- | :--- |
+| [`examples/query_01.sql`](examples/query_01.sql) | Basic `SELECT` statements, filtering, and projections |
+| [`examples/query_02.sql`](examples/query_02.sql) | Further practice covering various fundamental SQL concepts |
+| [`assignments/assignment_01.sql`](assignments/assignment_01.sql) | Practice set focused on filters, computed columns, and basic aggregations |
 
-## Key Concepts Covered
+## Key Concepts
 
-- **Query Writing:** Constructing `SELECT` statements with various clauses.
-- **Data Filtering:** Using `WHERE` with different conditions.
-- **Computed Columns:** Creating calculated fields in queries.
-- **Basic Aggregations:** Simple use of aggregate functions.
+| Concept | Summary |
+| :--- | :--- |
+| Query writing | Constructing `SELECT` statements with the full clause order |
+| Data filtering | Conditions in the `WHERE` clause |
+| Computed columns | Calculated fields in the select list |
+| Basic aggregations | First steps with aggregate functions |
 
-**Prerequisite:** To effectively work with these queries, ensure you have loaded sample tables from either `../02-ddl/schemas/scott-schema.sql` or `../02-ddl/schemas/hr-schema.sql` into your database.
+## Prerequisites
+
+> Sample tables must be loaded first — run either [`../02-ddl/schemas/scott-schema.sql`](../02-ddl/schemas/scott-schema.sql) or [`../02-ddl/schemas/hr-schema.sql`](../02-ddl/schemas/hr-schema.sql) before working through these.
+
+---
+
+[← Home](../README.md) · [Index](../INDEX.md)

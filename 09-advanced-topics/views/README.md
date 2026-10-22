@@ -1,20 +1,23 @@
-# Views: Virtual Tables
+# Views
 
-This directory contains a brief overview of database views (virtual tables defined by a SELECT) for simplifying queries and controlling access.
+Virtual tables defined by a `SELECT` — for simplifying queries, controlling access, and keeping a consistent access layer.
 
 ## Contents
 
-- [`views-examples.sql`](views-examples.sql) — Basic examples of creating, querying, and dropping views.
+| File | Description |
+| :--- | :--- |
+| [`views-examples.sql`](views-examples.sql) | Basic examples of creating, querying, and dropping views |
 
-## Key Concepts Covered
+## Key Concepts
 
-- What is a View: Virtual table defined by a SELECT over base tables.
-- Creation and Modification: CREATE VIEW, CREATE OR REPLACE VIEW, DROP VIEW.
-- Updatability: Simple views may be updatable; complex views usually read-only.
-- Materialized/Indexed Views: Persisted results (DB-specific).
-- Use Cases: Simplification, security, and a consistent access layer.
+| Concept | Summary |
+| :--- | :--- |
+| What a view is | A named `SELECT` that behaves like a table |
+| Creating and modifying | `CREATE VIEW`, `CREATE OR REPLACE VIEW`, `DROP VIEW` |
+| Updatability | Simple views may be updatable; complex views are usually read-only |
+| Materialized views | Persisted results — DB-specific feature |
 
-## Simple example
+## Simple Example
 
 ```sql
 -- Create a simple view
@@ -26,3 +29,7 @@ WHERE status = 'ACTIVE';
 -- Query the view
 SELECT * FROM active_employees;
 ```
+
+---
+
+[← Advanced Topics](../README.md) · [10 · Practice →](../../10-practice/)

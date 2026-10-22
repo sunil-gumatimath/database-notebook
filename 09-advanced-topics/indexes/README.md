@@ -1,14 +1,22 @@
-# Indexes: Performance Optimization
+# Indexes
 
-This directory contains basic scripts on SQL indexes for performance optimization.
+Speeding up reads at the cost of slower writes and extra storage.
 
 ## Contents
 
-- [`indexes-examples.sql`](indexes-examples.sql) — Basic examples of creating, viewing, and dropping indexes.
+| File | Description |
+| :--- | :--- |
+| [`indexes-examples.sql`](indexes-examples.sql) | Basic examples of creating, viewing, and dropping indexes |
 
-## Key Concepts Covered
+## Key Concepts
 
-- **What is an Index:** Definition and purpose of database indexes.
-- **Index Creation:** Using `CREATE INDEX` for single-column and composite indexes.
-- **Index Management:** Viewing indexes with `SHOW INDEXES` and dropping with `DROP INDEX`.
-- **Basic Usage:** When to use indexes for improving query performance.
+| Concept | Summary |
+| :--- | :--- |
+| What an index is | A lookup structure that avoids full table scans |
+| Creating | `CREATE INDEX` — single-column and composite |
+| Managing | Viewing with `SHOW INDEX`, removing with `DROP INDEX` |
+| Trade-offs | Faster `SELECT`, slower `INSERT`/`UPDATE`/`DELETE`, extra storage |
+
+---
+
+[← Advanced Topics](../README.md) · [10 · Practice →](../../10-practice/)
