@@ -1,11 +1,15 @@
-# Subquery Examples (Sequence)
+# Subquery Examples
 
-This folder contains progressive subquery practice files.
+The three example files in recommended order.
 
-Recommended order:
+| Order | File | Focus |
+| :--- | :--- | :--- |
+| 1 | [`subquery-basics.sql`](subquery-basics.sql) | Core subquery concepts |
+| 2 | [`single-row-subqueries.sql`](single-row-subqueries.sql) | Basic single-row subqueries |
+| 3 | [`multi-row-subqueries.sql`](multi-row-subqueries.sql) | Multi-row subqueries with `IN`, `ANY`, `ALL` |
 
-1. `subquery-basics.sql` — Core subquery concepts
-2. `single-row-subqueries.sql` — Basic single-row subqueries
-3. `multi-row-subqueries.sql` — Multi-row subqueries with `IN`, `ANY`, `ALL`
+> Sample tables must be loaded first — see [`../../02-ddl/schemas/`](../../02-ddl/schemas/).
 
-Tip: Ensure sample tables from `../../02-ddl/schemas/scott-schema.sql` or `../../02-ddl/schemas/hr-schema.sql` are loaded before running these.
+---
+
+[← Subqueries](../README.md)

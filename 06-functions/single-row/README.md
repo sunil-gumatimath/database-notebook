@@ -1,17 +1,31 @@
-# Single-Row Functions: Row-Level Operations
+# Single-Row Functions
 
-This directory covers single-row functions, which operate on individual rows to return a single result for each row processed. These functions are essential for data transformation and manipulation at the row level.
+Functions that transform each row independently — string, number, date, and conditional utilities.
 
 ## Contents
 
-- **Examples:**
-  - [`examples/character-functions.sql`](examples/character-functions.sql) — Functions for manipulating character strings (e.g., `UPPER`, `LOWER`, `SUBSTR`, `LENGTH`).
-  - [`examples/number-functions.sql`](examples/number-functions.sql) — Functions for mathematical and numeric operations (e.g., `ROUND`, `TRUNC`, `MOD`).
-  - [`examples/date-functions.sql`](examples/date-functions.sql) — Functions for working with dates and times (e.g., `CURRENT_DATE`, date extraction, formatting).
-  - [`examples/general-functions.sql`](examples/general-functions.sql) — Miscellaneous utility functions, including conditional logic.
-- **Assignments:**
-  - [`assignments/single-row-practice.sql`](assignments/single-row-practice.sql) — Practice tasks to apply single-row functions.
-- **Notes:**
-  - [`notes/quick-reference.sql`](notes/quick-reference.sql) — An overview and quick reference notes for single-row functions.
+| File | Description |
+| :--- | :--- |
+| [`examples/character-functions.sql`](examples/character-functions.sql) | String manipulation: `UPPER`, `LOWER`, `SUBSTR`, `LENGTH`, and more (40+ examples) |
+| [`examples/number-functions.sql`](examples/number-functions.sql) | Numeric operations: `ROUND`, `TRUNC`, `MOD`, and more |
+| [`examples/date-functions.sql`](examples/date-functions.sql) | Date and time handling (20+ examples) |
+| [`examples/general-functions.sql`](examples/general-functions.sql) | Conditional logic and general utility functions |
+| [`assignments/single-row-practice.sql`](assignments/single-row-practice.sql) | Practice exercises for single-row functions |
+| [`notes/quick-reference.sql`](notes/quick-reference.sql) | Quick reference overview of single-row functions |
 
-**Suggested Learning Order:** Begin with the `notes/quick-reference.sql` for a general understanding, then explore `examples/character-functions.sql`, `examples/number-functions.sql`, `examples/date-functions.sql`, and `examples/general-functions.sql` to learn about specific function types. Finally, practice your skills with the `assignments/single-row-practice.sql`.
+## Key Concepts
+
+| Concept | Summary |
+| :--- | :--- |
+| Character | Transforming and formatting text values |
+| Number | Rounding, truncating, and modular arithmetic |
+| Date | Current date, extraction, arithmetic, and formatting |
+| Conditional | `CASE`, `IF`, `IFNULL`, `COALESCE` decision logic |
+
+## Suggested Order
+
+Start with `notes/quick-reference.sql` for an overview, then the four example files in order (character, number, date, general), and finish with `assignments/single-row-practice.sql`.
+
+---
+
+[← DML](../../03-dml/) · [Index](../../INDEX.md) · [06 · Aggregate Functions →](../aggregate/)
