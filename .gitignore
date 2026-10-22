@@ -1,2 +1,14 @@
+# Editor / IDE
 .vscode/
-# *.session.sql
+.idea/
+
+# OS junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Session, backup, and temp files
+*.session.sql
+*.bak
+*.tmp
+~$*
