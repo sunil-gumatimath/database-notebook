@@ -1,18 +1,28 @@
-# DQL (Data Query Language): Retrieving Data
+# DQL: Retrieving Data
 
-This directory covers DQL, the SQL commands used for querying and retrieving data from database tables.
+The `SELECT` statement and everything needed to get data out of a database and make it readable.
 
 ## Contents
 
-- [`examples/select-basics.sql`](examples/select-basics.sql) — Introduces basic `SELECT` statements, data filtering using `WHERE`, column projections, and simple aggregate functions.
-- [`examples/select-alias.sql`](examples/select-alias.sql) — Demonstrates the use of column and table aliases for clarity and brevity in queries.
-- [`examples/select-distinct.sql`](examples/select-distinct.sql) — Explains how to retrieve unique rows using the `DISTINCT` keyword.
+| File | Description |
+| :--- | :--- |
+| [`examples/select-basics.sql`](examples/select-basics.sql) | Basic `SELECT` statements, `WHERE` filtering, column projection, simple aggregation |
+| [`examples/select-alias.sql`](examples/select-alias.sql) | Column and table aliases for clearer queries and output |
+| [`examples/select-distinct.sql`](examples/select-distinct.sql) | Removing duplicate rows with `DISTINCT` |
 
-## Key Concepts Covered
+## Key Concepts
 
-- **Basic SELECT:** Retrieving data from tables with column selection.
-- **Filtering Data:** Using `WHERE` clause to filter rows.
-- **Aliases:** Using column and table aliases for better readability.
-- **Distinct Values:** Removing duplicates with `DISTINCT`.
+| Concept | Summary |
+| :--- | :--- |
+| Basic SELECT | Projecting columns and retrieving rows |
+| Filtering | Conditions in the `WHERE` clause |
+| Aliases | Renaming columns and tables for readability |
+| Distinct values | Eliminating duplicate result rows |
 
-**Suggested Learning Order:** Begin with `examples/select-basics.sql` to grasp fundamental querying, then proceed to `examples/select-alias.sql` for improving query readability, and finally `examples/select-distinct.sql` for handling duplicate data.
+## Suggested Order
+
+`select-basics.sql` for fundamentals → `select-alias.sql` for readability → `select-distinct.sql` for handling duplicate data.
+
+---
+
+[← DDL](../02-ddl/) · [Index](../INDEX.md) · [05 · Operators →](../05-operators/)

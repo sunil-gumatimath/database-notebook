@@ -1,18 +1,28 @@
-# DDL (Data Definition Language): Schema Management
+# DDL: Schema Definition and Management
 
-This directory contains scripts for defining and managing database schemas, including table creation, modification, and deletion.
+Scripts for defining and managing database structures — tables, schemas, and their lifecycle.
 
 ## Contents
 
-- [`ddl-operations.sql`](ddl-operations.sql) — Demonstrates core DDL commands: `CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME`.
-- [`schemas/scott-schema.sql`](schemas/scott-schema.sql) — Definition for the classic SCOTT schema, including `EMP`, `DEPT`, `BONUS`, and `SALGRADE` tables with sample data.
-- [`schemas/hr-schema.sql`](schemas/hr-schema.sql) — Definition for the enterprise-level HR schema, including tables like `EMPLOYEES`, `DEPARTMENTS`, `JOBS`, `LOCATIONS`, `COUNTRIES`, and `REGIONS`.
+| File | Description |
+| :--- | :--- |
+| [`ddl-operations.sql`](ddl-operations.sql) | Core DDL commands: `CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME` |
+| [`schemas/scott-schema.sql`](schemas/scott-schema.sql) | Classic SCOTT schema: `EMP`, `DEPT`, `BONUS`, `SALGRADE` with sample data |
+| [`schemas/hr-schema.sql`](schemas/hr-schema.sql) | Enterprise HR schema: seven tables from `REGIONS` to `JOB_HISTORY` |
 
-## Key Concepts Covered
+## Key Concepts
 
-- **Table Creation:** Using `CREATE TABLE` with data types and constraints.
-- **Table Modification:** Altering table structure with `ALTER TABLE`.
-- **Table Deletion:** Removing tables and data with `DROP` and `TRUNCATE`.
-- **Schema Management:** Working with database schemas and objects.
+| Concept | Summary |
+| :--- | :--- |
+| Table creation | `CREATE TABLE` with data types and constraints |
+| Table modification | Changing structure with `ALTER TABLE` |
+| Table deletion | `DROP` removes the table; `TRUNCATE` empties it |
+| Schema management | Loading and reusing the sample schemas |
 
-**Tip:** It is recommended to load either the `schemas/scott-schema.sql` or `schemas/hr-schema.sql` script into your database before attempting the examples found in the `queries/` and `04-dql/` directories.
+## Prerequisites
+
+> Load `schemas/scott-schema.sql` or `schemas/hr-schema.sql` before running anything in [`04-dql/`](../04-dql/), [`05-operators/`](../05-operators/), [`06-functions/`](../06-functions/), or [`queries/`](../queries/) — those folders assume the sample tables exist.
+
+---
+
+[← Fundamentals](../01-fundamentals/) · [Index](../INDEX.md) · [04 · DQL →](../04-dql/)

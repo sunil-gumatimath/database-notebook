@@ -1,16 +1,27 @@
-# Operators: Filtering and Logical Operations
+# Operators: Filtering and Logic
 
-This directory covers SQL operators, which are used in `WHERE` clauses and other expressions to filter data, perform comparisons, and implement logical operations.
+Operators used in `WHERE` clauses and other expressions to compare, combine, and pattern-match values.
 
 ## Contents
 
-- **Examples:**
-  - [`examples/operators-demo.sql`](examples/operators-demo.sql) — Demonstrates various operators including comparison operators (`=`, `>`, `<`, etc.), logical operators (`AND`, `OR`, `NOT`), `IN`, `LIKE`, `BETWEEN`, `IS NULL`, and boolean logic.
-- **Assignments:**
-  - [`assignments/operators-practice.sql`](assignments/operators-practice.sql) — Practice tasks designed to reinforce the understanding and application of SQL operators.
+| File | Description |
+| :--- | :--- |
+| [`examples/operators-demo.sql`](examples/operators-demo.sql) | Comparison operators (`=`, `>`, `<`, …), logical operators (`AND`, `OR`, `NOT`), `IN`, `LIKE`, `BETWEEN`, `IS NULL` |
+| [`assignments/operators-practice.sql`](assignments/operators-practice.sql) | Practice tasks designed to reinforce the operators |
 
-## Key Concepts Covered
+## Key Concepts
 
-- **Comparison Operators:** `=`, `>`, `<`, `>=`, `<=`, `<>`, `!=`.
-- **Logical Operators:** `AND`, `OR`, `NOT` for combining conditions.
-- **Special Operators:** `IN`, `LIKE`, `BETWEEN`, `IS NULL` for pattern matching and null checks.
+| Concept | Summary |
+| :--- | :--- |
+| Comparison | `=`, `>`, `<`, `>=`, `<=`, `<>`, `!=` |
+| Logical | `AND`, `OR`, `NOT` for combining conditions |
+| Special | `IN`, `LIKE`, `BETWEEN`, `IS NULL` for sets, patterns, ranges, and null checks |
+| REGEXP | Regular expression pattern matching |
+
+## Suggested Order
+
+Run `examples/operators-demo.sql` first, then complete `assignments/operators-practice.sql`.
+
+---
+
+[← DQL](../04-dql/) · [Index](../INDEX.md) · [03 · DML →](../03-dml/)

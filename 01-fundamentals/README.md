@@ -1,15 +1,25 @@
-# Basics: Foundational SQL Concepts
+# Fundamentals: Data Types and Constraints
 
-This directory covers the fundamental building blocks of SQL, essential for creating and managing database structures.
+The building blocks of SQL — how data is represented and how integrity is enforced.
 
 ## Contents
 
-- [`data-types.sql`](data-types.sql) — A guide to common SQL data types with simple `CREATE TABLE` examples.
-- [`constraints.sql`](constraints.sql) — Explanation and examples of essential SQL constraints: `NOT NULL`, `UNIQUE`, `PRIMARY KEY`, `FOREIGN KEY`, `CHECK`, `DEFAULT`.
+| File | Description |
+| :--- | :--- |
+| [`data-types.sql`](data-types.sql) | Guide to common SQL data types with simple `CREATE TABLE` examples |
+| [`constraints.sql`](constraints.sql) | Core constraints: `NOT NULL`, `UNIQUE`, `PRIMARY KEY`, `FOREIGN KEY`, `CHECK`, `DEFAULT` |
 
-## Key Concepts Covered
+## Key Concepts
 
-- **Data Types:** Understanding different SQL data types for storing various kinds of data.
-- **Constraints:** Rules to enforce data integrity and prevent invalid data entry.
+| Concept | Summary |
+| :--- | :--- |
+| Data types | Choosing the right type for each column: numbers, text, dates, and more |
+| Constraints | Rules enforced at write time to keep data valid and consistent |
 
-**Suggested Learning Order:** Start with `data-types.sql` to understand data representation, then move to `constraints.sql` to learn how to enforce data integrity.
+## Suggested Order
+
+Start with `data-types.sql` to understand how values are stored, then move to `constraints.sql` to see how data integrity is enforced.
+
+---
+
+[← Index](../INDEX.md) · [02 · DDL →](../02-ddl/)
